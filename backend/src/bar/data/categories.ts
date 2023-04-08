@@ -60,5 +60,55 @@ export const barCategories: TMenuCategory[] = [
         name: 'Вино',
         searchLink: 'wines',
         thumbUrl: '/'
+    },
+    {
+        name: 'Виски',
+        searchLink: 'whiskey',
+        thumbUrl: '/'
+    },
+    {
+        name: 'Апперитивы',
+        searchLink: 'apperitives',
+        thumbUrl: '/'
+    },
+    {
+        name: 'Биттеры | ликеры',
+        searchLink: 'bitters',
+        thumbUrl: '/'
+    },
+    {
+        name: 'Вермут',
+        searchLink: 'vermouth',
+        thumbUrl: '/'
+    },
+    {
+        name: 'Бренди',
+        searchLink: 'brandy',
+        thumbUrl: '/'
+    },
+    {
+        name: 'Водка',
+        searchLink: 'vodka',
+        thumbUrl: '/'
+    },
+    {
+        name: 'Джин',
+        searchLink: 'gin',
+        thumbUrl: '/'
+    },
+    {
+        name: 'Коньяк',
+        searchLink: 'cognac',
+        thumbUrl: ''
+    },
+    {
+        name: 'Ром',
+        searchLink: 'rum',
+        thumbUrl: '/'
+    },
+    {
+        name: 'Текила',
+        searchLink: 'tequila',
+        thumbUrl: '/'
     }
 ]
