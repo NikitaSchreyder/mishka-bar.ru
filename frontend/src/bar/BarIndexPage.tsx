@@ -5,6 +5,7 @@ import Header from "../core/layout/components/header/Header"
 import Footer from "../core/layout/components/footer/Footer"
 import MenuCategories from '../core/components/Menu/MenuCategories'
 import MenuCategoriesItem from '../core/components/Menu/MenuCategoriesItem'
+import { Breadcrumb } from 'antd'
 
 const BarIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
     const barCategories = categories.map((item, index) => 
@@ -24,7 +25,11 @@ const BarIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
             </Head>
             <Header />
                 <div className="layout_container">
-                    <h1 className="menu-title">Барная карта</h1>
+                    <Breadcrumb separator='/'>
+                        <Breadcrumb.Item href='/bar'>
+                            <h1 className="menu-title">Барная карта</h1>
+                        </Breadcrumb.Item>
+                    </Breadcrumb>
                 </div>
                 <div className="layout_container">
                     <MenuCategories>

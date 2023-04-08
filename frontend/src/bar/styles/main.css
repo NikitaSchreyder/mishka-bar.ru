@@ -35,7 +35,6 @@
     font-size: 30px;
     width: 100%;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -48,11 +47,23 @@
     .menu-categories {
         grid-template-columns: repeat(3, 1fr);
     }
+    .menu-title {
+        font-size: 24px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
     .menu-categories {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-title {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .menu-title {
+        font-size: 18px;
     }
 }
 
