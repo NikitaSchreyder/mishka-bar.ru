@@ -345,836 +345,465 @@ export const menuItems: TMenuItem[] = [
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Трубочки с беконом и сыром',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 350,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Северные креветки жареные',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 600,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Жульен с курицей и грибами',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 350,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Тигровые креветки',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 560,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Мидии запеченые под соусом "Морнэ"',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 590,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Мясо мидий жареное',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 400,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Гренки чесночные',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 250,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Крылышки баффола',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 400,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Сырные палочки',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 390,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
+        name: 'Наггетсы',
+        description: 'Состав: ',
         categorySearchLink: 'hot-snacks',
-        price: 0,
+        price: 250,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Том ям с морепродуктами',
+        description: 'Состав: ',
+        categorySearchLink: 'soups',
+        price: 590,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Сырный с беконом',
+        description: 'Состав: ',
+        categorySearchLink: 'soups',
+        price: 350,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
-        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
-    },
-    {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Уха из лосося',
+        description: 'Состав: ',
+        categorySearchLink: 'soups',
+        price: 360,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Суп лапша с курицей и перепелиным яйцом',
+        description: 'Состав: ',
+        categorySearchLink: 'soups',
+        price: 250,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Грибной крем суп',
+        description: 'Состав: ',
+        categorySearchLink: 'soups',
+        price: 380,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Борщ домашний',
+        description: 'Состав: ',
+        categorySearchLink: 'soups',
+        price: 300,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Паста с говядиной',
+        description: 'Состав: ',
+        categorySearchLink: 'pastas',
+        price: 570,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Фарфалле с лососем',
+        description: 'Состав: ',
+        categorySearchLink: 'pastas',
+        price: 590,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Спагетти с морепродуктами',
+        description: 'Состав: ',
+        categorySearchLink: 'pastas',
+        price: 620,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Карбонара',
+        description: 'Состав: ',
+        categorySearchLink: 'pastas',
+        price: 420,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Феттучини с курицей и грибами',
+        description: 'Состав: ',
+        categorySearchLink: 'pastas',
+        price: 410,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Филе сибаса с стручковой фасолью',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 840,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Куриная грудка со сливочным соусом',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 540,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Палтус с пастой птитим',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 650,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Биточки из индейки',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 630,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Говяжьи медальоны',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 830,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Лосось запеченый',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 740,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Свиная корейка',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 580,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Утиная ножка',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 610,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Говядина на сковороде',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 890,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Равиоли с лососем / с говядиной',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 430,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Рулька свиная',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 1150,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Ризотто с креветками',
+        description: 'Состав: ',
+        categorySearchLink: 'hot-dishes',
+        price: 580,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Дорадо',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'grill',
+        price: 670,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Шашлык из лосося',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'grill',
+        price: 820,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Стейк из лосося',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'grill',
+        price: 1100,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Сибас',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'grill',
+        price: 680,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Филе миньон',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'steaks',
+        price: 1600,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Стриплойн',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'steaks',
+        price: 2250,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Рибай',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'steaks',
+        price: 2400,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Томогавк',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'steaks',
+        price: 690,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Мишка',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'steaks',
+        price: 2000,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Бавет стейк',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'steaks',
+        price: 1100,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Стейк мачете',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'steaks',
+        price: 1690,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Мясной бриффинг на углях',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'sharing-platters',
+        price: 3250,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Фри сет',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'sharing-platters',
+        price: 920,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Чикен сет',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'sharing-platters',
+        price: 1990,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Шашлык из курицы',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'kebabs',
+        price: 350,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Шашлык из свинины',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'kebabs',
+        price: 440,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Кебаб из курицы',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'kebabs',
+        price: 350,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Кебаб из баранины',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'kebabs',
+        price: 490,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Рис с овощами',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'side-dishes',
+        price: 150,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Картофельные дольки по - деревенски',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'side-dishes',
+        price: 180,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Шампиньоны на углях',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'side-dishes',
+        price: 220,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Картофель фри',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'side-dishes',
+        price: 180,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Овощи гриль',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'side-dishes',
+        price: 220,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Жареный картофель с луком и грибами',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'side-dishes',
+        price: 230,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Спаржа на гриле',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'side-dishes',
+        price: 200,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Мусс груша',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'desserts',
+        price: 350,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
-        description: '',
-        categorySearchLink: '',
-        price: 0,
+        name: 'Штрудель',
+        description: 'На выбор: яблоко, груша, вишня',
+        categorySearchLink: 'desserts',
+        price: 280,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Шоколадный фондан',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'desserts',
+        price: 390,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Торт фисташковый',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'desserts',
+        price: 340,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Меренговый рулет',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'desserts',
+        price: 380,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Чизкейк сан - себастьян',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'desserts',
+        price: 400,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Тарт шоколадный',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'desserts',
+        price: 380,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
-        name: '',
+        name: 'Панна котта клубничная',
         description: '',
-        categorySearchLink: '',
-        price: 0,
+        categorySearchLink: 'desserts',
+        price: 300,
         thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     }
 ]

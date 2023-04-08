@@ -72,6 +72,11 @@ export const menuCategories: TMenuCategory[] = [
         thumbUrl: '/'
     },
     {
+        name: 'Шашлыки и кебабы',
+        searchLink: 'kebabs',
+        thumbUrl: '/'
+    },
+    {
         name: 'Гарниры',
         searchLink: 'side-dishes',
         thumbUrl: '/'
