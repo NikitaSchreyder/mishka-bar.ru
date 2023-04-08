@@ -55,5 +55,10 @@ export const barCategories: TMenuCategory[] = [
         name: 'Лимонады',
         searchLink: 'lemonades',
         thumbUrl: '/'
+    },
+    {
+        name: 'Вино',
+        searchLink: 'wines',
+        thumbUrl: '/'
     }
 ]
