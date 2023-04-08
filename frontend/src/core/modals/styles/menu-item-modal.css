@@ -1,0 +1,18 @@
+.menu-item-modal {
+    width: fit-content !important;
+}
+
+.menu-item-modal_content {
+    display: flex;
+}
+
+.menu-item-modal_image {
+    max-width: 500px;
+}
+
+.menu-item-modal_title,
+.menu-item-modal_description,
+.menu-item-modal_price {
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}

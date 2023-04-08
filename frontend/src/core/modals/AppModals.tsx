@@ -36,7 +36,7 @@ export const MenuItemModal: React.FC<{open: boolean, closeModal: () => void, bar
         <Modal
             open={open}
             closable={false}
-            className="pickup-modal"
+            className="menu-item-modal"
             footer={null}
             destroyOnClose={true}
             onCancel={closeModal}
