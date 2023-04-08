@@ -1,0 +1,25 @@
+.about_map-container {
+    height: 100px;
+    width: 100vw;
+}
+
+.about_map-container {
+    height: 350px;
+    mix-blend-mode: difference;
+    filter: invert(100%) grayscale(100%);
+	-ms-filter: invert(100%) grayscale(100%);
+	-webkit-filter: invert(100%) grayscale(100%);
+	-moz-filter: invert(100%) grayscale(100%);
+	-o-filter: invert(100%)  grayscale(100%);
+}
+
+.about_map {
+    width: 100vw;
+    height: inherit;
+}
+
+@media only screen and (max-width: 575px) {
+    .about_map-container {
+        height: 200px;
+    }
+}

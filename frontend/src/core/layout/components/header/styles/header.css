@@ -1,0 +1,71 @@
+@import './header-menu.css';
+
+.header {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.header_menu-btn {
+  border: none;
+  width: 40px !important;
+  height: 40px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  animation-duration: 0s !important;
+  background: url('/img/icons/menu.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header_menu-btn:hover {
+  background: url('/img/icons/menu-hovered.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header_logo-container {
+  display: flex;
+  justify-content: center;
+  max-width: 120px;
+  margin: auto;
+}
+
+.header_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.header_info--address,
+.header_info--phone {
+  font-family: 'mishka';
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    row-gap: 20px;
+    padding: 20px;
+  }
+
+  .header_info {
+    grid-row: span 2;
+    grid-column: span 3;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+  }
+
+  .header_info--address,
+  .header_info--phone {
+    text-align: center;
+  }
+}

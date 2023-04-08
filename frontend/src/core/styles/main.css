@@ -1,0 +1,5 @@
+@import './global.css';
+@import '../layout/styles/main.css';
+@import '../../home/styles/main.css';
+@import '../../about/styles/main.css';
+@import '../../bar/styles/main.css'
