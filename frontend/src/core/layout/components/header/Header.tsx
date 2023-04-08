@@ -15,6 +15,7 @@ const Header: React.FC = () => {
     <header className='header'>
       <HeaderMenu onClose={closeMenu} visible={menuVisible} />
       <Button 
+        aria-label='меню'
         onClick={openMenu}
         className="header_menu-btn"
       />

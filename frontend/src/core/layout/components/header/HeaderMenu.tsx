@@ -48,14 +48,16 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
     >
       <div className="header_menu-content">
         <div className="header_menu-control">
-          <Button onClick={onClose} className='header_menu-close-btn' icon={<CloseOutlined  />} />
+          <Button aria-label='закрыть меню' onClick={onClose} className='header_menu-close-btn' icon={<CloseOutlined  />} />
         </div>
         <div className='header_menu-logo-container'>
           <Image alt='logo' className="footer_logo" preview={false} src="/img/logo.webp" />
         </div>
-        <ul className='header_menu-items'>
-          {renderMenuItems}
-        </ul>
+        <nav>
+          <ul className='header_menu-items'>
+            {renderMenuItems}
+          </ul>
+        </nav>
         <div className='header_menu-info'>
           <ul className='header_menu-info_social'>
             <li className='header_menu-info_social-item'>

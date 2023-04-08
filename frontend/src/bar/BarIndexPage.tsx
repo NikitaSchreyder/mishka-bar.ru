@@ -6,6 +6,7 @@ import Footer from "../core/layout/components/footer/Footer"
 import MenuCategories from '../core/components/Menu/MenuCategories'
 import MenuCategoriesItem from '../core/components/Menu/MenuCategoriesItem'
 import { Breadcrumb } from 'antd'
+import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 
 const BarIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
     const barCategories = categories.map((item, index) => 
@@ -17,6 +18,13 @@ const BarIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
             thumbUrl={item.thumbUrl} 
         />
     )
+
+    const breadcrumbItems: ItemType[] = [
+        {
+            title: 'Барная карта',
+            href: '/bar',
+        }
+    ]
     
     return (
         <>
@@ -25,11 +33,7 @@ const BarIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
             </Head>
             <Header />
                 <div className="layout_container">
-                    <Breadcrumb separator='/'>
-                        <Breadcrumb.Item href='/bar'>
-                            <h1 className="menu-title">Барная карта</h1>
-                        </Breadcrumb.Item>
-                    </Breadcrumb>
+                    <Breadcrumb items={breadcrumbItems} separator='/' />
                 </div>
                 <div className="layout_container">
                     <MenuCategories>

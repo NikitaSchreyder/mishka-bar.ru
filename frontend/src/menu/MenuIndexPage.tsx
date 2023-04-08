@@ -6,6 +6,7 @@ import MenuCategoriesItem from '../core/components/Menu/MenuCategoriesItem';
 import { IMenuIndexPageProps } from '../core/types/menu';
 import Head from 'next/head';
 import { Breadcrumb } from "antd";
+import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
 
 const MenuIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
     const menuCategories = categories.map((item, index) => 
@@ -17,6 +18,13 @@ const MenuIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
             thumbUrl={item.thumbUrl} 
         />
     )
+
+    const breadcrumbItems: ItemType[] = [
+        {
+            title: 'Меню',
+            href: '/menu'
+        }
+    ]
     
     return (
         <>
@@ -25,11 +33,7 @@ const MenuIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
             </Head>
             <Header />
                 <div className="layout_container">
-                    <Breadcrumb separator='/'>
-                        <Breadcrumb.Item href='/bar'>
-                            <h1 className="menu-title">Меню</h1>
-                        </Breadcrumb.Item>
-                    </Breadcrumb>
+                    <Breadcrumb items={breadcrumbItems} />
                 </div>
                 <div className="layout_container">
                     <MenuCategories>

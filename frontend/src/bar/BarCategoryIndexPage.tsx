@@ -9,6 +9,7 @@ import Footer from "../core/layout/components/footer/Footer"
 import MenuCategory from '../core/components/Menu/MenuCategory'
 import MenuCategoryItem from '../core/components/Menu/MenuCategoryItem'
 import { Breadcrumb } from 'antd'
+import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 
 const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryItems, categoryName}) => {
     const [openedItem, setOpenedItem] = useState<TMenuItem | null>(null)
@@ -28,6 +29,19 @@ const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryIt
         return categoryItems.map((item, index) => <MenuCategoryItem key={index} item={item} onClick={onItemClick} />)
     }, [categoryItems])
 
+    const breadcrumbItems: ItemType[] = [
+        {
+            title: 'Барная карта',
+            href: '/bar',
+            separator: '/'  
+        },
+        {
+            title: categoryName,
+            href: `/bar/${categoryItems[0].categorySearchLink}`,
+            separator: '/'  
+        }
+    ]
+
     return (
         <>
             <Head>
@@ -36,14 +50,7 @@ const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryIt
             <MenuItemModal barItem={openedItem && openedItem} closeModal={closeModal} open={barItemDtailsModalControl.toShow} />
             <Header />
                 <div className="layout_container">
-                    <Breadcrumb>
-                        <Breadcrumb.Item href='/bar'>
-                            <h1 className="menu-title">Барная карта</h1>
-                        </Breadcrumb.Item>
-                        <Breadcrumb.Item href={`/bar/${categoryItems[0].categorySearchLink}`}>
-                            <h1 className="menu-title">{categoryName}</h1>
-                        </Breadcrumb.Item>
-                    </Breadcrumb>
+                    <Breadcrumb items={breadcrumbItems} />
                 </div>
                 <div className="layout_container">
                     <MenuCategory>

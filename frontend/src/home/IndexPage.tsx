@@ -22,8 +22,8 @@ const IndexPage: React.FC = () => {
           <Header />
           <div className='layout_container'>
             <div className='home_btns'>
-              <Button onClick={() => router.replace('/menu')} className='home_btn'>меню</Button>
-              <Button className='home_btn' onClick={pickupModalControl.openModal}>самовывоз</Button>
+              <Button aria-label='меню ресторана' onClick={() => router.replace('/menu')} className='home_btn'>меню</Button>
+              <Button aria-label='самовывоз' className='home_btn' onClick={pickupModalControl.openModal}>самовывоз</Button>
             </div>
           </div>
         </section>
