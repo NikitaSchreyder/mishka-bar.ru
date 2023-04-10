@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         </li>
       )
     })
-  }, [])
+  }, [socialLinks])
 
   const infoItems = [
     {
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
         </div>
       )
     })
-  }, [])
+  }, [infoItems])
 
   const menuItems = [
     {
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
         </li>
       )
     })
-  }, [])
+  }, [menuItems])
 
   return (
     <footer className='footer'>

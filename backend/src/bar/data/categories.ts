@@ -4,111 +4,111 @@ export const barCategories: TMenuCategory[] = [
     {
         name: 'Классические',
         searchLink: 'classic',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Тикки',
         searchLink: 'tikki',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Авторские',
         searchLink: 'author',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Особые',
         searchLink: 'special',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'С миру по нитке',
         searchLink: 'with-the-world-by-a-thread',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Шутеры',
         searchLink: 'shooters',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Хайболы',
         searchLink: 'highballs',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Горячие',
         searchLink: 'hots',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Десертные',
         searchLink: 'dessert',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Смузи',
         searchLink: 'smoothie',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Лимонады',
         searchLink: 'lemonades',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Вино',
         searchLink: 'wines',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Виски',
         searchLink: 'whiskey',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Апперитивы',
         searchLink: 'apperitives',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Биттеры | ликеры',
         searchLink: 'bitters',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Вермут',
         searchLink: 'vermouth',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Бренди',
         searchLink: 'brandy',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Водка',
         searchLink: 'vodka',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Джин',
         searchLink: 'gin',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Коньяк',
         searchLink: 'cognac',
-        thumbUrl: ''
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Ром',
         searchLink: 'rum',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Текила',
         searchLink: 'tequila',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     }
 ]

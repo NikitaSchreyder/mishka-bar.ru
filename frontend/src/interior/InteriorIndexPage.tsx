@@ -7,6 +7,7 @@ import Footer from "../core/layout/components/footer/Footer"
 import Header from "../core/layout/components/header/Header"
 
 import "react-image-lightbox/style.css"
+import Head from 'next/head'
 
 const InteriorIndexPage: React.FC = () => {
     const [index, setIndex] = useState(-1);
@@ -34,6 +35,9 @@ const InteriorIndexPage: React.FC = () => {
     
     return (
         <>
+            <Head>
+                <title>Мишка бар | Интерьер</title>
+            </Head>
             <Header />
             <div className="layout_container">
                 {renderGallery}

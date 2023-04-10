@@ -27,7 +27,7 @@ const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryIt
 
     const barCategoryItems = useMemo(() => {
         return categoryItems.map((item, index) => <MenuCategoryItem key={index} item={item} onClick={onItemClick} />)
-    }, [categoryItems])
+    }, [categoryItems, onItemClick])
 
     const breadcrumbItems: ItemType[] = [
         {

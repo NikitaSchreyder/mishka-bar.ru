@@ -4,86 +4,86 @@ export const menuCategories: TMenuCategory[] = [
     {
         name: 'Аппетайзеры',
         searchLink: 'appetizers',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Роллы',
         searchLink: 'rolles',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Холодные закуски',
         searchLink: 'cold-snacks',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Домашний хлеб',
         searchLink: 'homemade-bread',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Пицца',
         searchLink: 'pizza',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Бургеры',
         searchLink: 'burgers',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Салаты',
         searchLink: 'salads',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Горячие закуски',
         searchLink: 'hot-snacks',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Супы',
         searchLink: 'soups',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Пасты',
         searchLink: 'pastas',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Горячие блюда',
         searchLink: 'hot-dishes',
-        thumbUrl: ''
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Угли',
         searchLink: 'grill',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Стейки',
         searchLink: 'steaks',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Блюда на компанию',
         searchLink: 'sharing-platters',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Шашлыки и кебабы',
         searchLink: 'kebabs',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Гарниры',
         searchLink: 'side-dishes',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     },
     {
         name: 'Десерты',
         searchLink: 'desserts',
-        thumbUrl: '/'
+        thumbUrl: 'https://honestlyyum.com/wp-content/uploads/2015/11/old.fashioned.cocktail.kit_.umami_.mart_.2.2.jpg'
     }
 ]

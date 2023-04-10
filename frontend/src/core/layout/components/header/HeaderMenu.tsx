@@ -35,7 +35,7 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
 
   const renderMenuItems = useMemo(() => {
     return menuItems.map((item, index) => <HeaderMenuItem key={index} {...item} />)
-  }, [])
+  }, [menuItems])
 
   return (
     <Drawer

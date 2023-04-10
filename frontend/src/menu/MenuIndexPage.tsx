@@ -29,7 +29,7 @@ const MenuIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
     return (
         <>
             <Head>
-                <title>Мишка бар | меню</title>
+                <title>Мишка бар | Меню</title>
             </Head>
             <Header />
                 <div className="layout_container">
