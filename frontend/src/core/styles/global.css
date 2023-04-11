@@ -14,7 +14,7 @@ body {
   src: url('../../core/fonts/SovMod.ttf') format("truetype");
 }
 
-:where(.css-dev-only-do-not-override-1vtf12y).ant-modal .ant-modal-content {
+:where(.css-dev-only-do-not-override-1vtf12y).ant-modal .ant-modal-content, .ant-modal-content {
   border-radius: 0 !important;
   padding: 0 !important;
   background-color: rgb(0, 0, 0) !important;
