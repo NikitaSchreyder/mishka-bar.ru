@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Image } from "antd";
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 
 const Footer: React.FC = () => {
   const socialLinks = [
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     }
   ]
 
-  const renderSocialLinks = useMemo(() => {
+  const renderSocialLinks = () => {
     return socialLinks.map((item, index) => {
       return (
         <li className="footer_social-item" key={index}>
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         </li>
       )
     })
-  }, [socialLinks])
+  }
 
   const infoItems = [
     {
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
     }
   ]
 
-  const renderInfoItems = useMemo(() => {
+  const renderInfoItems = () => {
     return infoItems.map((item, index) => {
       return (
         <div className="footer_info-item" key={index}>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
         </div>
       )
     })
-  }, [infoItems])
+  }
 
   const menuItems = [
     {
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
     }
   ]
 
-  const renderMenuItems = useMemo(() => {
+  const renderMenuItems = () => {
     return menuItems.map((item, index) => {
       return (
         <li className="footer_menu-item" key={index}>
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
         </li>
       )
     })
-  }, [menuItems])
+  }
 
   return (
     <footer className='footer'>
@@ -100,15 +100,15 @@ const Footer: React.FC = () => {
             <Image alt='logo' className="footer_logo" preview={false} src="/img/logo.webp" />
           </div>
           <ul className="footer_social">
-            {renderSocialLinks}
+            {renderSocialLinks()}
           </ul>
         </div>
         <div className="footer_content">
           <ul className="footer_menu">
-            {renderMenuItems}
+            {renderMenuItems()}
           </ul>
           <div className="footer_info">
-            {renderInfoItems}
+            {renderInfoItems()}
           </div>
         </div>
       </div>

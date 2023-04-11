@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Breadcrumb } from 'antd'
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { MenuItemModal } from '../core/modals/AppModals'
 import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 import { useModalControl } from '../core/hooks/useModalControl'
@@ -25,9 +25,9 @@ const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryIt
         barItemDtailsModalControl.closeModal()
     }
 
-    const barCategoryItems = useMemo(() => {
+    const barCategoryItems = () => {
         return categoryItems.map((item, index) => <MenuCategoryItem key={index} item={item} onClick={onItemClick} />)
-    }, [categoryItems, onItemClick])
+    }
 
     const breadcrumbItems: ItemType[] = [
         {
@@ -54,7 +54,7 @@ const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryIt
                 </div>
                 <div className='layout_container'>
                     <MenuCategory>
-                        {barCategoryItems}
+                        {barCategoryItems()}
                     </MenuCategory>
                 </div>
             <Footer />

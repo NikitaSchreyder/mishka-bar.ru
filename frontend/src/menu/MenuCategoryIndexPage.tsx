@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useMemo, useState } from "react"
+import { useCallback, useMemo, useState } from "react"
 import { useModalControl } from "../core/hooks/useModalControl"
 import { IMenuCategoryIndexPageProps, TMenuItem } from '../core/types/menu'
 
@@ -25,9 +25,9 @@ const MenuCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryI
         setOpenedItem(null)
     }
 
-    const menuCategoryItems = useMemo(() => {
+    const menuCategoryItems = () => {
         return categoryItems.map((item, index) => <MenuCategoryItem key={index} item={item} onClick={onItemClick} />)
-    }, [categoryItems, onItemClick])
+    }
 
     const breadcrumbItems: ItemType[] = [
         {
@@ -54,7 +54,7 @@ const MenuCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryI
                 </div>
                 <div className="layout_container">
                     <MenuCategory>
-                        {menuCategoryItems}
+                        {menuCategoryItems()}
                     </MenuCategory>
                 </div>
             <Footer />

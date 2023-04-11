@@ -1,6 +1,6 @@
 import { CloseOutlined } from '@ant-design/icons';
 import { Button, Drawer, Image } from 'antd';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { IHeaderMenuItemProps, IHeaderMenuProps } from './data/types';
 import HeaderMenuItem from './HeaderMenuItem';
 import Link from 'next/link';
@@ -33,9 +33,9 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
     }
   ]
 
-  const renderMenuItems = useMemo(() => {
+  const renderMenuItems = () => {
     return menuItems.map((item, index) => <HeaderMenuItem key={index} {...item} />)
-  }, [menuItems])
+  }
 
   return (
     <Drawer
@@ -55,7 +55,7 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
         </div>
         <nav>
           <ul className='header_menu-items'>
-            {renderMenuItems}
+            {renderMenuItems()}
           </ul>
         </nav>
         <div className='header_menu-info'>

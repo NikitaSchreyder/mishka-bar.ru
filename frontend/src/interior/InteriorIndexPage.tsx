@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useCallback, useMemo, useState } from "react"
 import { Gallery } from "react-grid-gallery"
 import { images, CustomImage } from "./images"
 
@@ -23,7 +23,7 @@ const InteriorIndexPage: React.FC = () => {
     const handleMoveNext = () => setIndex(nextIndex);
     const handleClick = (index: number, item: CustomImage) => setIndex(index);
 
-    const renderGallery = useMemo(() => {
+    const renderGallery = () => {
         return (
             <Gallery
                 images={images}
@@ -31,7 +31,7 @@ const InteriorIndexPage: React.FC = () => {
                 enableImageSelection={false}
             />
         )
-    }, [images])
+    }
     
     return (
         <>
@@ -40,7 +40,7 @@ const InteriorIndexPage: React.FC = () => {
             </Head>
             <Header />
             <div className="layout_container">
-                {renderGallery}
+                {renderGallery()}
                 {!!currentImage && (
                     <Lightbox
                         enableZoom={false}
