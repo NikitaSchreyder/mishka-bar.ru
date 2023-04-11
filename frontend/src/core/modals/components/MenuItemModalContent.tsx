@@ -1,7 +1,8 @@
-import { Image } from "antd"
+import { Button, Image } from "antd"
 import { TMenuItem } from '../../types/menu'
+import { CloseOutlined } from "@ant-design/icons"
 
-const MenuItemModalContent: React.FC<{barItem: TMenuItem | null}> = ({barItem}) => {
+const MenuItemModalContent: React.FC<{barItem: TMenuItem | null, onClose: () => void}> = ({barItem, onClose}) => {
     return (
         <div className="layout_container">
             <div className="menu-item-modal_content">
@@ -11,6 +12,11 @@ const MenuItemModalContent: React.FC<{barItem: TMenuItem | null}> = ({barItem}) 
                     <p className="menu-item-modal_description">{barItem?.description}</p>
                     <p className="menu-item-modal_price">{barItem?.price}&#x20bd;</p>
                 </div>
+                <Button 
+                    onClick={onClose}
+                    className="menu-item-modal_close" 
+                    icon={<CloseOutlined className="menu-item-modal_close-icon" />}
+                ></Button>
             </div>
         </div>
     )

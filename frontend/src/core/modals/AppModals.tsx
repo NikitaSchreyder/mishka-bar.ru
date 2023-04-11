@@ -18,6 +18,7 @@ const MenuItemModalContent = dynamic(() =>
 export const PickupModal: React.FC<{open: boolean, closeModal: () => void}> = ({open, closeModal}) => {
     return (
         <Modal
+            wrapClassName="modal-bg"
             open={open}
             closable={false}
             className="pickup-modal"
@@ -34,6 +35,7 @@ export const PickupModal: React.FC<{open: boolean, closeModal: () => void}> = ({
 export const MenuItemModal: React.FC<{open: boolean, closeModal: () => void, barItem: TMenuItem | null}> = ({open, closeModal, barItem}) => {
     return (
         <Modal
+            wrapClassName="modal-bg"
             open={open}
             closable={false}
             className="menu-item-modal"
@@ -41,7 +43,7 @@ export const MenuItemModal: React.FC<{open: boolean, closeModal: () => void, bar
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <MenuItemModalContent barItem={barItem} />
+            <MenuItemModalContent onClose={closeModal} barItem={barItem} />
         </Modal>
     )
 }

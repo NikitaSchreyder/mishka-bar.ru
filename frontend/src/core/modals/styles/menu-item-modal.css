@@ -1,5 +1,6 @@
 .menu-item-modal {
     width: fit-content !important;
+    position: relative;
 }
 
 .menu-item-modal_content {
@@ -35,8 +36,45 @@
     gap: 20px;
 }
 
+.menu-item-modal_close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    background: transparent;
+}
+
+.menu-item-modal_close-icon {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
 @media screen and (max-width: 768px) {
+    .menu-item-modal {
+        top: 20px;
+    }
+    .menu-item-modal .layout_container {
+        padding: 0;
+    }
+
+    .menu-item-modal_image {
+        max-width: 100%;
+    }
+
     .menu-item-modal_content {
+        padding: 20px;
+        padding-top: 64px;
         flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .menu-item-modal_title {
+        font-size: 30px;
+    }
+
+    .menu-item-modal .layout_container {
+        padding: 0 !important;
     }
 }
