@@ -1,4 +1,4 @@
-import { TMenuItem } from "src/app/types/types";
+import { TMenuItem } from "src/app/types/types"
 
 export const menuItems: TMenuItem[] = [
     {

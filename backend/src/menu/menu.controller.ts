@@ -1,6 +1,6 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common'
 
-import { MenuService } from './menu.service';
+import { MenuService } from './menu.service'
 
 @Controller('menu')
 export class MenuController {

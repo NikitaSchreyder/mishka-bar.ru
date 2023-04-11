@@ -1,4 +1,4 @@
-import { TMenuItem } from "../../app/types/types";
+import { TMenuItem } from "../../app/types/types"
 
 export const barItems: TMenuItem[] = [
     {

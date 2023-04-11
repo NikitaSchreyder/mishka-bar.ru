@@ -1,4 +1,4 @@
-import { TMenuCategory } from "src/app/types/types";
+import { TMenuCategory } from "src/app/types/types"
 
 export const barCategories: TMenuCategory[] = [
     {

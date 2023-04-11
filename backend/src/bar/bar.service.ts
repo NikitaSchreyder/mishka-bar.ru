@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common'
 
-import { barItems } from './data/items';
-import { barCategories } from './data/categories';
-import { TMenuCategory } from 'src/app/types/types';
+import { barItems } from './data/items'
+import { barCategories } from './data/categories'
+import { TMenuCategory } from 'src/app/types/types'
 
 @Injectable()
 export class BarService {
