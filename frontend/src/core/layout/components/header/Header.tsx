@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { Button, Image } from 'antd';
-import HeaderMenu from './HeaderMenu';
-import Link from 'next/link';
+import { useState } from 'react'
+import { Button, Image } from 'antd'
+import HeaderMenu from './HeaderMenu'
+import Link from 'next/link'
 
 const Header: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState<boolean>(false)
@@ -30,4 +30,4 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header;
+export default Header

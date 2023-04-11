@@ -1,12 +1,12 @@
 
-import Header from "../core/layout/components/header/Header";
-import Footer from "../core/layout/components/footer/Footer";
-import MenuCategories from '../core/components/Menu/MenuCategories';
-import MenuCategoriesItem from '../core/components/Menu/MenuCategoriesItem';
-import { IMenuIndexPageProps } from '../core/types/menu';
-import Head from 'next/head';
-import { Breadcrumb } from "antd";
-import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
+import Header from "../core/layout/components/header/Header"
+import Footer from "../core/layout/components/footer/Footer"
+import MenuCategories from '../core/components/Menu/MenuCategories'
+import MenuCategoriesItem from '../core/components/Menu/MenuCategoriesItem'
+import { IMenuIndexPageProps } from '../core/types/menu'
+import Head from 'next/head'
+import { Breadcrumb } from "antd"
+import { ItemType } from "antd/es/breadcrumb/Breadcrumb"
 
 const MenuIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
     const menuCategories = categories.map((item, index) => 

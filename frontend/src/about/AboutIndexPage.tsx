@@ -1,11 +1,11 @@
-import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-import Head from 'next/head';
+import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps'
+import Head from 'next/head'
 
 import Footer from "../core/layout/components/footer/Footer"
 import Header from "../core/layout/components/header/Header"
 
 const AboutIndexPage: React.FC = () => {
-    const mapState: ymaps.IMapState = { center: [61.258612, 73.403110], zoom: 17 };
+    const mapState: ymaps.IMapState = { center: [61.258612, 73.403110], zoom: 17 }
     return (
         <>
             <Head>

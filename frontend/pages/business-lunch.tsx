@@ -1,6 +1,6 @@
-import { NextPage } from "next";
+import { NextPage } from "next"
 
-import BusinessLunchIndexPage from "@/src/business-lunch/BusinessLunchIndexPage";
+import BusinessLunchIndexPage from "@/src/business-lunch/BusinessLunchIndexPage"
 
 const BusinessLunch: NextPage = () => {
     return <BusinessLunchIndexPage />

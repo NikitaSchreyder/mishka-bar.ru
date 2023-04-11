@@ -1,8 +1,8 @@
-import { axiosApi } from "@/src/core/api/AxiosApi";
-import { GetServerSideProps, NextPage } from "next";
+import { axiosApi } from "@/src/core/api/AxiosApi"
+import { GetServerSideProps, NextPage } from "next"
+import { IMenuIndexPageProps } from '../../src/core/types/menu'
 
-import BarIndexPage from "@/src/bar/BarIndexPage";
-import { IMenuIndexPageProps } from '../../src/core/types/menu';
+import BarIndexPage from "@/src/bar/BarIndexPage"
 
 const BarPage: NextPage<IMenuIndexPageProps> = (p) => {
     return <BarIndexPage {...p} />

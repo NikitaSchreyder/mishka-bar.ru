@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import { Button } from 'antd'
-import { useRouter } from 'next/router';
-import { useModalControl } from '../core/hooks/useModalControl';
+import { useRouter } from 'next/router'
+import { useModalControl } from '../core/hooks/useModalControl'
 
-import { PickupModal } from '../core/modals/AppModals';
+import { PickupModal } from '../core/modals/AppModals'
 import Footer from '../core/layout/components/footer/Footer'
 import Header from '../core/layout/components/header/Header'
 
 const IndexPage: React.FC = () => {
-  const pickupModalControl = useModalControl();
+  const pickupModalControl = useModalControl()
   const router = useRouter()
 
   return (

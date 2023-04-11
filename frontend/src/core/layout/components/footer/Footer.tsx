@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { Image } from "antd";
-import { useCallback, useMemo } from "react";
+import Link from "next/link"
+import { Image } from "antd"
+import { useCallback, useMemo } from "react"
 
 const Footer: React.FC = () => {
   const socialLinks = [
@@ -116,4 +116,4 @@ const Footer: React.FC = () => {
   )
 }
 
-export default Footer;
+export default Footer

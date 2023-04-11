@@ -1,9 +1,9 @@
-import { CloseOutlined } from '@ant-design/icons';
-import { Button, Drawer, Image } from 'antd';
-import { useCallback, useMemo } from 'react';
-import { IHeaderMenuItemProps, IHeaderMenuProps } from './data/types';
-import HeaderMenuItem from './HeaderMenuItem';
-import Link from 'next/link';
+import { CloseOutlined } from '@ant-design/icons'
+import { Button, Drawer, Image } from 'antd'
+import { useCallback, useMemo } from 'react'
+import { IHeaderMenuItemProps, IHeaderMenuProps } from './data/types'
+import HeaderMenuItem from './HeaderMenuItem'
+import Link from 'next/link'
 
 const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
   const menuItems: IHeaderMenuItemProps[] = [
@@ -76,4 +76,4 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
   )
 }
 
-export default HeaderMenu;
+export default HeaderMenu
