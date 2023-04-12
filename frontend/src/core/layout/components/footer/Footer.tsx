@@ -68,10 +68,10 @@ const Footer: React.FC = () => {
       title: 'БАРНАЯ КАРТА',
       link: '/bar'
     },
-    {
-      title: 'БИНЕС ЛАНЧ',
-      link: '/business-lunch'
-    },
+    // {
+    //   title: 'БИНЕС ЛАНЧ',
+    //   link: '/business-lunch'
+    // },
     {
       title: 'ИНТЕРЬЕР',
       link: '/interior'

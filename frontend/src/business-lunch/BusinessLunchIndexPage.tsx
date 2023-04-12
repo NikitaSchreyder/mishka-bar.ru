@@ -9,7 +9,9 @@ const BusinessLunchIndexPage: React.FC = () => {
                 <title>Мишка бар | Бизнес ланч</title>
             </Head>
             <Header />
-            <h1 style={{color: 'white'}}>AYE</h1>
+            <div className="layout_container">
+                <h1 style={{color: 'white'}}>AYE</h1>
+            </div>
             <Footer />
         </>
     )
