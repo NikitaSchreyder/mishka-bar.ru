@@ -4,6 +4,7 @@ import { ServeStaticModule } from '@nestjs/serve-static'
 
 import { BarModule } from '../bar/bar.module'
 import { MenuModule } from '../menu/menu.module'
+import { InteriorModule } from '../interior/interior.module'
 
 @Module({
   imports: [
@@ -12,7 +13,8 @@ import { MenuModule } from '../menu/menu.module'
       serveRoot: '/public/'
     }),
     BarModule, 
-    MenuModule
+    MenuModule,
+    InteriorModule
   ],
   controllers: [],
   providers: [],
