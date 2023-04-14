@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { readdir, readdirSync } from 'fs';
+import { readdirSync } from 'fs';
 import { extname, join } from 'path';
 
 @Injectable()

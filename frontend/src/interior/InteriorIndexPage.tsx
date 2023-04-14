@@ -1,13 +1,13 @@
-import { useCallback, useMemo, useState } from "react"
-import { Gallery } from "react-grid-gallery"
+import Head from 'next/head'
+import { useState } from "react"
 import { CustomImage } from "./images"
+import { Gallery } from "react-grid-gallery"
 
 import Lightbox from "react-image-lightbox"
 import Footer from "../core/layout/components/footer/Footer"
 import Header from "../core/layout/components/header/Header"
 
 import "react-image-lightbox/style.css"
-import Head from 'next/head'
 
 const InteriorIndexPage: React.FC<{interiorImages: any}> = ({interiorImages}) => {
     const [index, setIndex] = useState(-1)
