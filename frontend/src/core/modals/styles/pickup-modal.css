@@ -2,3 +2,8 @@
     width: 1000px;
 }
 
+.pickup-modal_content {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+}

@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { useState } from "react"
-import { CustomImage } from "./images"
 import { Gallery } from "react-grid-gallery"
 
 import Lightbox from "react-image-lightbox"
@@ -8,6 +7,8 @@ import Footer from "../core/layout/components/footer/Footer"
 import Header from "../core/layout/components/header/Header"
 
 import "react-image-lightbox/style.css"
+import { Breadcrumb } from 'antd'
+import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 
 const InteriorIndexPage: React.FC<{interiorImages: any}> = ({interiorImages}) => {
     const [index, setIndex] = useState(-1)
@@ -21,7 +22,7 @@ const InteriorIndexPage: React.FC<{interiorImages: any}> = ({interiorImages}) =>
     const handleClose = () => setIndex(-1)
     const handleMovePrev = () => setIndex(prevIndex)
     const handleMoveNext = () => setIndex(nextIndex)
-    const handleClick = (index: number, item: CustomImage) => setIndex(index)
+    const handleClick = (index: number) => setIndex(index)
 
     const renderGallery = () => {
         return (
@@ -29,9 +30,17 @@ const InteriorIndexPage: React.FC<{interiorImages: any}> = ({interiorImages}) =>
                 images={interiorImages}
                 onClick={handleClick}
                 enableImageSelection={false}
+                margin={5}
             />
         )
     }
+
+    const breadcrumbItems: ItemType[] = [
+        {
+            title: 'Интерьер',
+            href: '/interior',
+        }
+    ]
     
     return (
         <>
@@ -40,10 +49,13 @@ const InteriorIndexPage: React.FC<{interiorImages: any}> = ({interiorImages}) =>
             </Head>
             <Header />
             <div className="layout_container">
+                <Breadcrumb items={breadcrumbItems} separator='/' />
+            </div>
+            <div className="layout_container">
                 {renderGallery()}
                 {!!currentImage && (
                     <Lightbox
-                        enableZoom={false}
+                        enableZoom={true}
                         mainSrc={currentImage.original}
                         mainSrcThumbnail={currentImage.src}
                         nextSrc={nextImage.original}
