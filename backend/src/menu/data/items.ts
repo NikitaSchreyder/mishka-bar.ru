@@ -6,28 +6,28 @@ export const menuItems: TMenuItem[] = [
         description: '',
         categorySearchLink: 'appetizers',
         price: 640,
-        thumbUrl: '/img/test-menu.jpg'
+        thumbUrl: '/public/img/menu/appetizers/rostbeef-with-tomatos.png'
     },
     {
         name: 'Тартар из тунца',
         description: '',
         categorySearchLink: 'appetizers',
         price: 480,
-        thumbUrl: '/img/test-menu.jpg'
+        thumbUrl: '/public/img/menu/appetizers/tuna-tartar.png'
     },
     {
         name: 'Тартар из лосося',
         description: '',
         categorySearchLink: 'appetizers',
         price: 480,
-        thumbUrl: '/img/test-menu.jpg'
+        thumbUrl: '/public/img/menu/appetizers/salmon-tartar.png'
     },
     {
-        name: 'Брускета с лососем',
+        name: 'Брускетта с лососем',
         description: '',
         categorySearchLink: 'appetizers',
         price: 470,
-        thumbUrl: '/img/test-menu.jpg'
+        thumbUrl: '/public/img/menu/appetizers/salmon-bruschetta.png' 
     },
     {
         name: 'Европа',
@@ -419,21 +419,21 @@ export const menuItems: TMenuItem[] = [
         description: 'Состав: ',
         categorySearchLink: 'soups',
         price: 590,
-        thumbUrl: '/img/test-menu.jpg'
+        thumbUrl: '/public/img/menu/soups/thom-yam.png'
     },
     {
         name: 'Сырный с беконом',
         description: 'Состав: ',
         categorySearchLink: 'soups',
         price: 350,
-        thumbUrl: '/img/test-menu.jpg'
+        thumbUrl: '/public/img/menu/soups/cheese-soup.png'
     },
     {
         name: 'Уха из лосося',
         description: 'Состав: ',
         categorySearchLink: 'soups',
         price: 360,
-        thumbUrl: '/img/test-menu.jpg'
+        thumbUrl: '/public/img/menu/soups/salmon-soup.png'
     },
     {
         name: 'Суп лапша с курицей и перепелиным яйцом',

@@ -22,6 +22,7 @@
 .menu-category_item-image {
     margin-bottom: 10px;
     max-height: 350px;
+    filter: drop-shadow(10px);
 }
 
 .menu-category_item-name {
