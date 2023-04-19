@@ -44,7 +44,7 @@ export const menuCategories: TMenuCategory[] = [
     {
         name: 'Супы',
         searchLink: 'soups',
-        thumbUrl: '/public/img/menu/hot-snacks/bacon-and-cheese-rolls.png'
+        thumbUrl: '/public/img/menu/soups/cheese-soup.png'
     },
     {
         name: 'Пасты',
@@ -69,7 +69,7 @@ export const menuCategories: TMenuCategory[] = [
     {
         name: 'Блюда на компанию',
         searchLink: 'sharing-platters',
-        thumbUrl: '/public/img/menu/steaks/steak-machete.png'
+        thumbUrl: '/public/img/menu/sharing-platters/chicken-set.png'
     },
     {
         name: 'Шашлыки и кебабы',
@@ -84,6 +84,6 @@ export const menuCategories: TMenuCategory[] = [
     {
         name: 'Десерты',
         searchLink: 'desserts',
-        thumbUrl: '/public/img/menu/steaks/steak-machete.png'
+        thumbUrl: '/public/img/menu/desserts/pear-musse.png'
     }
 ]

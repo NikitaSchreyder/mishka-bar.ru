@@ -664,153 +664,153 @@ export const menuItems: TMenuItem[] = [
         description: '',
         categorySearchLink: 'sharing-platters',
         price: 3250,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/sharing-platters/meat-briffing.png'
     },
     {
         name: 'Фри сет',
         description: '',
         categorySearchLink: 'sharing-platters',
         price: 920,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/sharing-platters/fried-set.png'
     },
     {
         name: 'Чикен сет',
         description: '',
         categorySearchLink: 'sharing-platters',
         price: 1990,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/sharing-platters/chicken-set.png'
     },
     {
         name: 'Шашлык из курицы',
         description: '',
         categorySearchLink: 'kebabs',
         price: 350,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/kebabs/smoke-duck.png'
     },
     {
         name: 'Шашлык из свинины',
         description: '',
         categorySearchLink: 'kebabs',
         price: 440,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/kebabs/smoke-duck.png'
     },
     {
         name: 'Кебаб из курицы',
         description: '',
         categorySearchLink: 'kebabs',
         price: 350,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/kebabs/smoke-duck.png'
     },
     {
         name: 'Кебаб из баранины',
         description: '',
         categorySearchLink: 'kebabs',
         price: 490,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/kebabs/smoke-duck.png'
     },
     {
         name: 'Рис с овощами',
         description: '',
         categorySearchLink: 'side-dishes',
         price: 150,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/side-dishes/smoke-duck.png'
     },
     {
         name: 'Картофельные дольки по - деревенски',
         description: '',
         categorySearchLink: 'side-dishes',
         price: 180,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/side-dishes/smoke-duck.png'
     },
     {
         name: 'Шампиньоны на углях',
         description: '',
         categorySearchLink: 'side-dishes',
         price: 220,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/side-dishes/smoke-duck.png'
     },
     {
         name: 'Картофель фри',
         description: '',
         categorySearchLink: 'side-dishes',
         price: 180,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/side-dishes/smoke-duck.png'
     },
     {
         name: 'Овощи гриль',
         description: '',
         categorySearchLink: 'side-dishes',
         price: 220,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/side-dishes/smoke-duck.png'
     },
     {
         name: 'Жареный картофель с луком и грибами',
         description: '',
         categorySearchLink: 'side-dishes',
         price: 230,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/side-dishes/smoke-duck.png'
     },
     {
         name: 'Спаржа на гриле',
         description: '',
         categorySearchLink: 'side-dishes',
         price: 200,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/side-dishes/smoke-duck.png'
     },
     {
         name: 'Мусс груша',
         description: '',
         categorySearchLink: 'desserts',
         price: 350,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/pear-musse.png'
     },
     {
         name: 'Штрудель',
         description: 'На выбор: яблоко, груша, вишня',
         categorySearchLink: 'desserts',
         price: 280,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/strudel.png'
     },
     {
         name: 'Шоколадный фондан',
         description: '',
         categorySearchLink: 'desserts',
         price: 390,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/chocolate-fondue.png'
     },
     {
         name: 'Торт фисташковый',
         description: '',
         categorySearchLink: 'desserts',
         price: 340,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/pistachio-cake.png'
     },
     {
         name: 'Меренговый рулет',
         description: '',
         categorySearchLink: 'desserts',
         price: 380,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/meringue-roll.png'
     },
     {
         name: 'Чизкейк сан - себастьян',
         description: '',
         categorySearchLink: 'desserts',
         price: 400,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/san-sebastian-cheesecake.png'
     },
     {
         name: 'Тарт шоколадный',
         description: '',
         categorySearchLink: 'desserts',
         price: 380,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/chocolate-tart.png'
     },
     {
         name: 'Панна котта клубничная',
         description: '',
         categorySearchLink: 'desserts',
         price: 300,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/smoke-duck.png'
     }
 ]
