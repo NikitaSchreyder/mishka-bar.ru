@@ -76,7 +76,7 @@ export const menuItems: TMenuItem[] = [
         description: 'Состав: курица, салат айсберг, болгарский перец, огурец, тортилья',
         categorySearchLink: 'rolles',
         price: 450,
-        thumbUrl: '/public/img/menu/rolles/smoke-duck.png'
+        thumbUrl: '/public/img/menu/rolles/caesar.png'
     },
     {
         name: 'Рыбное плато',
@@ -195,28 +195,28 @@ export const menuItems: TMenuItem[] = [
         description: 'Состав: ',
         categorySearchLink: 'pizza',
         price: 560,
-        thumbUrl: '/public/img/menu/pizza/smoke-duck.png'
+        thumbUrl: '/public/img/menu/pizza/four-cheeses.png'
     },
     {
         name: 'С море - продуктами',
         description: 'Состав: тигровые креветки, кальмары, лосось, мидии, моцарелла',
         categorySearchLink: 'pizza',
         price: 690,
-        thumbUrl: '/public/img/menu/pizza/smoke-duck.png'
+        thumbUrl: '/public/img/menu/pizza/seafood.png'
     },
     {
         name: 'Маргарита',
         description: 'Состав: ',
         categorySearchLink: 'pizza',
         price: 430,
-        thumbUrl: '/public/img/menu/pizza/smoke-duck.png'
+        thumbUrl: '/public/img/menu/pizza/margarita.png'
     },
     {
         name: 'Пепперони',
         description: 'Состав: ',
         categorySearchLink: 'pizza',
         price: 520,
-        thumbUrl: '/public/img/menu/pizza/smoke-duck.png'
+        thumbUrl: '/public/img/menu/pizza/pepperoni.png'
     },
     {
         name: 'Блю чиз',

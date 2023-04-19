@@ -15,10 +15,10 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
       title: 'МЕНЮ',
       link: '/menu'
     },
-    {
-      title: 'БАРНАЯ КАРТА',
-      link: '/bar'
-    },
+    // {
+    //   title: 'БАРНАЯ КАРТА',
+    //   link: '/bar'
+    // },
     // {
     //   title: 'БИНЕС ЛАНЧ',
     //   link: '/business-lunch'
