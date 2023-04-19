@@ -53,7 +53,7 @@
 
 @media screen and (max-width: 768px) {
   .home {
-    background: linear-gradient(rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1)), url('/public/img/hall/mishkabar-33.jpg');  
+    background: linear-gradient(rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1)), url('/img/bg-mobile.png');  
     background-position: center;
     background-repeat: no-repeat;
   }
