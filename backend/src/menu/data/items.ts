@@ -328,7 +328,7 @@ export const menuItems: TMenuItem[] = [
         description: 'Состав: ',
         categorySearchLink: 'salads',
         price: 290,
-        thumbUrl: '/public/img/menu/salads/homemade-vegetable-with-herbs.png'
+        thumbUrl: '/public/img/menu/salads/vegetable.png'
     },
     {
         name: 'Греческий',
@@ -496,84 +496,84 @@ export const menuItems: TMenuItem[] = [
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 840,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Куриная грудка со сливочным соусом',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 540,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Палтус с пастой птитим',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 650,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Биточки из индейки',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 630,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Говяжьи медальоны',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 830,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Лосось запеченый',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 740,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Свиная корейка',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 580,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Утиная ножка',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 610,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Говядина на сковороде',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 890,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/hot-dishes/beef-in-a-frying-pan.png'
     },
     {
         name: 'Равиоли с лососем / с говядиной',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 430,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Рулька свиная',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 1150,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/hot-dishes/pork-knuckle.png'
     },
     {
         name: 'Ризотто с креветками',
         description: 'Состав: ',
         categorySearchLink: 'hot-dishes',
         price: 580,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/'
     },
     {
         name: 'Дорадо',
@@ -811,6 +811,6 @@ export const menuItems: TMenuItem[] = [
         description: '',
         categorySearchLink: 'desserts',
         price: 300,
-        thumbUrl: '/public/img/menu/desserts/smoke-duck.png'
+        thumbUrl: '/public/img/menu/desserts/panna-cotta.png'
     }
 ]
