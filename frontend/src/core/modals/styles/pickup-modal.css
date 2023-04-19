@@ -2,8 +2,30 @@
     width: 1000px;
 }
 
+.pickup-modal .ant-modal-content {
+    background-color: rgba(0,0,0,.7) !important;
+}
+
+.pickup-modal .layout_container {
+    max-width: 500px;
+}
+
 .pickup-modal_content {
     display: flex;
     padding: 40px;
     gap: 40px;
+}
+
+.pickup-modal_text, .pickup-modal_phone {
+    font-family: 'mishka';
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    word-wrap: break-word;
+    max-width: inherit;
+}
+
+.pickup-modal_phone:hover {
+    color: white !important;
+    text-decoration: underline;
 }

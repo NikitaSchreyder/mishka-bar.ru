@@ -57,20 +57,20 @@ export const menuItems: TMenuItem[] = [
         price: 510,
         thumbUrl: '/public/img/menu/rolles/deluxe.png'
     },
-    {
-        name: 'Майами',
-        description: 'Состав: сыр креметта, огурец, лосось, рис, имитированная красная икра',
-        categorySearchLink: 'rolles',
-        price: 510,
-        thumbUrl: '/public/img/menu/rolles/smoke-duck.png'
-    },
-    {
-        name: 'Лава',
-        description: 'Состав: лосось, рис, сыр креметта, соус лава',
-        categorySearchLink: 'rolles',
-        price: 500,
-        thumbUrl: '/public/img/menu/rolles/smoke-duck.png'
-    },
+    // {
+    //     name: 'Майами',
+    //     description: 'Состав: сыр креметта, огурец, лосось, рис, имитированная красная икра',
+    //     categorySearchLink: 'rolles',
+    //     price: 510,
+    //     thumbUrl: '/public/img/menu/rolles/smoke-duck.png'
+    // },
+    // {
+    //     name: 'Лава',
+    //     description: 'Состав: лосось, рис, сыр креметта, соус лава',
+    //     categorySearchLink: 'rolles',
+    //     price: 500,
+    //     thumbUrl: '/public/img/menu/rolles/smoke-duck.png'
+    // },
     {
         name: 'Цезарь',
         description: 'Состав: курица, салат айсберг, болгарский перец, огурец, тортилья',
@@ -127,20 +127,20 @@ export const menuItems: TMenuItem[] = [
         price: 980,
         thumbUrl: '/public/img/menu/cold-snacks/cheese-palette.png'
     },
-    {
-        name: 'Соленья домашние',
-        description: '',
-        categorySearchLink: 'cold-snacks',
-        price: 380,
-        thumbUrl: '/public/img/menu/cold-snacks/smoke-duck.png'
-    },
-    {
-        name: 'Овощная нарезка',
-        description: '',
-        categorySearchLink: 'cold-snacks',
-        price: 300,
-        thumbUrl: '/public/img/menu/cold-snacks/smoke-duck.png'
-    },
+    // {
+    //     name: 'Соленья домашние',
+    //     description: '',
+    //     categorySearchLink: 'cold-snacks',
+    //     price: 380,
+    //     thumbUrl: '/public/img/menu/cold-snacks/smoke-duck.png'
+    // },
+    // {
+    //     name: 'Овощная нарезка',
+    //     description: '',
+    //     categorySearchLink: 'cold-snacks',
+    //     price: 300,
+    //     thumbUrl: '/public/img/menu/cold-snacks/smoke-duck.png'
+    // },
     {
         name: 'Фруктовое ассорти',
         description: '',
@@ -162,13 +162,13 @@ export const menuItems: TMenuItem[] = [
         price: 480,
         thumbUrl: '/public/img/menu/homemade-bread/khachapuri-in-adjarian.png'
     },
-    {
-        name: 'Хачапури по имеритински',
-        description: '',
-        categorySearchLink: 'homemade-bread',
-        price: 480,
-        thumbUrl: '/public/img/menu/homemade-bread/smoke-duck.png'
-    },
+    // {
+    //     name: 'Хачапури по имеритински',
+    //     description: '',
+    //     categorySearchLink: 'homemade-bread',
+    //     price: 480,
+    //     thumbUrl: '/public/img/menu/homemade-bread/smoke-duck.png'
+    // },
     {
         name: 'Осетинский пирог',
         description: 'С сыром и шпинатом, с сыром и курицей',
@@ -192,7 +192,7 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Четыре сыра',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'pizza',
         price: 560,
         thumbUrl: '/public/img/menu/pizza/four-cheeses.png'
@@ -206,14 +206,14 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Маргарита',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'pizza',
         price: 430,
         thumbUrl: '/public/img/menu/pizza/margarita.png'
     },
     {
         name: 'Пепперони',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'pizza',
         price: 520,
         thumbUrl: '/public/img/menu/pizza/pepperoni.png'
@@ -241,339 +241,339 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Салат с тцнуом',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 590,
         thumbUrl: '/public/img/menu/salads/salad-with-tuna.png'
     },
     {
         name: 'Цезарь с креветками',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 560,
         thumbUrl: '/public/img/menu/salads/caesar-with-shrimps.png'
     },
     {
         name: 'Салат с ростбифом',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 590,
         thumbUrl: '/public/img/menu/salads/salad-with-roastbeef.png'
     },
     {
         name: 'Магнум фиш',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 790,
         thumbUrl: '/public/img/menu/salads/magnum-fish.png'
     },
     {
         name: 'Салат с копченой курицей и авокадо',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 520,
         thumbUrl: '/public/img/menu/salads/salad-with-smoked-chicken-and-avocado.png'
     },
     {
         name: 'Салат Прага - Сургут',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 580,
         thumbUrl: '/public/img/menu/salads/praga.png'
     },
     {
         name: 'Салат с яйцом пашот и креветками',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 550,
         thumbUrl: '/public/img/menu/salads/salad-with-poached-egg-and-shrimp.png'
     },
     {
         name: 'Салат с форелью и бкалажаном фри',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 530,
         thumbUrl: '/public/img/menu/salads/salad-with-trout-and-eggplant-fries.png'
     },
     {
         name: 'Салат с беконом',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 490,
         thumbUrl: '/public/img/menu/salads/salad-with-bacon.png'
     },
     {
         name: 'Бренче с вялеными томатами',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 450,
         thumbUrl: '/public/img/menu/salads/strum-with-dried-tomatoes.png'
     },
     {
         name: 'Салат с говяжьим языком',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 460,
         thumbUrl: '/public/img/menu/salads/salad-with-beef-tongue.png'
     },
     {
         name: 'Цезарь с курицей',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 490,
         thumbUrl: '/public/img/menu/salads/caesar-with-chicken.png'
     },
     {
         name: 'Домашний овощной с зеленью',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 290,
         thumbUrl: '/public/img/menu/salads/vegetable.png'
     },
     {
         name: 'Греческий',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 360,
         thumbUrl: '/public/img/menu/salads/greek.png'
     },
     {
         name: 'Смок дак',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'salads',
         price: 580,
         thumbUrl: '/public/img/menu/salads/smoke-duck.png'
     },
     {
         name: 'Трубочки с беконом и сыром',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-snacks',
         price: 350,
         thumbUrl: '/public/img/menu/hot-snacks/bacon-and-cheese-rolls.png'
     },
     {
         name: 'Северные креветки жареные',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-snacks',
         price: 600,
         thumbUrl: '/public/img/menu/hot-snacks/fried-northern-shrimp.png'
     },
     {
         name: 'Жульен с курицей и грибами',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-snacks',
         price: 350,
         thumbUrl: '/public/img/menu/hot-snacks/julienne-with-chicken-and-mushrooms.png'
     },
     {
         name: 'Тигровые креветки',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-snacks',
         price: 560,
         thumbUrl: '/public/img/menu/hot-snacks/tiger-prawns.png'
     },
     {
         name: 'Мидии запеченые под соусом "Морнэ"',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-snacks',
         price: 590,
         thumbUrl: '/public/img/menu/hot-snacks/baked-mussels.png'
     },
-    {
-        name: 'Мясо мидий жареное',
-        description: 'Состав: ',
-        categorySearchLink: 'hot-snacks',
-        price: 400,
-        thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
-    },
-    {
-        name: 'Гренки чесночные',
-        description: 'Состав: ',
-        categorySearchLink: 'hot-snacks',
-        price: 250,
-        thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
-    },
-    {
-        name: 'Крылышки баффола',
-        description: 'Состав: ',
-        categorySearchLink: 'hot-snacks',
-        price: 400,
-        thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
-    },
-    {
-        name: 'Сырные палочки',
-        description: 'Состав: ',
-        categorySearchLink: 'hot-snacks',
-        price: 390,
-        thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
-    },
-    {
-        name: 'Наггетсы',
-        description: 'Состав: ',
-        categorySearchLink: 'hot-snacks',
-        price: 250,
-        thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
-    },
+    // {
+    //     name: 'Мясо мидий жареное',
+    //     description: '',
+    //     categorySearchLink: 'hot-snacks',
+    //     price: 400,
+    //     thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
+    // },
+    // {
+    //     name: 'Гренки чесночные',
+    //     description: '',
+    //     categorySearchLink: 'hot-snacks',
+    //     price: 250,
+    //     thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
+    // },
+    // {
+    //     name: 'Крылышки баффола',
+    //     description: '',
+    //     categorySearchLink: 'hot-snacks',
+    //     price: 400,
+    //     thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
+    // },
+    // {
+    //     name: 'Сырные палочки',
+    //     description: '',
+    //     categorySearchLink: 'hot-snacks',
+    //     price: 390,
+    //     thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
+    // },
+    // {
+    //     name: 'Наггетсы',
+    //     description: '',
+    //     categorySearchLink: 'hot-snacks',
+    //     price: 250,
+    //     thumbUrl: '/public/img/menu/hot-snacks/smoke-duck.png'
+    // },
     {
         name: 'Том ям с морепродуктами',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'soups',
         price: 590,
         thumbUrl: '/public/img/menu/soups/thom-yam.png'
     },
     {
         name: 'Сырный с беконом',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'soups',
         price: 350,
         thumbUrl: '/public/img/menu/soups/cheese-soup.png'
     },
     {
         name: 'Уха из лосося',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'soups',
         price: 360,
         thumbUrl: '/public/img/menu/soups/salmon-soup.png'
     },
-    {
-        name: 'Суп лапша с курицей и перепелиным яйцом',
-        description: 'Состав: ',
-        categorySearchLink: 'soups',
-        price: 250,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
-    },
-    {
-        name: 'Грибной крем суп',
-        description: 'Состав: ',
-        categorySearchLink: 'soups',
-        price: 380,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
-    },
-    {
-        name: 'Борщ домашний',
-        description: 'Состав: ',
-        categorySearchLink: 'soups',
-        price: 300,
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
-    },
+    // {
+    //     name: 'Суп лапша с курицей и перепелиным яйцом',
+    //     description: '',
+    //     categorySearchLink: 'soups',
+    //     price: 250,
+    //     thumbUrl: '/'
+    // },
+    // {
+    //     name: 'Грибной крем суп',
+    //     description: '',
+    //     categorySearchLink: 'soups',
+    //     price: 380,
+    //     thumbUrl: '/'
+    // },
+    // {
+    //     name: 'Борщ домашний',
+    //     description: '',
+    //     categorySearchLink: 'soups',
+    //     price: 300,
+    //     thumbUrl: '/'
+    // },
     {
         name: 'Паста с говядиной',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'pastas',
         price: 570,
         thumbUrl: '/public/img/menu/pastas/pasta-with-beef.png'
     },
     {
         name: 'Фарфалле с лососем',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'pastas',
         price: 590,
         thumbUrl: '/public/img/menu/pastas/farfalle-with-salmon.png'
     },
     {
         name: 'Спагетти с морепродуктами',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'pastas',
         price: 620,
         thumbUrl: '/public/img/menu/pastas/spaghetti-with-seafood.png'
     },
     {
         name: 'Карбонара',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'pastas',
         price: 420,
         thumbUrl: '/public/img/menu/pastas/carbonara.png'
     },
     {
         name: 'Феттучини с курицей и грибами',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'pastas',
         price: 410,
         thumbUrl: '/public/img/menu/pastas/fettuccine-with-chicken-and-mushrooms.png'
     },
     {
         name: 'Филе сибаса с стручковой фасолью',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 840,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/sea-bass-fillet-with-beans.png'
     },
     {
         name: 'Куриная грудка со сливочным соусом',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 540,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/chicken-breast-with-cream-sauce.png'
     },
     {
         name: 'Палтус с пастой птитим',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 650,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/halibut-with-ptitim-paste.png'
     },
     {
         name: 'Биточки из индейки',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 630,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/turkey-meatballs.png'
     },
-    {
-        name: 'Говяжьи медальоны',
-        description: 'Состав: ',
-        categorySearchLink: 'hot-dishes',
-        price: 830,
-        thumbUrl: '/'
-    },
+    // {
+    //     name: 'Говяжьи медальоны',
+    //     description: '',
+    //     categorySearchLink: 'hot-dishes',
+    //     price: 830,
+    //     thumbUrl: '/'
+    // },
     {
         name: 'Лосось запеченый',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 740,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/baked-salmon.png'
     },
     {
         name: 'Свиная корейка',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 580,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/pork-loin.png'
     },
     {
         name: 'Утиная ножка',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 610,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/duck-leg.png'
     },
     {
         name: 'Говядина на сковороде',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 890,
         thumbUrl: '/public/img/menu/hot-dishes/beef-in-a-frying-pan.png'
     },
     {
         name: 'Равиоли с лососем / с говядиной',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 430,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/ravioli.png'
     },
     {
         name: 'Рулька свиная',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 1150,
         thumbUrl: '/public/img/menu/hot-dishes/pork-knuckle.png'
     },
     {
         name: 'Ризотто с креветками',
-        description: 'Состав: ',
+        description: '',
         categorySearchLink: 'hot-dishes',
         price: 580,
-        thumbUrl: '/'
+        thumbUrl: '/public/img/menu/hot-dishes/shrimp-risotto.png'
     },
     {
         name: 'Дорадо',

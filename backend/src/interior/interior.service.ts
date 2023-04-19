@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { log } from 'console';
 import { readdirSync } from 'fs';
 import { extname, join } from 'path';
 
@@ -14,11 +15,20 @@ export class InteriorService {
           original: '/public/img/hall/' + item,
           width: 320,
           height: 213,
-          caption: ''
+          caption: '',
+          order: 0
         }
       }
     }).filter(item => item != undefined)
-    
-    return images
+    const orderedImages = images.map(item => {
+      const test = item.src.split('-')[1]
+      const withoutDots = Number(test.split('.')[0])
+      item.order = withoutDots
+      return item
+    })
+
+    const sortedImages = orderedImages.sort((a, b) => a.order - b.order)
+
+    return sortedImages
   }
 }

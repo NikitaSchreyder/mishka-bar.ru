@@ -54,7 +54,7 @@ export const menuCategories: TMenuCategory[] = [
     {
         name: 'Горячие блюда',
         searchLink: 'hot-dishes',
-        thumbUrl: '/public/img/menu/salads/smoke-duck.png'
+        thumbUrl: '/public/img/menu/hot-dishes/pork-knuckle.png'
     },
     {
         name: 'Угли',
@@ -71,16 +71,16 @@ export const menuCategories: TMenuCategory[] = [
         searchLink: 'sharing-platters',
         thumbUrl: '/public/img/menu/sharing-platters/chicken-set.png'
     },
-    {
-        name: 'Шашлыки и кебабы',
-        searchLink: 'kebabs',
-        thumbUrl: '/public/img/menu/steaks/steak-machete.png'
-    },
-    {
-        name: 'Гарниры',
-        searchLink: 'side-dishes',
-        thumbUrl: '/public/img/menu/steaks/steak-machete.png'
-    },
+    // {
+    //     name: 'Шашлыки и кебабы',
+    //     searchLink: 'kebabs',
+    //     thumbUrl: '/public/img/menu/steaks/steak-machete.png'
+    // },
+    // {
+    //     name: 'Гарниры',
+    //     searchLink: 'side-dishes',
+    //     thumbUrl: '/public/img/menu/steaks/steak-machete.png'
+    // },
     {
         name: 'Десерты',
         searchLink: 'desserts',

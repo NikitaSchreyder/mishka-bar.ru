@@ -1,11 +1,11 @@
 const PickupModalContent: React.FC = () => {
     return (
         <div className="layout_container">
-            <div className="pickup-modal_content">
-                <p>
-                    Для оформления заказа позвоните по телефону
+            <p className="pickup-modal_content">
+                <p className="pickup-modal_text">
+                    Для оформления заказа позвоните по телефону <a className="pickup-modal_phone" href="tel:79825194242">+7 (982) 519 42 42</a>
                 </p>
-            </div>
+            </p>
         </div>
     )
 }

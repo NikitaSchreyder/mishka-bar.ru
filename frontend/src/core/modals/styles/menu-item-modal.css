@@ -1,6 +1,7 @@
 .menu-item-modal {
     width: fit-content !important;
     position: relative;
+    top: 200px;
 }
 
 .menu-item-modal_content {

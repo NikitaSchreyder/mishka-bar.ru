@@ -9,7 +9,7 @@ const MenuItemModalContent: React.FC<{barItem: TMenuItem | null, onClose: () => 
                 <Image preview={false} className="menu-item-modal_image" alt={barItem?.name} src={barItem?.thumbUrl} />
                 <div className="menu-item-modal_details">
                     <p className="menu-item-modal_title">{barItem?.name}</p>
-                    <p className="menu-item-modal_description">{barItem?.description}</p>
+                    {barItem?.description && barItem?.description.length > 0 && <p className="menu-item-modal_description">{barItem?.description}</p>}
                     <p className="menu-item-modal_price">{barItem?.price}&#x20bd;</p>
                 </div>
                 <Button 

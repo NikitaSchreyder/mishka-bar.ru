@@ -26,17 +26,19 @@ const Footer: React.FC = () => {
 
   const infoItems = [
     {
-      type: 'text',
+      type: 'address',
       title: 'Адрес',
-      value: 'ПРОСПЕКТ МИРА, 26'
-    },
-    {
-      type: 'text',
-      title: 'Номер телефона',
-      value: '+7 (982) 519 42 42'
+      value: 'ПРОСПЕКТ МИРА, 26',
+      link: 'https://yandex.ru/maps/-/CCU0MRcY8C'
     },
     {
       type: 'phone',
+      title: 'Номер телефона',
+      value: '+7 (982) 519 42 42',
+      link: 'tel:79825194242'
+    },
+    {
+      type: 'text',
       title: 'Время работы',
       value: '12:00 - 00:00'
     }
@@ -47,7 +49,7 @@ const Footer: React.FC = () => {
       return (
         <div className="footer_info-item" key={index}>
           <p className="footer_info-item_title">{item.title}</p>
-          {item.type === 'phone' ? <a className="footer_info-item_value" href="tel:">{item.value}</a> : (
+          {item.type === 'phone' || item.type === 'address' ? <a className="footer_info-item_value" href={`${item.link}`}>{item.value}</a> : (
             <p className="footer_info-item_value">{item.value}</p>
           )}
         </div>
