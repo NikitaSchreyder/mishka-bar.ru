@@ -29,3 +29,9 @@
     color: white !important;
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 575px) {
+    .pickup-modal_text, .pickup-modal_phone {
+        font-size: 16px;
+    }
+}
