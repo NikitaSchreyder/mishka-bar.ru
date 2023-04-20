@@ -19,6 +19,10 @@
     color: rgb(158,158,158);
 }
 
+.menu-category_item:hover .menu-category_item-image {
+    filter: brightness(80%)
+}
+
 .menu-category_item-image {
     margin-bottom: 10px;
     max-height: 350px;

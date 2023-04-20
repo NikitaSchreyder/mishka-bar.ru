@@ -25,6 +25,14 @@
     text-decoration: none;
 }
 
+.menu-categories_item:hover .menu-categories_item-name {
+    color: rgb(158,158,158);
+}
+
+.menu-categories_item:hover .menu-category_item-image {
+    filter: brightness(80%)
+}
+
 .menu-categories_item-name {
     width: 100%;
     text-align: center;
