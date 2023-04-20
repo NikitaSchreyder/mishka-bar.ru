@@ -141,13 +141,13 @@ export const menuItems: TMenuItem[] = [
     //     price: 300,
     //     thumbUrl: '/public/img/menu/cold-snacks/smoke-duck.png'
     // },
-    {
-        name: 'Фруктовое ассорти',
-        description: '',
-        categorySearchLink: 'cold-snacks',
-        price: 550,
-        thumbUrl: '/public/img/menu/cold-snacks/smoke-duck.png'
-    },
+    // {
+    //     name: 'Фруктовое ассорти',
+    //     description: '',
+    //     categorySearchLink: 'cold-snacks',
+    //     price: 550,
+    //     thumbUrl: '/public/img/menu/cold-snacks/smoke-duck.png'
+    // },
     {
         name: 'Хлебная корзина',
         description: 'Состав: грессини, багет, булочки',

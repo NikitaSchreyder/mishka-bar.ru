@@ -2,11 +2,12 @@ import Head from 'next/head'
 import { Breadcrumb } from 'antd'
 import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 import { useState } from 'react'
-import { Gallery, Image } from "react-grid-gallery"
+import { Gallery } from "react-grid-gallery"
 import Lightbox from "react-image-lightbox"
 import Header from '../core/layout/components/header/Header'
 import Footer from '../core/layout/components/footer/Footer'
 import "react-image-lightbox/style.css"
+
 const BarIndexPage: React.FC = () => {
     const [index, setIndex] = useState(-1)
     const barImages: any[] = [

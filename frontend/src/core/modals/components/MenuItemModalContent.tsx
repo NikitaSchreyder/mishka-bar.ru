@@ -10,7 +10,7 @@ const MenuItemModalContent: React.FC<{barItem: TMenuItem | null, onClose: () => 
                 <div className="menu-item-modal_details">
                     <p className="menu-item-modal_title">{barItem?.name}</p>
                     {barItem?.description && barItem?.description.length > 0 && <p className="menu-item-modal_description">{barItem?.description}</p>}
-                    <p className="menu-item-modal_price">{barItem?.price}&#x20bd;</p>
+                    {barItem?.price && barItem?.price.toString().length > 0 && <p className="menu-item-modal_price">{barItem?.price}&#x20bd;</p>}
                 </div>
                 <Button 
                     onClick={onClose}

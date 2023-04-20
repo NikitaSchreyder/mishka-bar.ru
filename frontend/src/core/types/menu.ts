@@ -6,11 +6,11 @@ export type TMenuCategory = {
 }
 
 export type TMenuItem = {
-  name: string
-  description: string
-  price: number
-  thumbUrl: string
-  categorySearchLink: string
+  name?: string
+  description?: string
+  price?: number | string
+  thumbUrl?: string
+  categorySearchLink?: string
 }
 
 export interface IMenuIndexPageProps {
