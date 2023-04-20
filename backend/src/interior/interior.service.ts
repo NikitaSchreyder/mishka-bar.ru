@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { log } from 'console';
 import { readdirSync } from 'fs';
 import { extname, join } from 'path';
 
