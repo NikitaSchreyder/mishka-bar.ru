@@ -27,7 +27,7 @@ const AboutIndexPage: React.FC = () => {
             <div className="layout_container">
                 <Breadcrumb items={breadcrumbItems} separator='/' />
                 <div className="about-content">
-                    <Image className='about-img' preview={false} src='/public/img/hall/mishkabar-12.jpg' />
+                    <Image alt='Фото зала' className='about-img' preview={false} src='/public/img/hall/mishkabar-12.jpg' />
                     <p className="about-description">{description}</p>
                 </div>
             </div>
