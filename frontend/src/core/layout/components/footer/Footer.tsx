@@ -66,10 +66,14 @@ const Footer: React.FC = () => {
       title: 'МЕНЮ',
       link: '/menu'
     },
-    // {
-    //   title: 'БАРНАЯ КАРТА',
-    //   link: '/bar'
-    // },
+    {
+      title: 'БАРНАЯ КАРТА',
+      link: '/bar'
+    },
+    {
+      title: 'АКЦИИ',
+      link: '/stocks'
+    },
     // {
     //   title: 'БИНЕС ЛАНЧ',
     //   link: '/business-lunch'
