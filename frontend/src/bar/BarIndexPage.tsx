@@ -12,35 +12,35 @@ const BarIndexPage: React.FC = () => {
     const [index, setIndex] = useState(-1)
     const barImages: any[] = [
         {
-            src: '/public/img/bar/pdf/bar-cock-1.png',
+            src: '/public/img/bar/pdf/min/bar-cock-1.png',
             original: '/public/img/bar/pdf/bar-cock-1.png',
             width: 300,
             height: 400,
             caption: ''
         },
         {
-            src: '/public/img/bar/pdf/bar-cock-2.png',
+            src: '/public/img/bar/pdf/min/bar-cock-2.png',
             original: '/public/img/bar/pdf/bar-cock-2.png',
             width: 300,
             height: 400,
             caption: ''
         },
         {
-            src: '/public/img/bar/pdf/bar-cock-3.png',
+            src: '/public/img/bar/pdf/min/bar-cock-3.png',
             original: '/public/img/bar/pdf/bar-cock-3.png',
             width: 300,
             height: 400,
             caption: ''
         },
         {
-            src: '/public/img/bar/pdf/bar-cock-4.png',
+            src: '/public/img/bar/pdf/min/bar-cock-4.png',
             original: '/public/img/bar/pdf/bar-cock-4.png',
             width: 300,
             height: 400,
             caption: ''
         },
         {
-            src: '/public/img/bar/pdf/bar-cock-5.png',
+            src: '/public/img/bar/pdf/min/bar-cock-5.png',
             original: '/public/img/bar/pdf/bar-cock-5.png',
             width: 300,
             height: 400,
