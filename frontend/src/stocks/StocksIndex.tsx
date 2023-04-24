@@ -18,14 +18,14 @@ const StocksIndex: React.FC = () => {
     const [index, setIndex] = useState(-1)
     const barImages: any[] = [
         {
-            src: '/public/img/stocks/stock-1.jpg',
+            src: '/public/img/stocks/stock-1-min.jpg',
             original: '/public/img/stocks/stock-1.jpg',
             width: 600,
             height: 400,
             caption: ''
         },
         {
-            src: '/public/img/stocks/stock-2.jpg',
+            src: '/public/img/stocks/stock-2-min.jpg',
             original: '/public/img/stocks/stock-2.jpg',
             width: 300,
             height: 400,
@@ -79,7 +79,7 @@ const StocksIndex: React.FC = () => {
     const stocksItems = [
         {
             name: 'Скидка 20%',
-            description: 'Скидка действует с понедельника по четверг и в пятницу до 17: 00',
+            description: 'Скидка действует с понедельника по четверг весь день и в пятницу до 17:00',
             thumbUrl: '/public/img/stocks/stock-1.jpg',
             price: ''
         },
