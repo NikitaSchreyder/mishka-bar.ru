@@ -80,13 +80,13 @@ const StocksIndex: React.FC = () => {
         {
             name: 'Скидка 20%',
             description: 'Скидка действует с понедельника по четверг весь день и в пятницу до 17:00',
-            thumbUrl: '/public/img/stocks/stock-1.jpg',
+            thumbUrl: '/public/img/stocks/stock-1-min.jpg',
             price: ''
         },
         {
             name: 'Martini Fiero tonic',
             description: 'Специальное предложение от Bacrdi Martini 2 + 1',
-            thumbUrl: '/public/img/stocks/stock-2.jpg',
+            thumbUrl: '/public/img/stocks/stock-2-min.jpg',
             price: ''
         }
     ]
