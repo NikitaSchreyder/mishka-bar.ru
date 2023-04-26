@@ -21,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <link rel='icon' type='image/x-icon' href='/img/favicon.ico' />
         <meta name='description' content='Mishka Bar, место где вас встретять не только крепкими медвежьими объятиями, но и вкусной итальянской, японской и русской кухней, освежающими напитками и приятной атмосферой.' />
         <meta name='keywords' content={keywords.join(',')} />
       </Head>
