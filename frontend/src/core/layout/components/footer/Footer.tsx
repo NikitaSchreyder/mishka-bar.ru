@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
     return socialLinks.map((item, index) => {
       return (
         <li className="footer_social-item" key={index}>
-          <Link className={`footer_social-item--${item.title}`} href={item.link}></Link>
+          <Link target='_blank' className={`footer_social-item--${item.title}`} href={item.link}></Link>
         </li>
       )
     })

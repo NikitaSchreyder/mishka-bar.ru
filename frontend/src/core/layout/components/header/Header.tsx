@@ -23,7 +23,7 @@ const Header: React.FC = () => {
         <Image preview={false} className='header_logo' src='/img/logo.webp' alt='logo' />
       </Link>
       <div className='header_info'>
-        <a href='https://yandex.ru/maps/-/CCU0MRcY8C' className='header_info--address'>{address}</a>
+        <a target='_blank' href='https://yandex.ru/maps/-/CCU0MRcY8C' className='header_info--address'>{address}</a>
         <a href='tel:79825194242' className='header_info--phone'>{phone}</a>
       </div>
     </header>
