@@ -32,7 +32,7 @@ export const PickupModal: React.FC<{open: boolean, closeModal: () => void}> = ({
 }
 
 
-export const MenuItemModal: React.FC<{open: boolean, closeModal: () => void, barItem: TMenuItem | null}> = ({open, closeModal, barItem}) => {
+export const MenuItemModal: React.FC<{open: boolean, closeModal: () => void, menuItem: TMenuItem}> = ({open, closeModal, menuItem}) => {
     return (
         <Modal
             wrapClassName="modal-bg"
@@ -43,7 +43,7 @@ export const MenuItemModal: React.FC<{open: boolean, closeModal: () => void, bar
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <MenuItemModalContent onClose={closeModal} barItem={barItem} />
+            <MenuItemModalContent onClose={closeModal} menuItem={menuItem} />
         </Modal>
     )
 }

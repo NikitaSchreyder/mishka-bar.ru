@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useCallback, useMemo, useState } from "react"
+import { useState } from "react"
 import { useModalControl } from "../core/hooks/useModalControl"
 import { IMenuCategoryIndexPageProps, TMenuItem } from '../core/types/menu'
 
@@ -12,7 +12,7 @@ import { Breadcrumb } from 'antd'
 import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 
 const MenuCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryItems, categoryName}) => {
-    const [openedItem, setOpenedItem] = useState<TMenuItem | null>(null)
+    const [openedItem, setOpenedItem] = useState<TMenuItem>()
     const menuItemDtailsModalControll = useModalControl()
 
     const onItemClick = (item: TMenuItem) => {
@@ -22,7 +22,6 @@ const MenuCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryI
 
     const closeModal = () => {
         menuItemDtailsModalControll.closeModal()
-        setOpenedItem(null)
     }
 
     const menuCategoryItems = () => {
@@ -47,7 +46,7 @@ const MenuCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryI
             <Head>
                 <title>Мишка бар | {categoryName}</title>
             </Head>
-            <MenuItemModal barItem={openedItem && openedItem} closeModal={closeModal} open={menuItemDtailsModalControll.toShow} />
+            {openedItem && <MenuItemModal menuItem={openedItem} closeModal={closeModal} open={menuItemDtailsModalControll.toShow} />}
             <Header />
                 <div className="layout_container">
                     <Breadcrumb items={breadcrumbItems} />

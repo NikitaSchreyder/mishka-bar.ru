@@ -2,7 +2,6 @@ import { join } from 'path'
 import { Module } from '@nestjs/common'
 import { ServeStaticModule } from '@nestjs/serve-static'
 
-import { BarModule } from '../bar/bar.module'
 import { MenuModule } from '../menu/menu.module'
 import { InteriorModule } from '../interior/interior.module'
 
@@ -12,7 +11,6 @@ import { InteriorModule } from '../interior/interior.module'
       rootPath: join(__dirname, '..', '..', '/public'),
       serveRoot: '/public/'
     }),
-    BarModule, 
     MenuModule,
     InteriorModule
   ],

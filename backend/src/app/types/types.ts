@@ -6,7 +6,7 @@ export type TMenuCategory = {
 
 export type TMenuItem = {
     name: string
-    description: string
+    composition : string[]
     price: number
     thumbUrl: string
     categorySearchLink: string
