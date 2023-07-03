@@ -3,7 +3,6 @@ import { TMenuItem } from '../../types/menu'
 import { CloseOutlined } from "@ant-design/icons"
 
 const MenuItemModalContent: React.FC<{menuItem: TMenuItem, onClose: () => void}> = ({menuItem, onClose}) => {
-    console.log(menuItem)
     const composition = () => {
         return menuItem.composition.length > 0 && (
             <p className="menu-item-modal_description">Состав: {menuItem.composition.join(', ').toLowerCase()}</p>
