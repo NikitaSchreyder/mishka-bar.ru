@@ -5,7 +5,8 @@ const nextConfig = {
     links: {
       vk: 'https://vk.com/club211107184',
       tg: 'https://t.me/mishka_bar_surgut',
-      map: 'https://yandex.ru/maps/-/CCU0MRcY8C'
+      map: 'https://yandex.ru/maps/-/CCU0MRcY8C',
+      yafood: 'https://eda.yandex.ru/surgut/r/miska_1635151764'
     }
   }
 }

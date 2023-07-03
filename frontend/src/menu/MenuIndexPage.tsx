@@ -35,7 +35,7 @@ const MenuIndexPage: React.FC<IMenuIndexPageProps> = ({categories}) => {
                 <div className="layout_container">
                     <Breadcrumb items={breadcrumbItems} />
                 </div>
-                <div className="layout_container">
+                <div className="layout_container menu-categories_container">
                     <MenuCategories>
                         {menuCategories}
                     </MenuCategories>

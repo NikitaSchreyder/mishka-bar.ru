@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Image } from "antd"
-import { useCallback, useMemo } from "react"
 
 const Footer: React.FC = () => {
   const socialLinks = [
@@ -11,6 +10,10 @@ const Footer: React.FC = () => {
     {
       title: 'telegram',
       link: 'https://t.me/mishka_bar_surgut'
+    },
+    {
+      title: 'yandex-food',
+      link: 'https://eda.yandex.ru/surgut/r/miska_1635151764'
     }
   ]
 
@@ -81,6 +84,10 @@ const Footer: React.FC = () => {
     {
       title: 'ИНТЕРЬЕР',
       link: '/interior'
+    },
+    {
+      title: 'ДОСТАВКА',
+      link: 'https://eda.yandex.ru/surgut/r/miska_1635151764'
     },
     {
       title: 'О НАС',

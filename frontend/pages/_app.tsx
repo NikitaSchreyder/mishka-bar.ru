@@ -25,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='description' content='Mishka Bar, место где вас встретят не только крепкими медвежьими объятиями, но и вкусной итальянской, японской и русской кухней, освежающими напитками и приятной атмосферой.' />
         <meta name='keywords' content={keywords.join(',')} />
       </Head>
-      <Component {...pageProps} />
+      <div className='app'>
+        <Component {...pageProps} />
+      </div>
     </>
   ) 
 }

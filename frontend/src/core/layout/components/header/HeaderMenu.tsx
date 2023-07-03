@@ -28,6 +28,10 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
       link: '/interior'
     },
     {
+      title: 'ДОСТАВКА',
+      link: 'https://eda.yandex.ru/surgut/r/miska_1635151764'
+    },
+    {
       title: 'О НАС',
       link: '/about'
     }
@@ -65,6 +69,9 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
             </li>
             <li className='header_menu-info_social-item'>
               <Link target='_blank' className='header_menu-info_social-item_link--tg' href={'https://t.me/mishka_bar_surgut'}></Link>
+            </li>
+            <li className='header_menu-info_social-item'>
+              <Link target='_blank' className='header_menu-info_social-item_link--yandex-food' href={'https://eda.yandex.ru/surgut/r/miska_1635151764'}></Link>
             </li>
           </ul>
           <p><span className='header_menu-info--title'>Номер телефона:</span> <a href="tel:79825194242">+7(982)519 42 42</a></p>

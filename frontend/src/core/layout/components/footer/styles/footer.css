@@ -51,6 +51,16 @@
     background-size: contain;
 }
 
+.footer_social-item--yandex-food {
+    display: block;
+    height: 30px;
+    width: 30px;
+    background: url('/img/icons/yandex-food.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .footer_content {
     display: flex;
     flex-direction: column;

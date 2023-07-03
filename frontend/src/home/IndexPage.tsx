@@ -10,6 +10,7 @@ import Header from '../core/layout/components/header/Header'
 const IndexPage: React.FC = () => {
   const pickupModalControl = useModalControl()
   const router = useRouter()
+  const YANDEX_FOOD_LINK = 'https://eda.yandex.ru/surgut/r/miska_1635151764'
 
   return (
     <>
@@ -23,7 +24,8 @@ const IndexPage: React.FC = () => {
           <div className='layout_container'>
             <div className='home_btns'>
               <Button aria-label='меню ресторана' onClick={() => router.replace('/menu')} className='home_btn'>меню</Button>
-              <Button aria-label='самовывоз' className='home_btn' onClick={pickupModalControl.openModal}>самовывоз</Button>
+              <Button aria-label='самовывоз' className='home_btn' onClick={() => router.replace(YANDEX_FOOD_LINK)}>Доставка</Button>
+              {/* <Button aria-label='самовывоз' className='home_btn' onClick={pickupModalControl.openModal}>самовывоз</Button> */}
             </div>
           </div>
         </section>

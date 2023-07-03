@@ -1,5 +1,9 @@
 @import './category.css';
 
+.menu-categories_container {
+    flex: 1 0 0 !important;
+}
+
 .menu-categories {
     display: grid;
     grid-template-columns: repeat(5, 1fr);

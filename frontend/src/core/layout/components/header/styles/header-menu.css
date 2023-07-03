@@ -97,6 +97,16 @@
   background-size: contain;
 }
 
+.header_menu-info_social-item_link--yandex-food {
+  display: block;
+  height: 30px;
+  width: 30px;
+  background: url('/img/icons/yandex-food.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 @media screen and (max-width: 768px) {
   .header-menu {
     width: 340px !important;
