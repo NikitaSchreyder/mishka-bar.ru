@@ -12,7 +12,14 @@ import MenuCategory from '../core/components/Menu/MenuCategory'
 import MenuCategoryItem from '../core/components/Menu/MenuCategoryItem'
 
 const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryItems, categoryName}) => {
-    const [openedItem, setOpenedItem] = useState<TMenuItem | null>(null)
+    const [openedItem, setOpenedItem] = useState<TMenuItem>({
+        categorySearchLink: '',
+        composition: [],
+        name: '',
+        price: 0,
+        thumbUrl: ''
+    })
+    
     const barItemDtailsModalControl = useModalControl()
 
     const onItemClick = (item: TMenuItem) => {
@@ -21,7 +28,6 @@ const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryIt
     }
 
     const closeModal = () => {
-        setOpenedItem(null)
         barItemDtailsModalControl.closeModal()
     }
 
@@ -47,7 +53,7 @@ const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryIt
             <Head>
                 <title>Мишка бар | {categoryName}</title>
             </Head>
-            <MenuItemModal barItem={openedItem && openedItem} closeModal={closeModal} open={barItemDtailsModalControl.toShow} />
+            <MenuItemModal menuItem={openedItem} closeModal={closeModal} open={barItemDtailsModalControl.toShow} />
             <Header />
                 <div className='layout_container'>
                     <Breadcrumb items={breadcrumbItems} />

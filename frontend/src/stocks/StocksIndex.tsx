@@ -13,6 +13,7 @@ import MenuCategoryItem from '../core/components/Menu/MenuCategoryItem'
 import { useModalControl } from '../core/hooks/useModalControl'
 import { TMenuItem } from '../core/types/menu'
 import { MenuItemModal } from '../core/modals/AppModals'
+import MenuStockItem from '../core/components/Menu/MenuStockItem'
 
 const StocksIndex: React.FC = () => {
     const [index, setIndex] = useState(-1)
@@ -63,7 +64,13 @@ const StocksIndex: React.FC = () => {
         }
     ]
 
-    const [openedItem, setOpenedItem] = useState<TMenuItem | null>(null)
+    const [openedItem, setOpenedItem] = useState<TMenuItem>({
+        categorySearchLink: '',
+        composition: [],
+        name: '',
+        price: '',
+        thumbUrl: ''
+    })
     const menuItemDtailsModalControll = useModalControl()
 
     const onItemClick = (item: TMenuItem) => {
@@ -73,7 +80,6 @@ const StocksIndex: React.FC = () => {
 
     const closeModal = () => {
         menuItemDtailsModalControll.closeModal()
-        setOpenedItem(null)
     }
 
     const stocksItems = [
@@ -87,12 +93,12 @@ const StocksIndex: React.FC = () => {
             name: 'Martini Fiero tonic',
             description: 'Специальное предложение от Bacrdi Martini 2 + 1',
             thumbUrl: '/public/img/stocks/stock-2-min.jpg',
-            price: ''
+            price: '',
         }
     ]
 
     const menuCategoryItems = () => {
-        return stocksItems.map((item, index) => <MenuCategoryItem key={index} item={item} onClick={onItemClick} />)
+        return stocksItems.map((item, index) => <MenuStockItem key={index} item={item} onClick={onItemClick} />)
     }
 
 
@@ -106,7 +112,7 @@ const StocksIndex: React.FC = () => {
                 <Breadcrumb items={breadcrumbItems} separator='/' />
             </div>
             <div className="layout_container">
-                <MenuItemModal barItem={openedItem && openedItem} closeModal={closeModal} open={menuItemDtailsModalControll.toShow} />
+                <MenuItemModal menuItem={openedItem} closeModal={closeModal} open={menuItemDtailsModalControll.toShow} />
                 <MenuCategory>
                     {menuCategoryItems()}
                 </MenuCategory>
