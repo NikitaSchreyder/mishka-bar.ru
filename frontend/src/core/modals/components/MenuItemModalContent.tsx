@@ -6,7 +6,7 @@ const MenuItemModalContent: React.FC<{menuItem: TMenuItem, onClose: () => void}>
     console.log(menuItem)
     const composition = () => {
         return menuItem.composition.length > 0 && (
-            <p className="menu-item-modal_description">Состав: {menuItem.composition.join(', ')}</p>
+            <p className="menu-item-modal_description">Состав: {menuItem.composition.join(', ').toLowerCase()}</p>
         )
     } 
     return (

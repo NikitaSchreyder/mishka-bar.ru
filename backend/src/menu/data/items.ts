@@ -3,56 +3,56 @@ import { TMenuItem } from "src/app/types/types"
 export const menuItems: TMenuItem[] = [
     {
         name: 'Ростбиф с томатами',
-        composition : ['ростбиф', 'помидоры черри'],
+        composition : ['Ростбиф', 'вяленые томаты', 'лолло росса'],
         categorySearchLink: 'appetizers',
         price: 640,
         thumbUrl: '/public/img/menu/appetizers/rostbeef-with-tomatos.png'
     },
     {
         name: 'Тартар из тунца',
-        composition : [],
+        composition : ['Тунец', 'желток перепелиного яйца', 'гренки', 'авокадо'],
         categorySearchLink: 'appetizers',
         price: 480,
         thumbUrl: '/public/img/menu/appetizers/tuna-tartar.png'
     },
     {
         name: 'Тартар из лосося',
-        composition : [],
+        composition : ['Лосось', 'желток перепелиного яйца', 'гренки', 'авокадо'],
         categorySearchLink: 'appetizers',
         price: 480,
         thumbUrl: '/public/img/menu/appetizers/salmon-tartar.png'
     },
     {
         name: 'Брускетта с лососем',
-        composition : [],
+        composition : ['Бородинский хлеб', 'лосось', 'руккола', 'яйцо пашот', 'огурец свежий'],
         categorySearchLink: 'appetizers',
         price: 470,
         thumbUrl: '/public/img/menu/appetizers/salmon-bruschetta.png' 
     },
     {
         name: 'Европа',
-        composition : [],
+        composition : ['Рис', 'нори', 'майонез', 'перец болгарский', 'огурцы', 'курица (грудка)', 'соус унаги', 'кляр'],
         categorySearchLink: 'rolles',
         price: 390,
         thumbUrl: '/public/img/menu/rolles/europe.png'
     },
     {
         name: 'Морне',
-        composition : [],
+        composition : ['Нори', 'рис', 'куриная грудка', 'огурцы', 'майонез', 'сыр моцарелла', 'мидии', 'соус унаги'],
         categorySearchLink: 'rolles',
         price: 450,
         thumbUrl: '/public/img/menu/rolles/morne.png'
     },
     {
         name: 'Канада',
-        composition : [],
+        composition : ['Рис', 'нори', 'сыр творожный', 'угорь', 'соус унаги', 'кунжут', 'креветка'],
         categorySearchLink: 'rolles',
         price: 640,
         thumbUrl: '/public/img/menu/rolles/canada.png'
     },
     {
         name: 'Де люкс',
-        composition : [],
+        composition : ['Рис', 'нори', 'семга', 'сыр творожный', 'зелень', 'икра красная', 'огурцы', 'икра тобико'],
         categorySearchLink: 'rolles',
         price: 510,
         thumbUrl: '/public/img/menu/rolles/deluxe.png'
@@ -73,56 +73,56 @@ export const menuItems: TMenuItem[] = [
     // },
     {
         name: 'Цезарь',
-        composition : [],
+        composition : ['Лепешка тортилья', 'рис', 'помидоры', 'огурцы', 'соус цезарь', 'сыр творожный', 'кляр'],
         categorySearchLink: 'rolles',
         price: 450,
         thumbUrl: '/public/img/menu/rolles/caesar.png'
     },
     {
         name: 'Рыбное плато',
-        composition : [],
+        composition : ['Муксун', 'форель', 'мясо мидий', 'селедка', 'креветки тигровые', 'северные креветки'],
         categorySearchLink: 'cold-snacks',
         price: 1450,
         thumbUrl: '/public/img/menu/cold-snacks/fish-plateau.png'
     },
     {
         name: 'Грузди бочковые',
-        composition : [],
+        composition : ['Грузди', 'маринованный лук', 'сметана'],
         categorySearchLink: 'cold-snacks',
         price: 440,
         thumbUrl: '/public/img/menu/cold-snacks/gruzdi.png'
     },
     {
         name: 'Перец с творожным сыром',
-        composition : [],
+        composition : ['Перец болгарский', 'творожный сыр', 'руккола'],
         categorySearchLink: 'cold-snacks',
         price: 350,
         thumbUrl: '/public/img/menu/cold-snacks/pepper-with-cheese.png'
     },
     {
         name: 'Селедка с картофелем',
-        composition : [],
+        composition : ['Селедка', 'картофель отварной', 'лук маринованный'],
         categorySearchLink: 'cold-snacks',
         price: 410,
         thumbUrl: '/public/img/menu/cold-snacks/herring.png'
     },
     {
         name: 'Камчатка',
-        composition : [],
+        composition : ['Муксун', 'форель', 'лосось', 'селедка'],
         categorySearchLink: 'cold-snacks',
         price: 2350,
         thumbUrl: '/public/img/menu/cold-snacks/kamchatka.png'
     },
     {
         name: 'Мясное ассорти',
-        composition : [],
+        composition : ['Ветчина', 'язык говяжий', 'куриная бастурма', 'сало'],
         categorySearchLink: 'cold-snacks',
         price: 1190,
         thumbUrl: '/public/img/menu/cold-snacks/cold-cuts.png'
     },
     {
         name: 'Палитра сыров',
-        composition : [],
+        composition : ['Дорблю', 'пармезан', 'чеддер', 'сыр креметте', 'грецкий орех', 'винoград', 'мед', 'чернослив'],
         categorySearchLink: 'cold-snacks',
         price: 980,
         thumbUrl: '/public/img/menu/cold-snacks/cheese-palette.png'
@@ -150,14 +150,14 @@ export const menuItems: TMenuItem[] = [
     // },
     {
         name: 'Хлебная корзина',
-        composition : [],
+        composition : ['Серые булочки', 'белые булочки', 'батон', 'сливочное масло', 'гресини'],
         categorySearchLink: 'homemade-bread',
         price: 210,
         thumbUrl: '/public/img/menu/homemade-bread/bread-basket.png'
     },
     {
         name: 'Хачапури по аджарски',
-        composition : [],
+        composition : ['Тесто', 'сыр моцарелла', 'сливки', 'желток яйца'],
         categorySearchLink: 'homemade-bread',
         price: 480,
         thumbUrl: '/public/img/menu/homemade-bread/khachapuri-in-adjarian.png'
@@ -171,175 +171,175 @@ export const menuItems: TMenuItem[] = [
     // },
     {
         name: 'Осетинский пирог',
-        composition : [],
+        composition : ['Сыр моцарелла', 'начинка на выбор (c сыром и курицей / c сыром и шпинатом)', 'желток яичный', 'тесто'],
         categorySearchLink: 'homemade-bread',
         price: 560,
         thumbUrl: '/public/img/menu/homemade-bread/ossetian-pie.png'
     },
     {
-        name: 'Пицца с охотничьими колбасками',
-        composition : [],
+        name: 'Пицца с охотничьими колбасками (30 см)',
+        composition : ['Тесто', 'куриная грудка', 'охотничьи колбаски', 'бекон', 'соус помодоро', 'руккола', 'сыр моцарелла' ],
         categorySearchLink: 'pizza',
         price: 590,
         thumbUrl: '/public/img/menu/pizza/pizza-with-hunting-sausages.png'
     },
     {
-        name: 'Пицца цезарь',
-        composition : [],
+        name: 'Пицца цезарь (30 см)',
+        composition : ['Тесто', 'соус цезарь', 'томаты черри', 'куриная грудка', 'салат' ],
         categorySearchLink: 'pizza',
         price: 550,
         thumbUrl: '/public/img/menu/pizza/pizza-caesar.png'
     },
     {
-        name: 'Четыре сыра',
-        composition : [],
+        name: 'Четыре сыра (30 см)',
+        composition : ['Тесто', 'сливки', 'дорблю', 'пармезан', 'чеддер', 'моцарелла'],
         categorySearchLink: 'pizza',
         price: 560,
         thumbUrl: '/public/img/menu/pizza/four-cheeses.png'
     },
     {
-        name: 'С море - продуктами',
-        composition : [],
+        name: 'С море - продуктами (30 см)',
+        composition : ['Тесто', 'соус помодоро', 'тигровые креветки', 'кальмар', 'лосось', 'мидии', 'моцарелла'],
         categorySearchLink: 'pizza',
         price: 690,
         thumbUrl: '/public/img/menu/pizza/seafood.png'
     },
     {
-        name: 'Маргарита',
-        composition : [],
+        name: 'Маргарита (30 см)',
+        composition : ['Тесто', 'помидоры', 'сыр моцарелла', 'соус помодоро'],
         categorySearchLink: 'pizza',
         price: 430,
         thumbUrl: '/public/img/menu/pizza/margarita.png'
     },
     {
-        name: 'Пепперони',
-        composition : [],
+        name: 'Пепперони (30 см)',
+        composition : ['Тесто', 'соус помодоро', 'сыр', 'пепперони'],
         categorySearchLink: 'pizza',
         price: 520,
         thumbUrl: '/public/img/menu/pizza/pepperoni.png'
     },
     {
         name: 'Блю чиз',
-        composition : [],
+        composition : ['Соус блю чиз', 'булочка', 'говяжья котлета', 'помидоры', 'соленые огурцы', 'лист салата', 'красный лук'],
         categorySearchLink: 'burgers',
         price: 450,
         thumbUrl: '/public/img/menu/burgers/burger.png'
     },
     {
         name: 'BBQ чиз',
-        composition : [],
+        composition : ['Булочка', 'соус барбекю', 'говяжья котлета', 'лист салата', 'огурец', 'помидоры', 'красный лук'],
         categorySearchLink: 'burgers',
         price: 450,
         thumbUrl: '/public/img/menu/burgers/burger.png'
     },
     {
         name: 'Чикен чиз',
-        composition : [],
+        composition : ['Булочка', 'соус коктейльный', 'куриное филе', 'помидоры', 'лист салата', 'огурец', 'сыр чеддер', 'красный лук'],
         categorySearchLink: 'burgers',
         price: 350,
         thumbUrl: '/public/img/menu/burgers/burger.png'
     },
     {
         name: 'Салат с тцнуом',
-        composition : [],
+        composition : ['Листья салата', 'авокадо', 'помидоры черри', 'яйцо перепелиное', 'огурцы', 'редис красный', 'соус бальзамический', 'маслины', 'лимон', 'кунжут', 'лук красный', 'картофель фри', 'тунец'],
         categorySearchLink: 'salads',
         price: 590,
         thumbUrl: '/public/img/menu/salads/salad-with-tuna.png'
     },
     {
         name: 'Цезарь с креветками',
-        composition : [],
+        composition : ['Помидоры черри', 'листья салата', 'яйца перепелиные', 'сухарики', 'сыр пармезан', 'соус цезарь', 'креветки'],
         categorySearchLink: 'salads',
         price: 560,
         thumbUrl: '/public/img/menu/salads/caesar-with-shrimps.png'
     },
     {
         name: 'Салат с ростбифом',
-        composition : [],
+        composition : ['Листья салата', 'ростбиф', 'соус бальзамический', 'томаты сушеные вяленые', 'спаржа', 'перец болгарский', 'соус устричный'],
         categorySearchLink: 'salads',
         price: 590,
         thumbUrl: '/public/img/menu/salads/salad-with-roastbeef.png'
     },
     {
         name: 'Магнум фиш',
-        composition : [],
+        composition : ['Листья салата', 'семга', 'помидоры черри', 'соус дэмаро', 'сыр пармезан', 'зелень', 'лимон', 'сливки', 'мед', 'креветки'],
         categorySearchLink: 'salads',
         price: 790,
         thumbUrl: '/public/img/menu/salads/magnum-fish.png'
     },
     {
         name: 'Салат с копченой курицей и авокадо',
-        composition : [],
+        composition : ['Листья салата', 'огурцы', 'помидоры черри', 'копченая куриная грудка', 'авокадо', 'киноа'],
         categorySearchLink: 'salads',
         price: 520,
         thumbUrl: '/public/img/menu/salads/salad-with-smoked-chicken-and-avocado.png'
     },
     {
         name: 'Салат Прага - Сургут',
-        composition : [],
+        composition : ['Куриная грудка', 'лук', 'язык отварной', 'майонез', 'орех грецкий', 'кедровый орех', 'гранат', 'яйца перепелиные', 'шампиньоны жареные', 'сыр пармезан', 'соленья', 'сливки', 'соус чесночный'],
         categorySearchLink: 'salads',
         price: 580,
         thumbUrl: '/public/img/menu/salads/praga.png'
     },
     {
         name: 'Салат с яйцом пашот и креветками',
-        composition : [],
+        composition : ['Листья салата', 'авокадо', 'огурцы', 'помидоры черри', 'яйцо', 'зелень', 'маслины', 'лимонный сок', 'креветки'],
         categorySearchLink: 'salads',
         price: 550,
         thumbUrl: '/public/img/menu/salads/salad-with-poached-egg-and-shrimp.png'
     },
     {
         name: 'Салат с форелью и бкалажаном фри',
-        composition : [],
+        composition : ['Листья салата', 'баклажаны', 'семга', 'огурцы', 'помидоры черри', 'зелень'],
         categorySearchLink: 'salads',
         price: 530,
         thumbUrl: '/public/img/menu/salads/salad-with-trout-and-eggplant-fries.png'
     },
     {
         name: 'Салат с беконом',
-        composition : [],
+        composition : ['Бекон', 'картофель фри', 'листья салата', 'зелень', 'масло оливковое', 'соус соевый', 'помидоры черри', 'яйца перепелиные'],
         categorySearchLink: 'salads',
         price: 490,
         thumbUrl: '/public/img/menu/salads/salad-with-bacon.png'
     },
     {
         name: 'Бренче с вялеными томатами',
-        composition : [],
+        composition : ['Сыр камамбер', 'помидоры черри', 'картофель', 'багет', 'ананас', 'листья салата', 'зелень', 'томаты сушеные вяленые'],
         categorySearchLink: 'salads',
         price: 450,
         thumbUrl: '/public/img/menu/salads/strum-with-dried-tomatoes.png'
     },
     {
         name: 'Салат с говяжьим языком',
-        composition : [],
+        composition : ['Язык отварной', 'капуста', 'морковь', 'помидоры черри', 'листья салата'],
         categorySearchLink: 'salads',
         price: 460,
         thumbUrl: '/public/img/menu/salads/salad-with-beef-tongue.png'
     },
     {
         name: 'Цезарь с курицей',
-        composition : [],
+        composition : ['Куриная грудка', 'помидоры черри', 'листья салата', 'яйца перепелиные', 'сухарики', 'сыр пармезан', 'соус цезарь'],
         categorySearchLink: 'salads',
         price: 490,
         thumbUrl: '/public/img/menu/salads/caesar-with-chicken.png'
     },
     {
         name: 'Домашний овощной с зеленью',
-        composition : [],
+        composition : ['Огурцы', 'помидоры', 'лук красный', 'зелень', 'перец болгарский'],
         categorySearchLink: 'salads',
         price: 290,
         thumbUrl: '/public/img/menu/salads/vegetable.png'
     },
     {
         name: 'Греческий',
-        composition : [],
+        composition : ['Перец болгарский', 'помидоры', 'огурцы', 'масло оливковое', 'сыр фета', 'маслины', 'лук красный'],
         categorySearchLink: 'salads',
         price: 360,
         thumbUrl: '/public/img/menu/salads/greek.png'
     },
     {
         name: 'Смок дак',
-        composition : [],
+        composition : ['Утиная грудка копченая', 'перец болгарский', 'томаты сушеные вяленые', 'апельсин', 'авокадо', 'паста миндальная', 'листья салата'],
         categorySearchLink: 'salads',
         price: 580,
         thumbUrl: '/public/img/menu/salads/smoke-duck.png'
