@@ -11,8 +11,8 @@ import "react-image-lightbox/style.css"
 import MenuCategory from '../core/components/Menu/MenuCategory'
 import MenuCategoryItem from '../core/components/Menu/MenuCategoryItem'
 import { useModalControl } from '../core/hooks/useModalControl'
-import { TMenuItem } from '../core/types/menu'
-import { MenuItemModal } from '../core/modals/AppModals'
+import { TMenuItem, TStocksItem } from '../core/types/menu'
+import { MenuItemModal, StocksModal } from '../core/modals/AppModals'
 import MenuStockItem from '../core/components/Menu/MenuStockItem'
 
 const StocksIndex: React.FC = () => {
@@ -64,22 +64,21 @@ const StocksIndex: React.FC = () => {
         }
     ]
 
-    const [openedItem, setOpenedItem] = useState<TMenuItem>({
-        categorySearchLink: '',
-        composition: [],
+    const [openedItem, setOpenedItem] = useState<TStocksItem>({
         name: '',
-        price: '',
-        thumbUrl: ''
+        description: '',
+        thumbUrl: '',
     })
-    const menuItemDtailsModalControll = useModalControl()
 
-    const onItemClick = (item: TMenuItem) => {
+    const stocksItemModalControll = useModalControl()
+
+    const onItemClick = (item: TStocksItem) => {
         setOpenedItem(item)
-        menuItemDtailsModalControll.openModal()
+        stocksItemModalControll.openModal()
     }
 
     const closeModal = () => {
-        menuItemDtailsModalControll.closeModal()
+        stocksItemModalControll.closeModal()
     }
 
     const stocksItems = [
@@ -87,13 +86,11 @@ const StocksIndex: React.FC = () => {
             name: 'Скидка 20%',
             description: 'Скидка действует с понедельника по четверг весь день и в пятницу до 17:00',
             thumbUrl: '/public/img/stocks/stock-1-min.jpg',
-            price: ''
         },
         {
             name: 'Martini Fiero tonic',
             description: 'Специальное предложение от Bacrdi Martini 2 + 1',
             thumbUrl: '/public/img/stocks/stock-2-min.jpg',
-            price: '',
         }
     ]
 
@@ -111,8 +108,8 @@ const StocksIndex: React.FC = () => {
             <div className="layout_container">
                 <Breadcrumb items={breadcrumbItems} separator='/' />
             </div>
-            <div className="layout_container">
-                <MenuItemModal menuItem={openedItem} closeModal={closeModal} open={menuItemDtailsModalControll.toShow} />
+            <div className="layout_container menu-categories_container">
+                <StocksModal stocksItem={openedItem} closeModal={closeModal} open={stocksItemModalControll.toShow} />
                 <MenuCategory>
                     {menuCategoryItems()}
                 </MenuCategory>

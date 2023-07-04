@@ -21,3 +21,9 @@ export interface IMenuCategoryIndexPageProps {
   categoryName: string
   categoryItems: TMenuItem[]
 }
+
+export type TStocksItem = {
+  name: string,
+  description: string,
+  thumbUrl: string,
+}

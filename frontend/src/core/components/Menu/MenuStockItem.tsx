@@ -1,13 +1,9 @@
 import { Image } from 'antd'
 import { IMenuCategoryItemProps } from './data/types'
+import { TStocksItem } from '../../types/menu'
 
 interface IMenuStockItem {
-  item: {
-    name: string,
-    description: string,
-    thumbUrl: string,
-    price: string
-  }
+  item: TStocksItem,
   onClick: (item: any) => void
 }
 
