@@ -1,0 +1,19 @@
+import * as fs from 'fs'
+import * as uuid from 'uuid'
+import * as path from 'path'
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class FilesService {
+  public async savePhoto(file: Express.Multer.File): Promise<string> {
+    const fileName = uuid.v4() + '.png'
+    const filePath = path.resolve(__dirname, '..', '..', 'public')
+
+    if(!fs.existsSync(filePath)) {
+        fs.mkdirSync(filePath, {recursive: true})
+    }
+    
+    fs.writeFileSync(path.join(filePath, fileName), file.buffer)
+    return `/public/${fileName}`
+}
+}
