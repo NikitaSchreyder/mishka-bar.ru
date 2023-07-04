@@ -346,7 +346,7 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Трубочки с беконом и сыром',
-        composition : [],
+        composition : ['Тортелли', 'сыр', 'бекон'],
         categorySearchLink: 'hot-snacks',
         price: 350,
         thumbUrl: '/public/img/menu/hot-snacks/bacon-and-cheese-rolls.png'
@@ -360,7 +360,7 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Жульен с курицей и грибами',
-        composition : [],
+        composition : ['Шампиньоны', 'курица', 'сливки', 'сыр пармезан', 'хлеб'],
         categorySearchLink: 'hot-snacks',
         price: 350,
         thumbUrl: '/public/img/menu/hot-snacks/julienne-with-chicken-and-mushrooms.png'
@@ -374,7 +374,7 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Мидии запеченые под соусом "Морнэ"',
-        composition : [],
+        composition : ['Мидии', 'соус морне', 'лимон'],
         categorySearchLink: 'hot-snacks',
         price: 590,
         thumbUrl: '/public/img/menu/hot-snacks/baked-mussels.png'
@@ -416,21 +416,21 @@ export const menuItems: TMenuItem[] = [
     // },
     {
         name: 'Том ям с морепродуктами',
-        composition : [],
+        composition : ['Кальмар', 'мидии', 'креветки', 'рис'],
         categorySearchLink: 'soups',
         price: 590,
         thumbUrl: '/public/img/menu/soups/thom-yam.png'
     },
     {
         name: 'Сырный с беконом',
-        composition : [],
+        composition : ['Морковь', 'картофель', 'сыр сливочный', 'лук', 'бекон'],
         categorySearchLink: 'soups',
         price: 350,
         thumbUrl: '/public/img/menu/soups/cheese-soup.png'
     },
     {
         name: 'Уха из лосося',
-        composition : [],
+        composition : ['Лосось', 'морковь', 'картофель', 'помидоры черри'],
         categorySearchLink: 'soups',
         price: 360,
         thumbUrl: '/public/img/menu/soups/salmon-soup.png'
@@ -458,35 +458,35 @@ export const menuItems: TMenuItem[] = [
     // },
     {
         name: 'Паста с говядиной',
-        composition : [],
+        composition : ['Пенне', 'говядина', 'сливки', 'барбекю соус', 'аджика', 'вяленные томаты', 'пармезан'],
         categorySearchLink: 'pastas',
         price: 570,
         thumbUrl: '/public/img/menu/pastas/pasta-with-beef.png'
     },
     {
         name: 'Фарфалле с лососем',
-        composition : [],
+        composition : ['Фарфалле', 'лосось', 'сливки', 'красная икра'],
         categorySearchLink: 'pastas',
         price: 590,
         thumbUrl: '/public/img/menu/pastas/farfalle-with-salmon.png'
     },
     {
         name: 'Спагетти с морепродуктами',
-        composition : [],
+        composition : ['Спагетти', 'креветки тигровые', 'мидии', 'кальмар', 'соус томатный'],
         categorySearchLink: 'pastas',
         price: 620,
         thumbUrl: '/public/img/menu/pastas/spaghetti-with-seafood.png'
     },
     {
         name: 'Карбонара',
-        composition : [],
+        composition : ['Спагетти', 'бекон', 'сливки', 'пармезан', 'чесночное масло'],
         categorySearchLink: 'pastas',
         price: 420,
         thumbUrl: '/public/img/menu/pastas/carbonara.png'
     },
     {
         name: 'Феттучини с курицей и грибами',
-        composition : [],
+        composition : ['Феттучини', 'грудка куриная', 'шампиньоны', 'лук', 'чеснок', 'сливки', 'сыр пармезан'],
         categorySearchLink: 'pastas',
         price: 410,
         thumbUrl: '/public/img/menu/pastas/fettuccine-with-chicken-and-mushrooms.png'
@@ -500,14 +500,14 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Куриная грудка со сливочным соусом',
-        composition : [],
+        composition : ['Грудка жареная', 'картофельное пюре', 'сливочный соус', 'томаты черри'],
         categorySearchLink: 'hot-dishes',
         price: 540,
         thumbUrl: '/public/img/menu/hot-dishes/chicken-breast-with-cream-sauce.png'
     },
     {
         name: 'Палтус с пастой птитим',
-        composition : [],
+        composition : ['Филе палтуса', 'томаты черри', 'шампиньоны', 'зелень', 'птитим'],
         categorySearchLink: 'hot-dishes',
         price: 650,
         thumbUrl: '/public/img/menu/hot-dishes/halibut-with-ptitim-paste.png'
@@ -528,7 +528,7 @@ export const menuItems: TMenuItem[] = [
     // },
     {
         name: 'Лосось запеченый',
-        composition : [],
+        composition : ['Филе лосося', 'рис с овощами (болгарский перец, цукини, баклажан, рис, соус унаги)', 'сливочный соус'],
         categorySearchLink: 'hot-dishes',
         price: 740,
         thumbUrl: '/public/img/menu/hot-dishes/baked-salmon.png'
@@ -542,35 +542,35 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Утиная ножка',
-        composition : [],
+        composition : ['Стручковая фасоль', 'утиная ножка', 'томаты черри', 'брокколи', 'цветная капуста'],
         categorySearchLink: 'hot-dishes',
         price: 610,
         thumbUrl: '/public/img/menu/hot-dishes/duck-leg.png'
     },
     {
         name: 'Говядина на сковороде',
-        composition : [],
+        composition : ['Говядина', 'картофельные дольки', 'жареные яйца', 'помидоры черри'],
         categorySearchLink: 'hot-dishes',
         price: 890,
         thumbUrl: '/public/img/menu/hot-dishes/beef-in-a-frying-pan.png'
     },
     {
-        name: 'Равиоли с лососем / с говядиной',
-        composition : [],
+        name: 'Равиоли',
+        composition : ['Тесто', 'начинка на выбор (с лососем / с говядиной)', 'томаты черри', 'зелень'],
         categorySearchLink: 'hot-dishes',
         price: 430,
         thumbUrl: '/public/img/menu/hot-dishes/ravioli.png'
     },
     {
         name: 'Рулька свиная',
-        composition : [],
+        composition : ['Квашеная капуста', 'картофельные дольки', 'рулька свиная', 'барбекю соус'],
         categorySearchLink: 'hot-dishes',
         price: 1150,
         thumbUrl: '/public/img/menu/hot-dishes/pork-knuckle.png'
     },
     {
         name: 'Ризотто с креветками',
-        composition : [],
+        composition : ['Креветки', 'ризотто', 'сливки', 'вяленные томаты'],
         categorySearchLink: 'hot-dishes',
         price: 580,
         thumbUrl: '/public/img/menu/hot-dishes/shrimp-risotto.png'
@@ -661,21 +661,21 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Мясной бриффинг на углях',
-        composition : [],
+        composition : ['Люля-кебаб из курицы', 'люля-кебаб из баранины', 'шашлык из индейки', 'шашлык из свинины', 'шашлык из курицы', 'болгарский перец', 'картофельные дольки', 'шампиньоны', 'помидоры'],
         categorySearchLink: 'sharing-platters',
         price: 3250,
         thumbUrl: '/public/img/menu/sharing-platters/meat-briffing.png'
     },
     {
         name: 'Фри сет',
-        composition : [],
+        composition : ['Гренки чесночные', 'крылышки баффало', 'кольца кальмара', 'луковые кольца', 'сосус чесночный'],
         categorySearchLink: 'sharing-platters',
         price: 920,
         thumbUrl: '/public/img/menu/sharing-platters/fried-set.png'
     },
     {
         name: 'Чикен сет',
-        composition : [],
+        composition : ['Люля кебаб из курицы', 'шашлык из индейки', 'шашлык из курицы', 'цыпленок табака'],
         categorySearchLink: 'sharing-platters',
         price: 1990,
         thumbUrl: '/public/img/menu/sharing-platters/chicken-set.png'
@@ -710,7 +710,7 @@ export const menuItems: TMenuItem[] = [
     },
     {
         name: 'Рис с овощами',
-        composition : [],
+        composition : ['Болгарский перец', 'цукини', 'баклажан', 'рис', 'соус унаги'],
         categorySearchLink: 'side-dishes',
         price: 150,
         thumbUrl: '/public/img/menu/side-dishes/smoke-duck.png'
