@@ -12,7 +12,7 @@ export class MenuController {
 
     @Get('/categories')
     getCategories() {
-        return this.menuService.categories.get()
+        return this.menuService.categories.getAll()
     }
 
     @Put('/categories/create')
