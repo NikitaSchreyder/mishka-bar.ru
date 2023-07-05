@@ -13,3 +13,15 @@ export class UpdateMenuCategoryDto {
 export class RemoveMenuCategoryDto {
   readonly id: number
 }
+
+
+
+
+
+export class CreateMenuDishDto {
+  readonly name: string
+  readonly price: string
+  readonly thumbUrl: string
+  readonly searchLink: string
+  readonly category: string
+}
