@@ -7,6 +7,8 @@ import { InteriorModule } from '../interior/interior.module'
 import { SequelizeModule } from '@nestjs/sequelize'
 import { ConfigModule } from '@nestjs/config'
 import { FilesModule } from '../files/files.module'
+import { MenuCategoriesModel } from '../menu/models/menu-categories.model'
+import { MenuDishesModel } from '../menu/models/menu-dishes.model'
 
 @Module({
   imports: [
@@ -24,7 +26,10 @@ import { FilesModule } from '../files/files.module'
       username: process.env.DATABASE_USER,
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
-      models: [],
+      models: [
+        MenuDishesModel,
+        MenuCategoriesModel,
+      ],
       autoLoadModels: true,
       // sync: { force: true }
     }),
