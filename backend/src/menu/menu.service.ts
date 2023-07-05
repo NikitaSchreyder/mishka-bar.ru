@@ -16,7 +16,7 @@ export class MenuService {
     ) {}
 
     public categories = {
-        get: async () => {
+        getAll: async () => {
             const categories = await this.menuCategoriesRepository.findAll()
             if(!categories) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
             return categories
@@ -27,7 +27,7 @@ export class MenuService {
             const searchLink = transliterate(dto.name).toLowerCase()
             const thumbUrl = await this.filesSefvice.savePhoto(file)
             const newCategoryData: CreateMenuCategoryDto = { ...dto, searchLink, thumbUrl }
-            const newCategory = this.menuCategoriesRepository.create(newCategoryData)
+            const newCategory = await this.menuCategoriesRepository.create(newCategoryData)
 
             if(!newCategory) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
             if(newCategory) throw new HttpException(`Категория "${(await newCategory).name}" успешно создана`, HttpStatus.OK)
@@ -37,6 +37,7 @@ export class MenuService {
             
             if(!file) {
                 const updateStatus = await menuCategory.update(dto)
+
                 if(!updateStatus) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
                 if(updateStatus) throw new HttpException(`Категория "${menuCategory.name}" успешно обновлена`, HttpStatus.OK)
             }
@@ -45,6 +46,7 @@ export class MenuService {
                 const thumbUrl = await this.filesSefvice.savePhoto(file)
                 const newCategoryData: UpdateMenuCategoryDto = { ...dto, thumbUrl }
                 const updateStatus = await menuCategory.update(newCategoryData)
+
                 if(!updateStatus) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
                 if(updateStatus) throw new HttpException(`Категория "${menuCategory.name}" успешно обновлена`, HttpStatus.OK)
             } 
@@ -52,6 +54,7 @@ export class MenuService {
         remove: async (dto: RemoveMenuCategoryDto) => {
             const menuCategory = await this.throwIfCategoryNotFound(dto.id)
             await menuCategory.destroy()
+            
             throw new HttpException(`Категория "${menuCategory.name}" успешно удалена`, HttpStatus.OK)
         }
     }
@@ -68,54 +71,4 @@ export class MenuService {
         if(!menuCategory) throw new HttpException('Категория не найдена', HttpStatus.NOT_FOUND)
         return menuCategory
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // public getCategories(): TMenuCategory[] {
-    //     return menuCategories
-    // }
-
-    // public getCategoryItems(categorySearchLink: string) {
-    //     const categoryItems = menuItems.filter(item => item.categorySearchLink === categorySearchLink)
-    //     const categoryName = menuCategories.filter(item => item.searchLink === categorySearchLink)[0].name
-    //     const data = {
-    //         categoryItems,
-    //         categoryName
-    //     }
-        
-    //     return data
-    // }
 }
