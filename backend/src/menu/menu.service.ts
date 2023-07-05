@@ -3,13 +3,16 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
 import { FilesService } from '../files/files.service';
 import { MenuCategoriesModel } from './models/menu-categories.model';
-import { CreateMenuCategoryDto, RemoveMenuCategoryDto, UpdateMenuCategoryDto } from './dto/menu-categories.dto';
+import { CreateMenuCategoryDto, CreateMenuDishDto, RemoveMenuCategoryDto, UpdateMenuCategoryDto } from './dto/menu-categories.dto';
 
 import { transliterate } from '../core/text-utils/translit';
+import { MenuDishesModel } from './models/menu-dishes.model';
 
 @Injectable()
 export class MenuService {
     constructor(
+        @InjectModel(MenuDishesModel) 
+        readonly menuDishesRepository: typeof MenuDishesModel,
         @InjectModel(MenuCategoriesModel) 
         readonly menuCategoriesRepository: typeof MenuCategoriesModel,
         readonly filesSefvice: FilesService
@@ -30,7 +33,7 @@ export class MenuService {
             const newCategory = await this.menuCategoriesRepository.create(newCategoryData)
 
             if(!newCategory) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
-            if(newCategory) throw new HttpException(`Категория "${(await newCategory).name}" успешно создана`, HttpStatus.OK)
+            if(newCategory) throw new HttpException(`Категория "${newCategory.name}" успешно создана`, HttpStatus.OK)
         },
         update: async (dto: UpdateMenuCategoryDto, file: Express.Multer.File) => {
             const menuCategory = await this.throwIfCategoryNotFound(dto.id)
@@ -59,6 +62,32 @@ export class MenuService {
         }
     }
 
+    public dishes = {
+        create: async (dto: CreateMenuDishDto, file: Express.Multer.File) => {
+            console.log(dto);
+            
+            await this.checkDishDuplicate(dto.name)
+
+            const category = await this.throwIfCategoryBySearchLinkNotFound(dto.category)
+            const searchLink = transliterate(dto.name).toLowerCase()
+            const thumbUrl = await this.filesSefvice.savePhoto(file)
+            const newDishData: CreateMenuDishDto = {...dto, searchLink, thumbUrl}
+            const newDish = await this.menuDishesRepository.create(newDishData)
+            
+            await newDish.$set('category', category)
+
+            if(!newDish) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
+            if(newDish) throw new HttpException(`Блюдо "${newDish.name}" успешно создано`, HttpStatus.OK)
+
+            return newDish
+        },
+    }
+
+    private async checkDishDuplicate(name: string) {
+        const isDuplicate = await this.menuDishesRepository.findOne({ where: {name}})
+        if(isDuplicate) throw new HttpException('Блюдо уже существует', HttpStatus.BAD_REQUEST)
+    }
+
     private async checkCategoryDuplicate(name: string) {
         const isDuplicate = await this.menuCategoriesRepository.findOne({ where: {name}})
         if(isDuplicate) throw new HttpException('Категория уже существует', HttpStatus.BAD_REQUEST)
@@ -67,6 +96,14 @@ export class MenuService {
     private async throwIfCategoryNotFound(id: number) {
         const menuCategory = await this.menuCategoriesRepository.findOne({
             where: {id}
+        })
+        if(!menuCategory) throw new HttpException('Категория не найдена', HttpStatus.NOT_FOUND)
+        return menuCategory
+    }
+
+    private async throwIfCategoryBySearchLinkNotFound(searchLink: string) {
+        const menuCategory = await this.menuCategoriesRepository.findOne({
+            where: {searchLink}
         })
         if(!menuCategory) throw new HttpException('Категория не найдена', HttpStatus.NOT_FOUND)
         return menuCategory

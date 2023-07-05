@@ -1,8 +1,8 @@
 import { FileInterceptor } from '@nestjs/platform-express'
-import { Body, Controller, Delete, Get, Put, UploadedFile, UseInterceptors } from '@nestjs/common'
+import { Body, Controller, Delete, Get, Param, Put, UploadedFile, UseInterceptors } from '@nestjs/common'
 
 import { MenuService } from './menu.service'
-import { CreateMenuCategoryDto, RemoveMenuCategoryDto, UpdateMenuCategoryDto } from './dto/menu-categories.dto'
+import { CreateMenuCategoryDto, CreateMenuDishDto, RemoveMenuCategoryDto, UpdateMenuCategoryDto } from './dto/menu-categories.dto'
 
 @Controller('menu')
 export class MenuController {
@@ -40,44 +40,19 @@ export class MenuController {
         return this.menuService.categories.remove(dto)
     }
 
+    @Get('/dishes')
+    getDishes(
+        @Param('categorySearchLink') categorySearchLink: string
+    ) {
 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // @Get('/category-items')
-    // getCategoryItems(
-    //     @Query('categorySearchLink') categorySearchLink: string
-    // ) {
-    //     return this.menuService.getCategoryItems(categorySearchLink)
-    // }
+    @Put('/dishes/create')
+    @UseInterceptors(FileInterceptor('photo'))
+    createDish(
+        @Body() dto: CreateMenuDishDto,
+        @UploadedFile() file: Express.Multer.File
+    ) {
+        return this.menuService.dishes.create(dto, file)
+    }
 }
