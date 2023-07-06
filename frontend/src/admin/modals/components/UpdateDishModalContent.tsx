@@ -1,8 +1,9 @@
-import { Button, Input, Upload, UploadFile, UploadProps } from 'antd'
+import { Button, Input, Upload, UploadFile, UploadProps, message } from 'antd'
 import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { axiosApi } from '../../../core/api/AxiosApi'
 import { UploadChangeParam, RcFile } from 'antd/es/upload';
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
+import { useRouter } from 'next/router';
 
 const getBase64 = (img: RcFile, callback: (url: string) => void) => {
   const reader = new FileReader();
@@ -10,16 +11,21 @@ const getBase64 = (img: RcFile, callback: (url: string) => void) => {
   reader.readAsDataURL(img);
 };
 
-const UpdateDishModalContent: React.FC<{updatedItem: any}> = ({updatedItem}) => {
+const UpdateDishModalContent: React.FC<{updatedItem: any, closeModal: () => void}> = ({updatedItem, closeModal}) => {
   const [categories, setCategories] = useState<any[]>()
+  const router = useRouter()
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
-
     formData.append('id', updatedItem.id)
-    
-    axiosApi.put('/menu/dishes/update', formData)    
+    axiosApi.put('/menu/dishes/update', formData)   
+    .then(data => {
+      closeModal()
+      message.success(data.data.message)
+      setTimeout(() => router.reload(), 1000)
+    })  
+    .catch(err => message.error(err.response.data.message))
   }
 
   const renderCategories = useMemo(() => {

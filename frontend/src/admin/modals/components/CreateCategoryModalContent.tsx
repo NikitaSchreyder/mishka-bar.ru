@@ -1,13 +1,20 @@
 import { Button, Input, message } from 'antd'
 import { FormEvent } from 'react'
 import { axiosApi } from '../../../core/api/AxiosApi'
+import { useRouter } from 'next/router'
 
-const CreateCategoryModalContent: React.FC = () => {
+const CreateCategoryModalContent: React.FC<{closeModal: () => void}> = ({closeModal}) => {
+  const router = useRouter()
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
-    axiosApi.put('/menu/categories/create', formData)    
-      .catch(err => message.error(err.response.data.message))
+    axiosApi.put('/menu/categories/create', formData)
+      .then(data => {
+        closeModal()
+        message.success(data.data.message)
+        setTimeout(() => router.reload(), 1000)
+      })
+        .catch(err => message.error(err.response.data.message))
   }
 
   return (
