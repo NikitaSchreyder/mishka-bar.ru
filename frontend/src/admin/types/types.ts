@@ -1,3 +1,8 @@
 export interface IAdminIndexPageProps {}
 
-export interface ICategoryItemProps {}
+export interface ICategoryItemProps {
+  id: string 
+  name: string
+  searchLink: string
+  thumbUrl: string
+}
