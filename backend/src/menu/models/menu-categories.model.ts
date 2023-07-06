@@ -1,6 +1,5 @@
-import { Table, Model, Column, DataType, HasMany } from 'sequelize-typescript';
+import { Table, Model, Column, DataType } from 'sequelize-typescript';
 import { CreateMenuCategoryDto } from '../dto/menu-categories.dto';
-import { MenuDishesModel } from './menu-dishes.model';
 
 @Table({ tableName: 'menu-categories', createdAt: false, updatedAt: false })
 export class MenuCategoriesModel extends Model<MenuCategoriesModel, CreateMenuCategoryDto> {

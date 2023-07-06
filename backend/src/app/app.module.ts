@@ -9,6 +9,8 @@ import { ConfigModule } from '@nestjs/config'
 import { FilesModule } from '../files/files.module'
 import { MenuCategoriesModel } from '../menu/models/menu-categories.model'
 import { MenuDishesModel } from '../menu/models/menu-dishes.model'
+import { AdminModel } from '../admin/models/admin.model'
+import { AdminModule } from '../admin/admin.module'
 
 @Module({
   imports: [
@@ -29,13 +31,15 @@ import { MenuDishesModel } from '../menu/models/menu-dishes.model'
       models: [
         MenuDishesModel,
         MenuCategoriesModel,
+        AdminModel
       ],
       autoLoadModels: true,
       // sync: { force: true }
     }),
     MenuModule,
     InteriorModule,
-    FilesModule
+    FilesModule,
+    AdminModule
   ],
   controllers: [],
   providers: [],
