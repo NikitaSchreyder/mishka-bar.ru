@@ -1,14 +1,14 @@
 import { Modal, Spin } from "antd"
 import dynamic from "next/dynamic"
 
-const UpdateCategoryModalContent = dynamic(() => 
-    import('./components/UpdateCategoryModal'), 
+const UpdateDishModalContent = dynamic(() => 
+    import('./components/UpdateDishModalContent'), 
     {
         loading: () => <Spin />
     }
 )
 
-export const UpdateCategoryModal: React.FC<{open: boolean, closeModal: () => void, updatedItem: any}> = ({open, closeModal, updatedItem}) => {
+export const UpdateDishModal: React.FC<{open: boolean, closeModal: () => void, updatedItem: any}> = ({open, closeModal, updatedItem}) => {
   return (
       <Modal
           wrapClassName="modal-bg"
@@ -19,7 +19,7 @@ export const UpdateCategoryModal: React.FC<{open: boolean, closeModal: () => voi
           destroyOnClose={true}
           onCancel={closeModal}
       >
-          <UpdateCategoryModalContent updatedItem={updatedItem} />
+          <UpdateDishModalContent updatedItem={updatedItem} />
       </Modal>
   )
 }
