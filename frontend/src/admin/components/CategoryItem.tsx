@@ -1,6 +1,5 @@
 import { Button, Popconfirm, Popover, message } from 'antd'
 import { ICategoryItemProps } from '../types/types'
-import { MoreOutlined } from '@ant-design/icons'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
@@ -11,7 +10,10 @@ const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal}) => 
   const actions = {
     remove() {
       axios.delete(`http://mishkabar.localhost/api/menu/categories/remove?id=${id}`)
-        .then(() => router.reload())
+        .then(data => {
+          message.success(data.data.message);
+          setTimeout(() => router.reload(), 1000)
+        })
           .catch(err => message.error(err.response.data.message))
     }
   }

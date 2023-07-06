@@ -40,7 +40,7 @@ export const UpdateDishModal: React.FC<{open: boolean, closeModal: () => void, u
           destroyOnClose={true}
           onCancel={closeModal}
       >
-          <UpdateDishModalContent updatedItem={updatedItem} />
+          <UpdateDishModalContent closeModal={closeModal} updatedItem={updatedItem} />
       </Modal>
   )
 }
@@ -56,7 +56,7 @@ export const CreateDishModal: React.FC<{open: boolean, closeModal: () => void}> 
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <CreateDishModalContent />
+            <CreateDishModalContent closeModal={closeModal} />
         </Modal>
     )
 }
@@ -72,7 +72,7 @@ export const UpdateCategoryModal: React.FC<{open: boolean, closeModal: () => voi
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <UpdateCategoryModalContent updatedItem={updatedItem} />
+            <UpdateCategoryModalContent closeModal={closeModal} updatedItem={updatedItem} />
         </Modal>
     )
   }
@@ -88,7 +88,7 @@ export const CreateCategoryModal: React.FC<{open: boolean, closeModal: () => voi
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <CreateCategoryModalContent />
+            <CreateCategoryModalContent closeModal={closeModal} />
         </Modal>
     )
 }
