@@ -4,8 +4,8 @@ import CategoryItem from '../../components/CategoryItem';
 import { axiosApi } from '../../../core/api/AxiosApi';
 import DishesItem from '../../components/DishesItem';
 import { useModalControl } from '../../../core/hooks/useModalControl';
-import { UpdateCategoryModal } from '../../modals/AdminModals';
 import { IDishesItemProps } from '../../types/types';
+import { UpdateDishModal } from '../../modals/AdminModals';
 
 const AdminMenuDishesPanel: React.FC = () => {
   const [dishes, setDishes] = useState<any[]>()
@@ -33,7 +33,7 @@ const AdminMenuDishesPanel: React.FC = () => {
 
   return (
     <>
-      <UpdateCategoryModal updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
+      <UpdateDishModal updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
       <div style={{padding: 20}}>
         <Button style={{marginBottom: 20}}>Новое блюдо</Button>
         {renderDishes}
