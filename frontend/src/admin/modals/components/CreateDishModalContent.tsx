@@ -1,14 +1,21 @@
-import { Button, Input } from 'antd'
+import { Button, Input, message } from 'antd'
 import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { axiosApi } from '../../../core/api/AxiosApi'
+import { useRouter } from 'next/router'
 
-const CreateDishModalContent: React.FC = () => {
+const CreateDishModalContent: React.FC<{closeModal: () => void}> = ({closeModal}) => {
   const [categories, setCategories] = useState<any[]>()
-
+  const router = useRouter()
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
-    axiosApi.put('/menu/dishes/create', formData)    
+    axiosApi.put('/menu/dishes/create', formData)  
+    .then(data => {
+      closeModal()
+      message.success(data.data.message)
+      setTimeout(() => router.reload(), 1000)
+    })  
+    .catch(err => message.error(err.response.data.message))
   }
 
   const renderCategories = useMemo(() => {
@@ -26,18 +33,18 @@ const CreateDishModalContent: React.FC = () => {
     <div style={{padding: 20}}>
       <form onSubmit={onSubmit}>
         <label style={{color: 'white', marginBottom: 10}} htmlFor='photo'>Фото</label>
-        <input style={{marginBottom: 20}} type='file' name='photo'  />
+        <input style={{marginBottom: 20}} type='file' name='photo' required/>
         
         <label style={{color: 'white', marginBottom: 10}} htmlFor='name'>Название</label>
-        <Input style={{marginBottom: 20}} name='name' id="name" placeholder='Название' />
+        <Input style={{marginBottom: 20}} name='name' id="name" placeholder='Название' required/>
 
         <label style={{color: 'white', marginBottom: 10}} htmlFor='composition'>Состав</label>
-        <Input style={{marginBottom: 20}} name='composition' id="composition" placeholder='Состав' />
+        <Input style={{marginBottom: 20}} name='composition' id="composition" placeholder='Состав' required/>
 
         <label style={{color: 'white', marginBottom: 10}} htmlFor='composition'>Цена</label>
-        <Input style={{marginBottom: 20}} name='price' id="price" placeholder='Цена' />
+        <Input style={{marginBottom: 20}} name='price' id="price" placeholder='Цена' required/>
 
-        <select name="categorySearchLink" id="">
+        <select name="categorySearchLink" id="" required>
           {renderCategories}
         </select>
         <Button htmlType='submit'>Сохранить</Button>
