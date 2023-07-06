@@ -2,7 +2,7 @@ import { Button, Input, Upload } from 'antd'
 import { FormEvent } from 'react'
 import { axiosApi } from '../../../core/api/AxiosApi'
 
-const UpdateCategoryModal: React.FC<{updatedItem: any}> = ({updatedItem}) => {
+const UpdateDishModalContent: React.FC<{updatedItem: any}> = ({updatedItem}) => {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
@@ -23,5 +23,5 @@ const UpdateCategoryModal: React.FC<{updatedItem: any}> = ({updatedItem}) => {
     </div>
   )
 }
-
-export default UpdateCategoryModal
+UpdateDishModalContent
+export default UpdateDishModalContent
