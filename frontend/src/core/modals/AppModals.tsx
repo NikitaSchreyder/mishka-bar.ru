@@ -16,6 +16,7 @@ const MenuItemModalContent = dynamic(() =>
         loading: () => <Spin />
     }
 )
+
 export const PickupModal: React.FC<{open: boolean, closeModal: () => void}> = ({open, closeModal}) => {
     return (
         <Modal
