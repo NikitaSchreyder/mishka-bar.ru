@@ -36,7 +36,7 @@ export class MenuService {
             if(newCategory) throw new HttpException(`Категория "${newCategory.name}" успешно создана`, HttpStatus.OK)
         },
         update: async (dto: UpdateMenuCategoryDto, file: Express.Multer.File) => {
-            const menuCategory = await this.throwIfCategoryNotFound(dto.id)
+            const menuCategory = await this.throwIfCategoryByIdNotFound(dto.id)
             
             if(!file) {
                 const searchLink = transliterate(dto.name).toLowerCase()
@@ -66,7 +66,7 @@ export class MenuService {
             } 
         },
         remove: async (dto: RemoveMenuCategoryDto) => {
-            const menuCategory = await this.throwIfCategoryNotFound(dto.id)
+            const menuCategory = await this.throwIfCategoryByIdNotFound(dto.id)
             await menuCategory.destroy()
             
             throw new HttpException(`Категория "${menuCategory.name}" успешно удалена`, HttpStatus.OK)
@@ -110,7 +110,7 @@ export class MenuService {
             return newDish
         },
         update: async (dto: UpdateMenuDishDto, file: Express.Multer.File) => {
-            const dish = await this.throwIfDishNotFound(dto.id)
+            const dish = await this.throwIfDishByIdNotFound(dto.id)
             
             if(dto.categorySearchLink !== dish.categorySearchLink) 
                 await this.throwIfCategoryBySearchLinkNotFound(dto.categorySearchLink)
@@ -144,7 +144,7 @@ export class MenuService {
             } 
         },
         remove: async (dto: RemoveMenuDishDto) => {
-            const dish = await this.throwIfDishNotFound(dto.id)
+            const dish = await this.throwIfDishByIdNotFound(dto.id)
             await dish.destroy()
             
             throw new HttpException(`Блюдо "${dish.name}" успешно удалено`, HttpStatus.OK)
@@ -156,12 +156,7 @@ export class MenuService {
         if(isDuplicate) throw new HttpException('Блюдо уже существует', HttpStatus.BAD_REQUEST)
     }
 
-    private async checkCategoryDuplicate(name: string) {
-        const isDuplicate = await this.menuCategoriesRepository.findOne({ where: {name}})
-        if(isDuplicate) throw new HttpException('Категория уже существует', HttpStatus.BAD_REQUEST)
-    }
-
-    private async throwIfDishNotFound(id: number) {
+    private async throwIfDishByIdNotFound(id: number) {
         const dish = await this.menuDishesRepository.findOne({
             where: {id}
         })
@@ -169,7 +164,12 @@ export class MenuService {
         return dish
     }
 
-    private async throwIfCategoryNotFound(id: number) {
+    private async checkCategoryDuplicate(name: string) {
+        const isDuplicate = await this.menuCategoriesRepository.findOne({ where: {name}})
+        if(isDuplicate) throw new HttpException('Категория уже существует', HttpStatus.BAD_REQUEST)
+    }
+
+    private async throwIfCategoryByIdNotFound(id: number) {
         const menuCategory = await this.menuCategoriesRepository.findOne({
             where: {id}
         })
