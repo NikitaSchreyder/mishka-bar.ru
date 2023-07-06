@@ -5,8 +5,15 @@ import { MailOutlined } from '@ant-design/icons';
 
 import AdminMenuDishesPanel from './panels/menu/AdminMenuDishesPanel';
 import AdminMenuCategoriesPanel from './panels/menu/AdminMenuCategoriesPanel';
+import Link from 'next/link';
 
 const items: MenuProps['items'] = [
+  {
+    label: (
+      <Link href={'/'}>Сайт</Link>
+    ),
+    key: 'site'
+  },
   {
     label: 'Меню',
     key: 'menu',
@@ -27,10 +34,6 @@ const items: MenuProps['items'] = [
 const AdminIndexPage: React.FC = () => {
   const [current, setCurrent] = useState('menu');
   const onClick: MenuProps['onClick'] = (e) => setCurrent(e.key)
-
-  // useEffect(() => {
-  //   document.cookie = "token=John";
-  // }, [])
 
   const RenderPanel = useCallback(() => {
     switch(current) {
