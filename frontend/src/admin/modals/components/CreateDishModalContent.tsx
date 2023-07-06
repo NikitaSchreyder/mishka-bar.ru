@@ -1,25 +1,14 @@
-import { Button, Input, Upload, UploadFile, UploadProps } from 'antd'
+import { Button, Input } from 'antd'
 import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { axiosApi } from '../../../core/api/AxiosApi'
-import { UploadChangeParam, RcFile } from 'antd/es/upload';
-import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 
-const getBase64 = (img: RcFile, callback: (url: string) => void) => {
-  const reader = new FileReader();
-  reader.addEventListener('load', () => callback(reader.result as string));
-  reader.readAsDataURL(img);
-};
-
-const UpdateDishModalContent: React.FC<{updatedItem: any}> = ({updatedItem}) => {
+const CreateDishModalContent: React.FC = () => {
   const [categories, setCategories] = useState<any[]>()
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
-
-    formData.append('id', updatedItem.id)
-    
-    axiosApi.put('/menu/dishes/update', formData)    
+    axiosApi.put('/menu/dishes/create', formData)    
   }
 
   const renderCategories = useMemo(() => {
@@ -40,13 +29,13 @@ const UpdateDishModalContent: React.FC<{updatedItem: any}> = ({updatedItem}) => 
         <input style={{marginBottom: 20}} type='file' name='photo'  />
         
         <label style={{color: 'white', marginBottom: 10}} htmlFor='name'>Название</label>
-        <Input style={{marginBottom: 20}} name='name' id="name" defaultValue={updatedItem.name} />
+        <Input style={{marginBottom: 20}} name='name' id="name" placeholder='Название' />
 
         <label style={{color: 'white', marginBottom: 10}} htmlFor='composition'>Состав</label>
-        <Input style={{marginBottom: 20}} name='composition' id="composition" defaultValue={updatedItem.composition} />
+        <Input style={{marginBottom: 20}} name='composition' id="composition" placeholder='Состав' />
 
         <label style={{color: 'white', marginBottom: 10}} htmlFor='composition'>Цена</label>
-        <Input style={{marginBottom: 20}} name='price' id="price" defaultValue={updatedItem.price} />
+        <Input style={{marginBottom: 20}} name='price' id="price" placeholder='Цена' />
 
         <select name="categorySearchLink" id="">
           {renderCategories}
@@ -56,5 +45,5 @@ const UpdateDishModalContent: React.FC<{updatedItem: any}> = ({updatedItem}) => 
     </div>
   )
 }
-UpdateDishModalContent
-export default UpdateDishModalContent
+
+export default CreateDishModalContent
