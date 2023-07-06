@@ -83,7 +83,7 @@ export class MenuService {
             const dishesByCategory = await this.menuDishesRepository.findAll({
                 where: {categorySearchLink}
             })
-            if(!dishesByCategory) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
+            if(!dishesByCategory) throw new HttpException('Не найдены блюда в категории', HttpStatus.NOT_FOUND)
             const categoryName = (await this.menuCategoriesRepository.findOne({where: {searchLink: categorySearchLink}})).name
             const data = {
                 categoryItems: dishesByCategory,
