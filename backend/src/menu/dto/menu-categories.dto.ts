@@ -23,5 +23,5 @@ export class CreateMenuDishDto {
   readonly price: string
   readonly thumbUrl: string
   readonly searchLink: string
-  readonly category: string
+  readonly categorySearchLink: string
 }

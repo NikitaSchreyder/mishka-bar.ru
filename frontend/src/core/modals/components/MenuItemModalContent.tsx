@@ -5,7 +5,7 @@ import { CloseOutlined } from "@ant-design/icons"
 const MenuItemModalContent: React.FC<{menuItem: TMenuItem, onClose: () => void}> = ({menuItem, onClose}) => {
     const composition = () => {
         return menuItem.composition.length > 0 && (
-            <p className="menu-item-modal_description">Состав: {menuItem.composition.join(', ').toLowerCase()}</p>
+            <p className="menu-item-modal_description">Состав: {menuItem.composition.toLowerCase()}</p>
         )
     } 
     return (

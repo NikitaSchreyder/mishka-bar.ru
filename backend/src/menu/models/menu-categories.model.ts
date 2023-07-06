@@ -15,7 +15,4 @@ export class MenuCategoriesModel extends Model<MenuCategoriesModel, CreateMenuCa
 
   @Column({type: DataType.STRING, unique: true, allowNull: false})
   thumbUrl: string
-
-  @HasMany(() => MenuDishesModel)
-  dishes: MenuDishesModel
 }

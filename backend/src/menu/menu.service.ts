@@ -7,14 +7,13 @@ import { CreateMenuCategoryDto, CreateMenuDishDto, RemoveMenuCategoryDto, Update
 
 import { transliterate } from '../core/text-utils/translit';
 import { MenuDishesModel } from './models/menu-dishes.model';
+import { async } from 'rxjs';
 
 @Injectable()
 export class MenuService {
     constructor(
-        @InjectModel(MenuDishesModel) 
-        readonly menuDishesRepository: typeof MenuDishesModel,
-        @InjectModel(MenuCategoriesModel) 
-        readonly menuCategoriesRepository: typeof MenuCategoriesModel,
+        @InjectModel(MenuDishesModel) readonly menuDishesRepository: typeof MenuDishesModel,
+        @InjectModel(MenuCategoriesModel) readonly menuCategoriesRepository: typeof MenuCategoriesModel,
         readonly filesSefvice: FilesService
     ) {}
 
@@ -63,19 +62,32 @@ export class MenuService {
     }
 
     public dishes = {
+        get: async () => {
+            const dishesByCategory = await this.menuDishesRepository.findAll()
+            if(!dishesByCategory) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
+            return dishesByCategory
+        },
+        getByCategory: async (categorySearchLink: string) => {
+            const dishesByCategory = await this.menuDishesRepository.findAll({
+                where: {categorySearchLink}
+            })
+            if(!dishesByCategory) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
+            const categoryName = (await this.menuCategoriesRepository.findOne({where: {searchLink: categorySearchLink}})).name
+            const data = {
+                categoryItems: dishesByCategory,
+                categoryName 
+            }
+            return data
+        },
         create: async (dto: CreateMenuDishDto, file: Express.Multer.File) => {
-            console.log(dto);
-            
             await this.checkDishDuplicate(dto.name)
 
-            const category = await this.throwIfCategoryBySearchLinkNotFound(dto.category)
+            const category = await this.throwIfCategoryBySearchLinkNotFound(dto.categorySearchLink)
             const searchLink = transliterate(dto.name).toLowerCase()
             const thumbUrl = await this.filesSefvice.savePhoto(file)
-            const newDishData: CreateMenuDishDto = {...dto, searchLink, thumbUrl}
+            const newDishData: CreateMenuDishDto = {...dto, searchLink, thumbUrl, categorySearchLink: category.searchLink}
             const newDish = await this.menuDishesRepository.create(newDishData)
             
-            await newDish.$set('category', category)
-
             if(!newDish) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
             if(newDish) throw new HttpException(`Блюдо "${newDish.name}" успешно создано`, HttpStatus.OK)
 
