@@ -10,8 +10,8 @@ const MenuCategoryPage: NextPage<IMenuCategoryIndexPageProps> = (p) => {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const {categorySearchLink} = ctx.query
-    const categoryItems = await(await axiosApi.get(`/menu/category-items?categorySearchLink=${categorySearchLink}`)).data
-    
+    const categoryItems = await(await axiosApi.get(`/menu/dishes/by-category?categorySearchLink=${categorySearchLink}`)).data
+
     return {
         props: {
             ...categoryItems

@@ -25,7 +25,7 @@ const MenuCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryI
     }
 
     const menuCategoryItems = () => {
-        return categoryItems.map((item, index) => <MenuCategoryItem key={index} item={item} onClick={onItemClick} />)
+        return categoryItems.map(item => <MenuCategoryItem key={item.id} item={item} onClick={onItemClick} />)
     }
 
     const breadcrumbItems: ItemType[] = [
