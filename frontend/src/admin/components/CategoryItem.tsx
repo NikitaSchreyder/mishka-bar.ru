@@ -4,12 +4,11 @@ import { MoreOutlined } from '@ant-design/icons'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
-const CategoryItem: React.FC<ICategoryItemProps> = (p) => {
-  const {id, name, searchLink, thumbUrl} = p
+const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal}) => {
+  const {id, name, searchLink, thumbUrl} = item
   const router = useRouter()
 
   const actions = {
-    update() {},
     remove() {
       axios.delete(`http://mishkabar.localhost/api/menu/categories/remove?id=${id}`)
         .then(() => router.reload())
@@ -19,6 +18,9 @@ const CategoryItem: React.FC<ICategoryItemProps> = (p) => {
 
   const popoverContent = (
     <div>
+      <Button
+        onClick={showUpdateModal}
+      >Изменить</Button>
       <Popconfirm 
         title="Удалить"
         description="После удаления категории необходимо изменить категорию блюд которые были в ней, либо удалить их. Вы уверены?"

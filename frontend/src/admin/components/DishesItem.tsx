@@ -8,7 +8,6 @@ const DishesItem: React.FC<IDishesItemProps> = ({item, showUpdateModal}) => {
   const router = useRouter()
 
   const actions = {
-    update() {},
     remove() {
       axios.delete(`http://mishkabar.localhost/api/menu/dishes/remove?id=${id}`)
         .then(() => router.reload())
