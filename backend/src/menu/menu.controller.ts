@@ -1,5 +1,5 @@
 import { FileInterceptor } from '@nestjs/platform-express'
-import { Body, Controller, Delete, Get, Param, Put, UploadedFile, UseInterceptors } from '@nestjs/common'
+import { Body, Controller, Delete, Get, Param, Put, Query, UploadedFile, UseInterceptors } from '@nestjs/common'
 
 import { MenuService } from './menu.service'
 import { CreateMenuCategoryDto, CreateMenuDishDto, RemoveMenuCategoryDto, UpdateMenuCategoryDto } from './dto/menu-categories.dto'
@@ -41,10 +41,15 @@ export class MenuController {
     }
 
     @Get('/dishes')
-    getDishes(
-        @Param('categorySearchLink') categorySearchLink: string
-    ) {
+    getDishes() {
+        return this.menuService.dishes.get()
+    }
 
+    @Get('/dishes/by-category')
+    getDishesByCategory(
+        @Query('categorySearchLink') categorySearchLink: string
+    ) {
+        return this.menuService.dishes.getByCategory(categorySearchLink)
     }
 
     @Put('/dishes/create')
