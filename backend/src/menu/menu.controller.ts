@@ -79,6 +79,8 @@ export class MenuController {
         @Body() dto: UpdateMenuDishDto,
         @UploadedFile() file: Express.Multer.File
     ) {
+        console.log(dto);
+        
         return this.menuService.dishes.update(dto, file)
     }
 
