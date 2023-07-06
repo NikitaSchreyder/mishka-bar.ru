@@ -75,9 +75,9 @@ export class MenuService {
 
     public dishes = {
         get: async () => {
-            const dishesByCategory = await this.menuDishesRepository.findAll()
-            if(!dishesByCategory) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
-            return dishesByCategory
+            const dishes = await this.menuDishesRepository.findAll()
+            if(!dishes) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
+            return dishes
         },
         getByCategory: async (categorySearchLink: string) => {
             const dishesByCategory = await this.menuDishesRepository.findAll({
@@ -111,6 +111,7 @@ export class MenuService {
         },
         update: async (dto: UpdateMenuDishDto, file: Express.Multer.File) => {
             const dish = await this.throwIfDishByIdNotFound(dto.id)
+            console.log(dto);
             
             if(dto.categorySearchLink !== dish.categorySearchLink) 
                 await this.throwIfCategoryBySearchLinkNotFound(dto.categorySearchLink)

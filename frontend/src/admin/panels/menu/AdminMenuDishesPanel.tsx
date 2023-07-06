@@ -5,18 +5,22 @@ import { axiosApi } from '../../../core/api/AxiosApi';
 import DishesItem from '../../components/DishesItem';
 import { useModalControl } from '../../../core/hooks/useModalControl';
 import { IDishesItemProps } from '../../types/types';
-import { UpdateDishModal } from '../../modals/AdminModals';
+import { CreateDishModal, UpdateDishModal } from '../../modals/AdminModals';
 
 const AdminMenuDishesPanel: React.FC = () => {
   const [dishes, setDishes] = useState<any[]>()
   const [updatedItem, setUpdatedItem] = useState<IDishesItemProps>()
+
+  const createModalControl = useModalControl()
+  const showCreateModal = (item: IDishesItemProps) => {
+    createModalControl.openModal()
+  }
 
   const updateModalControl = useModalControl()
   const showUpdateModal = (item: IDishesItemProps) => {
     setUpdatedItem(item)
     updateModalControl.openModal()
   }
-
 
   useEffect(() => {
     axiosApi.get('menu/dishes')
@@ -33,9 +37,10 @@ const AdminMenuDishesPanel: React.FC = () => {
 
   return (
     <>
+      <CreateDishModal closeModal={createModalControl.closeModal} open={createModalControl.toShow} />
       <UpdateDishModal updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
       <div style={{padding: 20}}>
-        <Button style={{marginBottom: 20}}>Новое блюдо</Button>
+        <Button onClick={createModalControl.openModal} style={{marginBottom: 20}}>Новое блюдо</Button>
         {renderDishes}
       </div>
     </>
