@@ -1,6 +1,6 @@
 import { Menu, MenuProps } from 'antd'
 import { IAdminIndexPageProps } from './types/types'
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { MailOutlined } from '@ant-design/icons';
 
 import AdminMenuDishesPanel from './panels/menu/AdminMenuDishesPanel';
@@ -24,9 +24,13 @@ const items: MenuProps['items'] = [
   }
 ];
 
-const AdminIndexPage: React.FC<IAdminIndexPageProps> = ({}) => {
+const AdminIndexPage: React.FC = () => {
   const [current, setCurrent] = useState('menu');
   const onClick: MenuProps['onClick'] = (e) => setCurrent(e.key)
+
+  // useEffect(() => {
+  //   document.cookie = "token=John";
+  // }, [])
 
   const RenderPanel = useCallback(() => {
     switch(current) {

@@ -1,4 +1,6 @@
-export interface IAdminIndexPageProps {}
+export interface IAdminIndexPageProps {
+  isAdmin: boolean
+}
 
 export interface ICategoryItemProps {
   item: {
