@@ -12,9 +12,6 @@ const AdminMenuDishesPanel: React.FC = () => {
   const [updatedItem, setUpdatedItem] = useState<IDishesItemProps>()
 
   const createModalControl = useModalControl()
-  const showCreateModal = (item: IDishesItemProps) => {
-    createModalControl.openModal()
-  }
 
   const updateModalControl = useModalControl()
   const showUpdateModal = (item: IDishesItemProps) => {
