@@ -1,17 +1,16 @@
 import { Button, Popconfirm, Popover, message } from 'antd'
-import { ICategoryItemProps } from '../types/types'
-import { MoreOutlined } from '@ant-design/icons'
+import { IDishesItemProps } from '../types/types'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
-const CategoryItem: React.FC<ICategoryItemProps> = (p) => {
-  const {id, name, searchLink, thumbUrl} = p
+const DishesItem: React.FC<IDishesItemProps> = ({item, showUpdateModal}) => {
+  const {id, name, searchLink, thumbUrl} = item
   const router = useRouter()
 
   const actions = {
     update() {},
     remove() {
-      axios.delete(`http://mishkabar.localhost/api/menu/categories/remove?id=${id}`)
+      axios.delete(`http://mishkabar.localhost/api/menu/dishes/remove?id=${id}`)
         .then(() => router.reload())
           .catch(err => message.error(err.response.data.message))
     }
@@ -19,9 +18,14 @@ const CategoryItem: React.FC<ICategoryItemProps> = (p) => {
 
   const popoverContent = (
     <div>
+      <Button
+        onClick={showUpdateModal}
+      >
+        Изменить
+      </Button>
       <Popconfirm 
         title="Удалить"
-        description="После удаления категории необходимо изменить категорию блюд которые были в ней, либо удалить их. Вы уверены?"
+        description="Вы уверены?"
         onConfirm={actions.remove}
       >
         <Button danger>Удалить</Button>
@@ -45,4 +49,4 @@ const CategoryItem: React.FC<ICategoryItemProps> = (p) => {
   )
 }
 
-export default CategoryItem
+export default DishesItem
