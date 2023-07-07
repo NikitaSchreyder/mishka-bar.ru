@@ -33,3 +33,14 @@ export interface ICategoriesItemProps {
   }
   showUpdateModal: () => void
 }
+
+export interface IStockItemProps {
+  item: {
+    id: string 
+    name: string
+    description: string
+    thumbUrl: string
+  }
+  showUpdateModal: () => void
+  updateStocks: () => void
+}

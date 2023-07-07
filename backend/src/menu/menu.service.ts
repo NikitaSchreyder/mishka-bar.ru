@@ -111,7 +111,6 @@ export class MenuService {
         },
         update: async (dto: UpdateMenuDishDto, file: Express.Multer.File) => {
             const dish = await this.throwIfDishByIdNotFound(dto.id)
-            console.log(dto);
             
             if(dto.categorySearchLink !== dish.categorySearchLink) 
                 await this.throwIfCategoryBySearchLinkNotFound(dto.categorySearchLink)
