@@ -34,7 +34,7 @@ const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal, upda
   )
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column', maxWidth: 200, gap: 10}}>
+    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: 200, gap: 10}}>
       <img src={`http://mishkabar.localhost${thumbUrl}`} width={200} alt="" />
       <p style={{color: 'white'}}>{name}</p>
       <Popover
