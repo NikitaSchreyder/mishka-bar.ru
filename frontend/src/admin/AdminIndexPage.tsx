@@ -38,9 +38,17 @@ const items: MenuProps['items'] = [
   }
 ];
 
+
+
 const AdminIndexPage: React.FC = () => {
-  const [current, setCurrent] = useState('menu');
+  const [current, setCurrent] = useState('');
   const onClick: MenuProps['onClick'] = (e) => setCurrent(e.key)
+
+  useEffect(() => {
+    if(current.length === 0) {
+      setCurrent('menu-categories')
+    }
+  }, [])
 
   const RenderPanel = useCallback(() => {
     switch(current) {
