@@ -11,6 +11,8 @@ import { MenuCategoriesModel } from '../menu/models/menu-categories.model'
 import { MenuDishesModel } from '../menu/models/menu-dishes.model'
 import { AdminModel } from '../admin/models/admin.model'
 import { AdminModule } from '../admin/admin.module'
+import { StocksModule } from '../stocks/stocks.module'
+import { StocksModel } from '../stocks/models/stocks.model'
 
 @Module({
   imports: [
@@ -31,7 +33,8 @@ import { AdminModule } from '../admin/admin.module'
       models: [
         MenuDishesModel,
         MenuCategoriesModel,
-        AdminModel
+        AdminModel,
+        StocksModel
       ],
       autoLoadModels: true,
       // sync: { force: true }
@@ -39,7 +42,8 @@ import { AdminModule } from '../admin/admin.module'
     MenuModule,
     InteriorModule,
     FilesModule,
-    AdminModule
+    AdminModule,
+    StocksModule
   ],
   controllers: [],
   providers: [],

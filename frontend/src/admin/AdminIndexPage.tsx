@@ -6,6 +6,7 @@ import { MailOutlined } from '@ant-design/icons';
 import AdminMenuDishesPanel from './panels/menu/AdminMenuDishesPanel';
 import AdminMenuCategoriesPanel from './panels/menu/AdminMenuCategoriesPanel';
 import Link from 'next/link';
+import AdminStocksPanel from './panels/stocks/AdminStocksPanel';
 
 const items: MenuProps['items'] = [
   {
@@ -28,6 +29,11 @@ const items: MenuProps['items'] = [
         key: 'menu-dishes'
       }
     ]
+  },
+  {
+    label: 'Акции',
+    key: 'stocks',
+    icon: <MailOutlined />
   }
 ];
 
@@ -41,6 +47,8 @@ const AdminIndexPage: React.FC = () => {
         return <AdminMenuCategoriesPanel />
       case 'menu-dishes':
         return <AdminMenuDishesPanel />
+      case 'stocks':
+        return <AdminStocksPanel />
       default:
         return null
     }

@@ -1,33 +1,63 @@
 import { Modal, Spin } from "antd"
 import dynamic from "next/dynamic"
 
-const UpdateDishModalContent = dynamic(() => 
-    import('./components/UpdateDishModalContent'), 
-    {
-        loading: () => <Spin />
-    }
-)
-
 const CreateDishModalContent = dynamic(() => 
-    import('./components/CreateDishModalContent'), 
+    import('./components/dishes/CreateDishModalContent'), 
     {
         loading: () => <Spin />
     }
 )
 
-const UpdateCategoryModalContent = dynamic(() => 
-    import('./components/UpdateCategoryModalContent'), 
+const UpdateDishModalContent = dynamic(() => 
+    import('./components/dishes/UpdateDishModalContent'), 
     {
         loading: () => <Spin />
     }
 )
 
 const CreateCategoryModalContent = dynamic(() => 
-    import('./components/CreateCategoryModalContent'), 
+    import('./components/categories/CreateCategoryModalContent'), 
     {
         loading: () => <Spin />
     }
 )
+
+const UpdateCategoryModalContent = dynamic(() => 
+    import('./components/categories/UpdateCategoryModalContent'), 
+    {
+        loading: () => <Spin />
+    }
+)
+
+const CreateStockyModalContent = dynamic(() => 
+    import('./components/stocks/CreateStockModalContent'), 
+    {
+        loading: () => <Spin />
+    }
+)
+
+const UpdateStockModalContent = dynamic(() => 
+    import('./components/stocks/UpdateStockModalContent'), 
+    {
+        loading: () => <Spin />
+    }
+)
+
+export const CreateDishModal: React.FC<{open: boolean, closeModal: () => void, updateDishes: () => void}> = ({open, closeModal, updateDishes}) => {
+    return (
+        <Modal
+            wrapClassName="modal-bg"
+            open={open}
+            closable={false}
+            className="pickup-modal"
+            footer={null}
+            destroyOnClose={true}
+            onCancel={closeModal}
+        >
+            <CreateDishModalContent updateDishes={updateDishes} closeModal={closeModal} />
+        </Modal>
+    )
+}
 
 export const UpdateDishModal: React.FC<{open: boolean, closeModal: () => void, updatedItem: any, updateDishes: () => void}> = ({open, closeModal, updatedItem, updateDishes}) => {
   return (
@@ -45,7 +75,9 @@ export const UpdateDishModal: React.FC<{open: boolean, closeModal: () => void, u
   )
 }
 
-export const CreateDishModal: React.FC<{open: boolean, closeModal: () => void, updateDishes: () => void}> = ({open, closeModal, updateDishes}) => {
+
+
+export const CreateCategoryModal: React.FC<{open: boolean, closeModal: () => void, updateCategories: () => void}> = ({open, closeModal, updateCategories}) => {
     return (
         <Modal
             wrapClassName="modal-bg"
@@ -56,7 +88,7 @@ export const CreateDishModal: React.FC<{open: boolean, closeModal: () => void, u
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <CreateDishModalContent updateDishes={updateDishes} closeModal={closeModal} />
+            <CreateCategoryModalContent updateCategories={updateCategories} closeModal={closeModal} />
         </Modal>
     )
 }
@@ -77,7 +109,9 @@ export const UpdateCategoryModal: React.FC<{open: boolean, closeModal: () => voi
     )
   }
 
-export const CreateCategoryModal: React.FC<{open: boolean, closeModal: () => void, updateCategories: () => void}> = ({open, closeModal, updateCategories}) => {
+
+
+export const CreateStockModal: React.FC<{open: boolean, closeModal: () => void, updateStocks: () => void}> = ({open, closeModal, updateStocks}) => {
     return (
         <Modal
             wrapClassName="modal-bg"
@@ -88,7 +122,23 @@ export const CreateCategoryModal: React.FC<{open: boolean, closeModal: () => voi
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <CreateCategoryModalContent updateCategories={updateCategories} closeModal={closeModal} />
+            <CreateStockyModalContent updateStocks={updateStocks} closeModal={closeModal} />
         </Modal>
     )
 }
+
+export const UpdateStockModal: React.FC<{open: boolean, closeModal: () => void, updatedItem: any, updateStocks: () => void}> = ({updateStocks, open, closeModal, updatedItem}) => {
+    return (
+        <Modal
+            wrapClassName="modal-bg"
+            open={open}
+            closable={false}
+            className="pickup-modal"
+            footer={null}
+            destroyOnClose={true}
+            onCancel={closeModal}
+        >
+            <UpdateStockModalContent updateStocks={updateStocks} closeModal={closeModal} updatedItem={updatedItem} />
+        </Modal>
+    )
+  }

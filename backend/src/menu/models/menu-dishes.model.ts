@@ -1,5 +1,4 @@
-import { Table, Model, Column, DataType, HasOne, BelongsTo, ForeignKey } from 'sequelize-typescript';
-import { MenuCategoriesModel } from './menu-categories.model';
+import { Table, Model, Column, DataType } from 'sequelize-typescript';
 import { CreateMenuDishDto } from '../dto/menu-categories.dto';
 
 @Table({ tableName: 'menu-dishes', createdAt: false, updatedAt: false })
