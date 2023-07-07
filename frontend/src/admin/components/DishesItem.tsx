@@ -3,14 +3,17 @@ import { IDishesItemProps } from '../types/types'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
-const DishesItem: React.FC<IDishesItemProps> = ({item, showUpdateModal}) => {
+const DishesItem: React.FC<IDishesItemProps> = ({item, showUpdateModal, updateDishes}) => {
   const {id, name, searchLink, thumbUrl} = item
   const router = useRouter()
 
   const actions = {
     remove() {
       axios.delete(`http://mishkabar.localhost/api/menu/dishes/remove?id=${id}`)
-        .then(() => router.reload())
+        .then(data => {
+          message.success(data.data.message);
+          updateDishes()
+        })
           .catch(err => message.error(err.response.data.message))
     }
   }

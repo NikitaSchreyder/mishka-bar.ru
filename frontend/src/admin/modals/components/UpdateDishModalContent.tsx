@@ -11,7 +11,7 @@ const getBase64 = (img: RcFile, callback: (url: string) => void) => {
   reader.readAsDataURL(img);
 };
 
-const UpdateDishModalContent: React.FC<{updatedItem: any, closeModal: () => void}> = ({updatedItem, closeModal}) => {
+const UpdateDishModalContent: React.FC<{updatedItem: any, closeModal: () => void, updateDishes: () => void}> = ({updatedItem, closeModal, updateDishes}) => {
   const [categories, setCategories] = useState<any[]>()
   const router = useRouter()
 
@@ -23,7 +23,7 @@ const UpdateDishModalContent: React.FC<{updatedItem: any, closeModal: () => void
     .then(data => {
       closeModal()
       message.success(data.data.message)
-      setTimeout(() => router.reload(), 1000)
+      updateDishes()
     })  
     .catch(err => message.error(err.response.data.message))
   }

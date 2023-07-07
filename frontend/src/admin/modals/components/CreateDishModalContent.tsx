@@ -3,7 +3,7 @@ import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { axiosApi } from '../../../core/api/AxiosApi'
 import { useRouter } from 'next/router'
 
-const CreateDishModalContent: React.FC<{closeModal: () => void}> = ({closeModal}) => {
+const CreateDishModalContent: React.FC<{closeModal: () => void, updateDishes: () => void}> = ({closeModal, updateDishes}) => {
   const [categories, setCategories] = useState<any[]>()
   const router = useRouter()
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -13,7 +13,7 @@ const CreateDishModalContent: React.FC<{closeModal: () => void}> = ({closeModal}
     .then(data => {
       closeModal()
       message.success(data.data.message)
-      setTimeout(() => router.reload(), 1000)
+      updateDishes()
     })  
     .catch(err => message.error(err.response.data.message))
   }
