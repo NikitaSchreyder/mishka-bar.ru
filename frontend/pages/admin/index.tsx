@@ -15,29 +15,9 @@ const AdminPage: NextPage<IAdminIndexPageProps> = ({isAdmin}) => {
 export default AdminPage
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { token } = ctx.req.cookies;
-  
-  if(!token) {
-    return {
-      props: {
-        isAdmin: false
-      }
-    }
-  }
-
-  const checkToken = await (await axiosApi.post('/admin/check-token', {token})).data
-  
-  if(checkToken) {
-    return {
-      props: {
-        isAdmin: true
-      }
-    }  
-  }
-
   return {
     props: {
-      isAdmin: false
+      isAdmin: true
     }
   }
 }

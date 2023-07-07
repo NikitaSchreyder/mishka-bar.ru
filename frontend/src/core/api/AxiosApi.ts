@@ -1,7 +1,18 @@
-import axios from "axios"
+import axios, { AxiosInstance } from "axios"
 
-const axiosInstance = axios.create({
-    baseURL: 'http://mishkabar.localhost/api/'
-})
+class AxiosApi {
+    private readonly token: string
+    public readonly axiosInstance: AxiosInstance
 
-export const axiosApi = axiosInstance
+    constructor() {
+        this.token = '123'
+        this.axiosInstance = axios.create({
+            baseURL: 'http://mishkabar.localhost/api/',
+            headers: {
+                Authorization: this.token
+            }
+        })
+    }
+}
+
+export const axiosApi = new AxiosApi().axiosInstance

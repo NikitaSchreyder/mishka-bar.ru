@@ -3,7 +3,7 @@ import { FormEvent } from 'react'
 import { axiosApi } from '../../../core/api/AxiosApi'
 import { useRouter } from 'next/router'
 
-const CreateCategoryModalContent: React.FC<{closeModal: () => void}> = ({closeModal}) => {
+const CreateCategoryModalContent: React.FC<{closeModal: () => void, updateCategories: () => void}> = ({closeModal, updateCategories}) => {
   const router = useRouter()
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -12,7 +12,7 @@ const CreateCategoryModalContent: React.FC<{closeModal: () => void}> = ({closeMo
       .then(data => {
         closeModal()
         message.success(data.data.message)
-        setTimeout(() => router.reload(), 1000)
+        updateCategories()
       })
         .catch(err => message.error(err.response.data.message))
   }
