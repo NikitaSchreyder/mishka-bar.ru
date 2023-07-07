@@ -1,9 +1,9 @@
 import { Button, Input, message } from 'antd'
 import { FormEvent } from 'react'
 import { axiosApi } from '../../../../core/api/AxiosApi'
-import { useRouter } from 'next/router'
 
 const CreateStockModalContent: React.FC<{closeModal: () => void, updateStocks: () => void}> = ({closeModal, updateStocks}) => {
+  const { TextArea } = Input;
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
@@ -26,7 +26,7 @@ const CreateStockModalContent: React.FC<{closeModal: () => void, updateStocks: (
         <Input style={{marginBottom: 20}} name='name' id="name" placeholder='Название' />
 
         <label style={{color: 'white', marginBottom: 10}} htmlFor='description'>Описание</label>
-        <Input style={{marginBottom: 20}} name='description' id="description" placeholder='Описание' />
+        <TextArea rows={4} style={{marginBottom: 20}} name='description' id="description" placeholder='Описание' />
 
         <Button htmlType='submit'>Сохранить</Button>
       </form>
