@@ -2,3 +2,6 @@ Sitemap: https://mishka-bar.ru/sitemap.xml
 
 User-agent: *
 Allow: /*
+
+User-agent: *
+Disallow: /admin

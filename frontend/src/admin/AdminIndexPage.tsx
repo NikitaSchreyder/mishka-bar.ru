@@ -1,7 +1,7 @@
 import { Menu, MenuProps } from 'antd'
 import { IAdminIndexPageProps } from './types/types'
 import { useCallback, useEffect, useState } from 'react';
-import { MailOutlined } from '@ant-design/icons';
+import { HomeOutlined, MailOutlined, PercentageOutlined, ReadOutlined } from '@ant-design/icons';
 
 import AdminMenuDishesPanel from './panels/menu/AdminMenuDishesPanel';
 import AdminMenuCategoriesPanel from './panels/menu/AdminMenuCategoriesPanel';
@@ -13,12 +13,13 @@ const items: MenuProps['items'] = [
     label: (
       <Link href={'/'}>Сайт</Link>
     ),
-    key: 'site'
+    key: 'site',
+    icon: <HomeOutlined />
   },
   {
     label: 'Меню',
     key: 'menu',
-    icon: <MailOutlined />,
+    icon: <ReadOutlined />,
     children: [
       {
         label: "Категории",
@@ -33,7 +34,7 @@ const items: MenuProps['items'] = [
   {
     label: 'Акции',
     key: 'stocks',
-    icon: <MailOutlined />
+    icon: <PercentageOutlined />
   }
 ];
 
