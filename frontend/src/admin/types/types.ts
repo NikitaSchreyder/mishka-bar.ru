@@ -10,7 +10,7 @@ export interface ICategoryItemProps {
     thumbUrl: string
   }
   showUpdateModal: () => void
-
+  updateCategories: () => void
 }
 
 export interface IDishesItemProps {

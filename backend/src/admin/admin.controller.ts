@@ -1,5 +1,6 @@
-import { Body, Controller, Post, Put } from '@nestjs/common';
+import { Body, Controller, Post, Put, UseGuards } from '@nestjs/common';
 import { AdminService } from './admin.service';
+import { AdminGuard } from './guard/admin.guard';
 
 class AdminCreateDto  {
   readonly login: string
