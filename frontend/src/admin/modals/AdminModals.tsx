@@ -29,7 +29,7 @@ const CreateCategoryModalContent = dynamic(() =>
     }
 )
 
-export const UpdateDishModal: React.FC<{open: boolean, closeModal: () => void, updatedItem: any}> = ({open, closeModal, updatedItem}) => {
+export const UpdateDishModal: React.FC<{open: boolean, closeModal: () => void, updatedItem: any, updateDishes: () => void}> = ({open, closeModal, updatedItem, updateDishes}) => {
   return (
       <Modal
           wrapClassName="modal-bg"
@@ -40,12 +40,12 @@ export const UpdateDishModal: React.FC<{open: boolean, closeModal: () => void, u
           destroyOnClose={true}
           onCancel={closeModal}
       >
-          <UpdateDishModalContent closeModal={closeModal} updatedItem={updatedItem} />
+          <UpdateDishModalContent updateDishes={updateDishes} closeModal={closeModal} updatedItem={updatedItem} />
       </Modal>
   )
 }
 
-export const CreateDishModal: React.FC<{open: boolean, closeModal: () => void}> = ({open, closeModal}) => {
+export const CreateDishModal: React.FC<{open: boolean, closeModal: () => void, updateDishes: () => void}> = ({open, closeModal, updateDishes}) => {
     return (
         <Modal
             wrapClassName="modal-bg"
@@ -56,7 +56,7 @@ export const CreateDishModal: React.FC<{open: boolean, closeModal: () => void}> 
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <CreateDishModalContent closeModal={closeModal} />
+            <CreateDishModalContent updateDishes={updateDishes} closeModal={closeModal} />
         </Modal>
     )
 }
