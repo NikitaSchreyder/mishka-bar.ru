@@ -19,23 +19,27 @@ const AdminMenuCategoriesPanel: React.FC = () => {
     updateModalControl.openModal()
   }
 
-  useEffect(() => {
+  const updateCategories = () => {
     axiosApi.get('menu/categories')
       .then(res => {
         const { data } = res
         setCategories(data)
       })
+  }
+
+  useEffect(() => {
+    updateCategories()
   }, [])
 
   const renderCategories = useMemo(() => {
-    if(categories?.length) return categories.map(item => <CategoryItem item={item} showUpdateModal={() => showUpdateModal(item)} />)
+    if(categories?.length) return categories.map(item => <CategoryItem key={item.id} updateCategories={updateCategories} item={item} showUpdateModal={() => showUpdateModal(item)} />)
     return <div style={{color: 'white'}}>Нет категорий </div>
   }, [categories]) 
 
   return (
     <>
-      <CreateCategoryModal closeModal={createModalControl.closeModal} open={createModalControl.toShow} />
-      <UpdateCategoryModal updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
+      <CreateCategoryModal updateCategories={updateCategories} closeModal={createModalControl.closeModal} open={createModalControl.toShow} />
+      <UpdateCategoryModal updateCategories={updateCategories} updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
       <div style={{padding: 20}}>
         <Button onClick={createModalControl.openModal} style={{marginBottom: 20}}>Новая категория</Button>
         {renderCategories}

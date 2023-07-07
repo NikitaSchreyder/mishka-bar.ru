@@ -3,7 +3,7 @@ import { ICategoryItemProps } from '../types/types'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
-const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal}) => {
+const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal, updateCategories}) => {
   const {id, name, searchLink, thumbUrl} = item
   const router = useRouter()
 
@@ -12,7 +12,7 @@ const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal}) => 
       axios.delete(`http://mishkabar.localhost/api/menu/categories/remove?id=${id}`)
         .then(data => {
           message.success(data.data.message);
-          setTimeout(() => router.reload(), 1000)
+          updateCategories()
         })
           .catch(err => message.error(err.response.data.message))
     }

@@ -61,7 +61,7 @@ export const CreateDishModal: React.FC<{open: boolean, closeModal: () => void}> 
     )
 }
 
-export const UpdateCategoryModal: React.FC<{open: boolean, closeModal: () => void, updatedItem: any}> = ({open, closeModal, updatedItem}) => {
+export const UpdateCategoryModal: React.FC<{open: boolean, closeModal: () => void, updatedItem: any, updateCategories: () => void}> = ({updateCategories, open, closeModal, updatedItem}) => {
     return (
         <Modal
             wrapClassName="modal-bg"
@@ -72,12 +72,12 @@ export const UpdateCategoryModal: React.FC<{open: boolean, closeModal: () => voi
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <UpdateCategoryModalContent closeModal={closeModal} updatedItem={updatedItem} />
+            <UpdateCategoryModalContent updateCategories={updateCategories} closeModal={closeModal} updatedItem={updatedItem} />
         </Modal>
     )
   }
 
-export const CreateCategoryModal: React.FC<{open: boolean, closeModal: () => void}> = ({open, closeModal}) => {
+export const CreateCategoryModal: React.FC<{open: boolean, closeModal: () => void, updateCategories: () => void}> = ({open, closeModal, updateCategories}) => {
     return (
         <Modal
             wrapClassName="modal-bg"
@@ -88,7 +88,7 @@ export const CreateCategoryModal: React.FC<{open: boolean, closeModal: () => voi
             destroyOnClose={true}
             onCancel={closeModal}
         >
-            <CreateCategoryModalContent closeModal={closeModal} />
+            <CreateCategoryModalContent updateCategories={updateCategories} closeModal={closeModal} />
         </Modal>
     )
 }
