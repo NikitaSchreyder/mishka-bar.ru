@@ -21,6 +21,7 @@ export interface IDishesItemProps {
     thumbUrl: string
   }
   showUpdateModal: () => void
+  updateDishes: () => void
 }
 
 export interface ICategoriesItemProps {

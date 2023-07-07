@@ -19,23 +19,27 @@ const AdminMenuDishesPanel: React.FC = () => {
     updateModalControl.openModal()
   }
 
-  useEffect(() => {
+  const updateDishes = () => {
     axiosApi.get('menu/dishes')
       .then(res => {
         const { data } = res
         setDishes(data)
       })
+  }
+
+  useEffect(() => {
+    updateDishes()
   }, [])
 
   const renderDishes = useMemo(() => {
-    if(dishes?.length) return dishes.map(item => <DishesItem showUpdateModal={() => showUpdateModal(item)} item={item} />)
+    if(dishes?.length) return dishes.map(item => <DishesItem key={item.id} updateDishes={updateDishes} showUpdateModal={() => showUpdateModal(item)} item={item} />)
     return <div style={{color: 'white'}}>Нет блюд </div>
   }, [dishes]) 
 
   return (
     <>
-      <CreateDishModal closeModal={createModalControl.closeModal} open={createModalControl.toShow} />
-      <UpdateDishModal updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
+      <CreateDishModal updateDishes={updateDishes} closeModal={createModalControl.closeModal} open={createModalControl.toShow} />
+      <UpdateDishModal updateDishes={updateDishes} updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
       <div style={{padding: 20}}>
         <Button onClick={createModalControl.openModal} style={{marginBottom: 20}}>Новое блюдо</Button>
         {renderDishes}
