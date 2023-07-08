@@ -1,8 +1,9 @@
 import { FileInterceptor } from '@nestjs/platform-express'
-import { Body, Controller, Delete, Get, Put, Query, UploadedFile, UseInterceptors } from '@nestjs/common'
+import { Body, Controller, Delete, Get, Put, Query, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common'
 
 import { MenuService } from './menu.service'
 import { CreateMenuCategoryDto, CreateMenuDishDto, RemoveMenuCategoryDto, RemoveMenuDishDto, UpdateMenuCategoryDto, UpdateMenuDishDto } from './dto/menu-categories.dto'
+import { AdminGuard } from '../admin/guard/admin.guard'
 
 @Controller('menu')
 export class MenuController {
@@ -21,6 +22,7 @@ export class MenuController {
     }
 
     @Put('/categories/create')
+    @UseGuards(new AdminGuard())
     @UseInterceptors(FileInterceptor('photo'))
     createCatogry(
         @Body() dto: CreateMenuCategoryDto,
@@ -30,6 +32,7 @@ export class MenuController {
     }
 
     @Put('/categories/update')
+    @UseGuards(new AdminGuard())
     @UseInterceptors(FileInterceptor('photo'))
     updateCategory(
         @Body() dto: UpdateMenuCategoryDto,
@@ -39,6 +42,7 @@ export class MenuController {
     }
 
     @Delete('/categories/remove')
+    @UseGuards(new AdminGuard())
     removeCategory(
         @Query('id') id: number
     ) {
@@ -65,6 +69,7 @@ export class MenuController {
     }
 
     @Put('/dishes/create')
+    @UseGuards(new AdminGuard())
     @UseInterceptors(FileInterceptor('photo'))
     createDish(
         @Body() dto: CreateMenuDishDto,
@@ -75,6 +80,7 @@ export class MenuController {
 
     @Put('/dishes/update')
     @UseInterceptors(FileInterceptor('photo'))
+    @UseGuards(new AdminGuard())
     updateDish(
         @Body() dto: UpdateMenuDishDto,
         @UploadedFile() file: Express.Multer.File
@@ -83,6 +89,7 @@ export class MenuController {
     }
 
     @Delete('/dishes/remove')
+    @UseGuards(new AdminGuard())
     async removeDish(
         @Query('id') id: number
     ) {

@@ -16,7 +16,7 @@ export default BarPage
 // }
 
 // export const getServerSideProps: GetServerSideProps = async (ctx) => {
-//   const categories = await(await axiosApi.get('/menu/categories')).data
+//   const categories = await(await axiosApi().get('/menu/categories')).data
 
 //   if(categories) {
 //     return {

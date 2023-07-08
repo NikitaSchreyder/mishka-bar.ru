@@ -8,7 +8,7 @@ const InteriorPage: NextPage<{interiorImages: any}> = ({interiorImages}) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-    const interiorImages = await(await axiosApi.get('/interior')).data
+    const interiorImages = await(await axiosApi().get('/interior')).data
     
     return {
         props: {

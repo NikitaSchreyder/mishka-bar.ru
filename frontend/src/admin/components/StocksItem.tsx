@@ -1,16 +1,15 @@
 import { Button, Popconfirm, Popover, message } from 'antd'
 import { IDishesItemProps } from '../types/types'
-import axios from 'axios'
-import { useRouter } from 'next/router'
 import { axiosApi } from '../../core/api/AxiosApi'
+import { getCookie } from '../../core/helpers/cookies'
 
 const StocksItem: React.FC<IDishesItemProps> = ({item, showUpdateModal, updateDishes}) => {
   const {id, name, searchLink, thumbUrl} = item
-  const router = useRouter()
+  const token = getCookie('token')
 
   const actions = {
     remove() {
-      axiosApi.delete(`/stocks/remove?id=${id}`)
+      axiosApi(token).delete(`/stocks/remove?id=${id}`)
         .then(data => {
           message.success(data.data.message);
           updateDishes()

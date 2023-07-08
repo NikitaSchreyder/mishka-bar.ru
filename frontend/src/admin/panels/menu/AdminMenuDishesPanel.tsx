@@ -20,7 +20,7 @@ const AdminMenuDishesPanel: React.FC = () => {
   }
 
   const updateDishes = () => {
-    axiosApi.get('menu/dishes')
+    axiosApi().get('menu/dishes')
       .then(res => {
         const { data } = res
         setDishes(data)

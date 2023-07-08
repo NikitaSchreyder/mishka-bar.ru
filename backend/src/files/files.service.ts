@@ -15,5 +15,11 @@ export class FilesService {
     
     fs.writeFileSync(path.join(filePath, fileName), file.buffer)
     return `/public/${fileName}`
-}
+  }
+
+  public async removeFile(filename: string) {
+    const clearFilename = filename.split('/')
+    const filePath = path.resolve(__dirname, '..', '..', 'public', clearFilename[clearFilename.length - 1])
+    fs.unlink(filePath, () => {})
+  }
 }
