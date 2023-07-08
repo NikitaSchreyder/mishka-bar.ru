@@ -1,18 +1,16 @@
 import axios, { AxiosInstance } from "axios"
 
 class AxiosApi {
-    private readonly token: string
-    public readonly axiosInstance: AxiosInstance
+  public readonly axiosInstance: AxiosInstance
 
-    constructor() {
-        this.token = '123'
-        this.axiosInstance = axios.create({
-            baseURL: 'http://mishkabar.localhost/api/',
-            headers: {
-                Authorization: this.token
-            }
-        })
-    }
+  constructor(authToken?: string) {
+    this.axiosInstance = axios.create({
+      baseURL: 'http://mishkabar.localhost/api/',
+      headers: {
+        Authorization: authToken || '123'
+      }
+    })
+  }
 }
 
-export const axiosApi = new AxiosApi().axiosInstance
+export const axiosApi = (authToken?: string) => new AxiosApi(authToken).axiosInstance

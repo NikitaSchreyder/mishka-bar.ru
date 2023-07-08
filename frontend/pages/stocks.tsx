@@ -9,7 +9,7 @@ const StocksPage: NextPage<{stocksItems: {name: string, description: string, thu
 export default StocksPage;
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-    const stocksItems = (await axiosApi.get('stocks')).data
+    const stocksItems = (await axiosApi().get('stocks')).data
     return {
         props: {
             stocksItems

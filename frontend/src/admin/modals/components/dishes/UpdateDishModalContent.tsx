@@ -1,15 +1,16 @@
 import { Button, Input, message } from 'antd'
 import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { axiosApi } from '../../../../core/api/AxiosApi';
+import { getCookie } from '../../../../core/helpers/cookies';
 
 const UpdateDishModalContent: React.FC<{updatedItem: any, closeModal: () => void, updateDishes: () => void}> = ({updatedItem, closeModal, updateDishes}) => {
   const [categories, setCategories] = useState<any[]>()
-
+  const token = getCookie('token')
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
     formData.append('id', updatedItem.id)
-    axiosApi.put('/menu/dishes/update', formData)   
+    axiosApi(token).put('/menu/dishes/update', formData)   
     .then(data => {
       closeModal()
       message.success(data.data.message)
@@ -25,7 +26,7 @@ const UpdateDishModalContent: React.FC<{updatedItem: any, closeModal: () => void
   }, [categories])
 
   useEffect(() => {
-    axiosApi.get('/menu/categories')
+    axiosApi().get('/menu/categories')
       .then(data => setCategories(data.data))
   }, [])
 

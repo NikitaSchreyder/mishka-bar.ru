@@ -1,7 +1,8 @@
-import { Body, Controller, Delete, Get, Put, Query, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Put, Query, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { StocksService } from './stocks.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { CreateStockDto, RemoveStockDto, UpdateStockDto } from './dto/stocks.dto';
+import { AdminGuard } from '../admin/guard/admin.guard';
 
 @Controller('stocks')
 export class StocksController {
@@ -15,6 +16,7 @@ export class StocksController {
   }
 
   @Put('/create')
+  @UseGuards(new AdminGuard())
   @UseInterceptors(FileInterceptor('photo'))
   createStock(
     @Body() dto: CreateStockDto,
@@ -24,6 +26,7 @@ export class StocksController {
   }
 
   @Put('/update')
+  @UseGuards(new AdminGuard())
   @UseInterceptors(FileInterceptor('photo'))
   updateStock(
     @Body() dto: UpdateStockDto,
@@ -33,6 +36,7 @@ export class StocksController {
   }
 
   @Delete('/remove')
+  @UseGuards(new AdminGuard())
   removeStock(
     @Query('id') id: number
   ) {

@@ -20,7 +20,7 @@ const AdminMenuCategoriesPanel: React.FC = () => {
   }
 
   const updateCategories = () => {
-    axiosApi.get('menu/categories')
+    axiosApi().get('menu/categories')
       .then(res => {
         const { data } = res
         setCategories(data)

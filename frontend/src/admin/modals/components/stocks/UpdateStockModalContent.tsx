@@ -1,15 +1,16 @@
 import { Button, Input, message } from 'antd'
 import { FormEvent } from 'react'
 import { axiosApi } from '../../../../core/api/AxiosApi'
+import { getCookie } from '../../../../core/helpers/cookies';
 
 const UpdateStockModalContent: React.FC<{updatedItem: any, closeModal: () => void, updateStocks: () => void}> = ({updatedItem, closeModal, updateStocks}) => {
   const { TextArea } = Input;
-
+  const token = getCookie('token')
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
     formData.append('id', updatedItem.id)
-    axiosApi.put('/stocks/update', formData)  
+    axiosApi(token).put('/stocks/update', formData)  
       .then(data => {
         closeModal()
         message.success(data.data.message)

@@ -1,14 +1,14 @@
 import { Button, Input, message } from 'antd'
 import { FormEvent } from 'react'
-import { useRouter } from 'next/router'
 import { axiosApi } from '../../../../core/api/AxiosApi'
+import { getCookie } from '../../../../core/helpers/cookies'
 
 const CreateCategoryModalContent: React.FC<{closeModal: () => void, updateCategories: () => void}> = ({closeModal, updateCategories}) => {
-  const router = useRouter()
+  const token = getCookie('token')
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
-    axiosApi.put('/menu/categories/create', formData)
+    axiosApi(token).put('/menu/categories/create', formData)
       .then(data => {
         closeModal()
         message.success(data.data.message)
