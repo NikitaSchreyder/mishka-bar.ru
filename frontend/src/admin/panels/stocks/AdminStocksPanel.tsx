@@ -19,7 +19,7 @@ const AdminStocksPanel: React.FC = () => {
   }
 
   const updateStocks = () => {
-    axiosApi.get('stocks')
+    axiosApi().get('stocks')
       .then(res => {
         const { data } = res
         setStocks(data)

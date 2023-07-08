@@ -14,7 +14,7 @@ export class MenuService {
     constructor(
         @InjectModel(MenuDishesModel) readonly menuDishesRepository: typeof MenuDishesModel,
         @InjectModel(MenuCategoriesModel) readonly menuCategoriesRepository: typeof MenuCategoriesModel,
-        readonly filesSefvice: FilesService
+        readonly filesService: FilesService
     ) {}
 
     public categories = {
@@ -28,7 +28,7 @@ export class MenuService {
             if(!file) throw new HttpException('Фото категории обязательно', HttpStatus.BAD_REQUEST)
             
             const searchLink = transliterate(dto.name).toLowerCase()
-            const thumbUrl = await this.filesSefvice.savePhoto(file)
+            const thumbUrl = await this.filesService.savePhoto(file)
             const newCategoryData: CreateMenuCategoryDto = { ...dto, searchLink, thumbUrl }
             const newCategory = await this.menuCategoriesRepository.create(newCategoryData)
 
@@ -51,7 +51,9 @@ export class MenuService {
             }
 
             if(file) {
-                const thumbUrl = await this.filesSefvice.savePhoto(file)
+                await this.filesService.removeFile(menuCategory.thumbUrl)
+
+                const thumbUrl = await this.filesService.savePhoto(file)
                 const searchLink = transliterate(dto.name).toLowerCase()
                 const updateData: UpdateMenuCategoryDto = {
                     ...dto,
@@ -67,6 +69,7 @@ export class MenuService {
         },
         remove: async (dto: RemoveMenuCategoryDto) => {
             const menuCategory = await this.throwIfCategoryByIdNotFound(dto.id)
+            await this.filesService.removeFile(menuCategory.thumbUrl)
             await menuCategory.destroy()
             
             throw new HttpException(`Категория "${menuCategory.name}" успешно удалена`, HttpStatus.OK)
@@ -100,7 +103,7 @@ export class MenuService {
 
             const category = await this.throwIfCategoryBySearchLinkNotFound(dto.categorySearchLink)
             const searchLink = transliterate(dto.name).toLowerCase()
-            const thumbUrl = await this.filesSefvice.savePhoto(file)
+            const thumbUrl = await this.filesService.savePhoto(file)
             const newDishData: CreateMenuDishDto = {...dto, searchLink, thumbUrl, categorySearchLink: category.searchLink}
             const newDish = await this.menuDishesRepository.create(newDishData)
             
@@ -129,8 +132,10 @@ export class MenuService {
             }
 
             if(file) {
+                await this.filesService.removeFile(dish.thumbUrl)
+
                 const searchLink = transliterate(dto.name).toLowerCase() 
-                const thumbUrl = await this.filesSefvice.savePhoto(file)
+                const thumbUrl = await this.filesService.savePhoto(file)
                 const updateData: UpdateMenuDishDto = {
                     ...dto,
                     searchLink,
@@ -145,6 +150,7 @@ export class MenuService {
         },
         remove: async (dto: RemoveMenuDishDto) => {
             const dish = await this.throwIfDishByIdNotFound(dto.id)
+            await this.filesService.removeFile(dish.thumbUrl)
             await dish.destroy()
             
             throw new HttpException(`Блюдо "${dish.name}" успешно удалено`, HttpStatus.OK)

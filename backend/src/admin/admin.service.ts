@@ -28,12 +28,12 @@ export class AdminService {
     if(!admin) throw new HttpException('Неверный логин или пароль', HttpStatus.NOT_FOUND)
     
     if(bcrypt.compare(password, admin.password)) {
-      return "test-token-228"
+      return "fggdfgserg654365ytvfgdsad23re423erwqr"
     }
   }
 
   public async adminCheckToken(token: string) {
-    if(token === "test-token-228") return true
+    if(token === "fggdfgserg654365ytvfgdsad23re423erwqr") return true
     return false
   }
 }

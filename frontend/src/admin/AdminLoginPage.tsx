@@ -17,7 +17,7 @@ const AdminLoginPage: React.FC = () => {
       password
     }
 
-    axiosApi.post('/admin/signin', signInData)
+    axiosApi().post('/admin/signin', signInData)
       .then(data => {
         document.cookie = "token=" + data.data
         router.reload()

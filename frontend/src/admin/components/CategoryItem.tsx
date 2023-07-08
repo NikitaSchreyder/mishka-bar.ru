@@ -1,15 +1,15 @@
 import { Button, Popconfirm, Popover, message } from 'antd'
 import { ICategoryItemProps } from '../types/types'
-import axios from 'axios'
-import { useRouter } from 'next/router'
+import { axiosApi } from '../../core/api/AxiosApi'
+import { getCookie } from '../../core/helpers/cookies'
 
 const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal, updateCategories}) => {
   const {id, name, searchLink, thumbUrl} = item
-  const router = useRouter()
+  const token = getCookie('token')
 
   const actions = {
     remove() {
-      axios.delete(`http://mishkabar.localhost/api/menu/categories/remove?id=${id}`)
+      axiosApi(token).delete(`/menu/categories/remove?id=${id}`)
         .then(data => {
           message.success(data.data.message);
           updateCategories()
