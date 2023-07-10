@@ -16,6 +16,7 @@ export class StocksController {
   }
 
   @Get('/all')
+  @UseGuards(new AdminGuard())
   getStocksWithHidden() {
     return this.stocksService.getStocksWithHidden()
   }
