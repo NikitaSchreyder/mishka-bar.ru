@@ -17,7 +17,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       "_document.tsx",
       "404.tsx",
       "sitemap.xml.tsx",
-      "business-lunch.tsx"
+      "business-lunch.tsx",
+      "admin"
     ].includes(staticPage)
   })
   .map(staticPagePath => {
