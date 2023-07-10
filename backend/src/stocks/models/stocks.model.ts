@@ -14,4 +14,7 @@ export class StocksModel extends Model<StocksModel, CreateStockDto> {
 
   @Column({type: DataType.STRING, allowNull: false})
   thumbUrl: string
+
+  @Column({type: DataType.BOOLEAN, allowNull: false})
+  isHidden: boolean
 }

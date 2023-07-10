@@ -13,6 +13,11 @@ export class StocksService {
   ){}
 
   public async getStocks() {
+    const stocks = await this.stocksRepository.findAll({where: {isHidden: false}})
+    return stocks
+  }
+
+  public async getStocksWithHidden() {
     const stocks = await this.stocksRepository.findAll()
     return stocks
   }
@@ -23,7 +28,7 @@ export class StocksService {
     if(!dto.description) throw new HttpException('Описание обязателено', HttpStatus.BAD_REQUEST)
 
     const thumbUrl = await this.filesSefvice.savePhoto(file)
-    const newStockData: CreateStockDto = {...dto, thumbUrl}
+    const newStockData: CreateStockDto = {...dto, thumbUrl, isHidden: true}
     const newStock = await this.stocksRepository.create(newStockData)
     
     if(!newStock) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
@@ -32,11 +37,13 @@ export class StocksService {
 
   public async updateStock(dto: UpdateStockDto, file: Express.Multer.File) {
     const stock = await this.throwIfStockByIdNotFound(dto.id)
-    if(!dto.name) throw new HttpException('Название обязателено', HttpStatus.BAD_REQUEST)
-    if(!dto.description) throw new HttpException('Описание обязателено', HttpStatus.BAD_REQUEST)
 
     if(!file) {
-      const updateStatus = await stock.update(dto)
+      
+      const updateStatus = await stock.update({
+        ...dto,
+        isHidden: dto.isHidden != null ? dto.isHidden : stock.isHidden,
+      })
 
       if(!updateStatus) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
       if(updateStatus) throw new HttpException(`Категория "${stock.name}" успешно обновлена`, HttpStatus.OK)
@@ -44,10 +51,11 @@ export class StocksService {
 
     if(file) {
       const thumbUrl = await this.filesSefvice.savePhoto(file)
-      const updateData: UpdateStockDto = {
+      const updateData = await stock.update({
         ...dto,
+        isHidden: dto.isHidden != null ? dto.isHidden : stock.isHidden,
         thumbUrl
-      } 
+      })
 
       const updateStatus = await stock.update(updateData)
 
