@@ -32,7 +32,7 @@ export class AboutService {
       if(file) {
         const thumbUrl = await this.filesService.savePhoto(file)
         const updateData: UpdateAboutDto = {
-          ...dto,
+          description: dto.description || '',
           thumbUrl
         } 
   
@@ -45,7 +45,10 @@ export class AboutService {
 
     if(aboutData) {
       if(!file) {
-        const updateStatus = aboutData.update(dto) 
+        const updateStatus = aboutData.update({
+          ...dto,
+          thumbUrl: aboutData.thumbUrl
+        }) 
   
         if(!updateStatus) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
         if(updateStatus) throw new HttpException(`Описание обновлено`, HttpStatus.OK)
