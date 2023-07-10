@@ -1,12 +1,12 @@
 import { Menu, MenuProps } from 'antd'
-import { IAdminIndexPageProps } from './types/types'
 import { useCallback, useEffect, useState } from 'react';
-import { HomeOutlined, MailOutlined, PercentageOutlined, ReadOutlined } from '@ant-design/icons';
+import { HomeOutlined, PercentageOutlined, PictureOutlined, QuestionOutlined, ReadOutlined } from '@ant-design/icons';
 
 import AdminMenuDishesPanel from './panels/menu/AdminMenuDishesPanel';
 import AdminMenuCategoriesPanel from './panels/menu/AdminMenuCategoriesPanel';
 import Link from 'next/link';
 import AdminStocksPanel from './panels/stocks/AdminStocksPanel';
+import AdminAboutPanel from './panels/about/AdminAboutPanel';
 
 const items: MenuProps['items'] = [
   {
@@ -35,6 +35,16 @@ const items: MenuProps['items'] = [
     label: 'Акции',
     key: 'stocks',
     icon: <PercentageOutlined />
+  },
+  {
+    label: 'Интерьер',
+    key: 'interior',
+    icon: <PictureOutlined />
+  },
+  {
+    label: 'О нас',
+    key: 'about',
+    icon: <QuestionOutlined />
   }
 ];
 
@@ -58,6 +68,8 @@ const AdminIndexPage: React.FC = () => {
         return <AdminMenuDishesPanel />
       case 'stocks':
         return <AdminStocksPanel />
+      case 'about':
+        return <AdminAboutPanel />
       default:
         return null
     }
