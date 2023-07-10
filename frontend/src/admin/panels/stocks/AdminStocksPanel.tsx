@@ -2,12 +2,14 @@ import { Button } from 'antd';
 import { useEffect, useMemo, useState } from 'react';
 import { axiosApi } from '../../../core/api/AxiosApi';
 import { useModalControl } from '../../../core/hooks/useModalControl';
-import { IDishesItemProps, IStockItemProps } from '../../types/types';
+import { IStockItemProps } from '../../types/types';
 import StocksItem from '../../components/StocksItem';
 import { CreateStockModal, UpdateStockModal } from '../../modals/AdminModals';
+import { getCookie } from '../../../core/helpers/cookies';
 
 const AdminStocksPanel: React.FC = () => {
   const [stocks, setStocks] = useState<any[]>()
+  const token = getCookie('token')
   const [updatedItem, setUpdatedItem] = useState<IStockItemProps>()
 
   const createModalControl = useModalControl()
@@ -19,7 +21,7 @@ const AdminStocksPanel: React.FC = () => {
   }
 
   const updateStocks = () => {
-    axiosApi().get('stocks')
+    axiosApi(token).get('stocks/all')
       .then(res => {
         const { data } = res
         setStocks(data)
