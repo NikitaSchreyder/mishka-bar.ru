@@ -2,6 +2,7 @@ export class CreateStockDto {
   readonly name: string
   readonly description: string
   readonly thumbUrl: string
+  readonly isHidden: boolean
 }
 
 export class UpdateStockDto {
@@ -9,6 +10,7 @@ export class UpdateStockDto {
   readonly name: string
   readonly description: string
   readonly thumbUrl: string
+  readonly isHidden: boolean
 }
 
 export class RemoveStockDto {

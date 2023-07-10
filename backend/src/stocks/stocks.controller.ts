@@ -15,6 +15,11 @@ export class StocksController {
     return this.stocksService.getStocks()
   }
 
+  @Get('/all')
+  getStocksWithHidden() {
+    return this.stocksService.getStocksWithHidden()
+  }
+
   @Put('/create')
   @UseGuards(new AdminGuard())
   @UseInterceptors(FileInterceptor('photo'))
