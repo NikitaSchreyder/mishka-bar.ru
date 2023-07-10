@@ -23,4 +23,7 @@ export class MenuDishesModel extends Model<MenuDishesModel, CreateMenuDishDto> {
 
   @Column({type: DataType.STRING, allowNull: false})
   categorySearchLink: string
+
+  @Column({type: DataType.BOOLEAN, allowNull: false})
+  isHidden: boolean
 }

@@ -10,10 +10,13 @@ import MenuCategory from '../core/components/Menu/MenuCategory'
 import MenuCategoryItem from '../core/components/Menu/MenuCategoryItem'
 import { Breadcrumb } from 'antd'
 import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
+import { useRouter } from 'next/router'
 
 const MenuCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryItems, categoryName}) => {
     const [openedItem, setOpenedItem] = useState<TMenuItem>()
     const menuItemDtailsModalControll = useModalControl()
+    const router = useRouter()
+    const breadcrumbPath =  router.asPath.split('/')[router.asPath.split('/').length - 1]
 
     const onItemClick = (item: TMenuItem) => {
         setOpenedItem(item)
@@ -36,7 +39,7 @@ const MenuCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryI
         },
         {
             title: categoryName,
-            href: `/menu/${categoryItems[0].categorySearchLink}`,
+            href: `/menu/${breadcrumbPath}`,
             separator: '/'  
         }
     ]

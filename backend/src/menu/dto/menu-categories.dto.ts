@@ -6,6 +6,7 @@ export class CreateMenuCategoryDto {
   readonly name: string
   readonly searchLink: string
   readonly thumbUrl: string
+  readonly isHidden: boolean
 }
 
 export class UpdateMenuCategoryDto {
@@ -13,7 +14,7 @@ export class UpdateMenuCategoryDto {
   readonly name: string
   readonly thumbUrl: string
   readonly searchLink: string
-
+  readonly isHidden: boolean
 }
 
 export class RemoveMenuCategoryDto {
@@ -31,6 +32,7 @@ export class CreateMenuDishDto {
   readonly searchLink: string
   readonly composition: string
   readonly categorySearchLink: string
+  readonly isHidden: boolean
 }
 
 export class UpdateMenuDishDto {
@@ -41,6 +43,7 @@ export class UpdateMenuDishDto {
   readonly searchLink: string
   readonly composition: string
   readonly categorySearchLink: string
+  readonly isHidden: boolean
 }
 
 export class RemoveMenuDishDto {

@@ -18,7 +18,13 @@ export class MenuController {
 
     @Get('/categories')
     getCategories() {
-        return this.menuService.categories.getAll()
+        return this.menuService.categories.get()
+    }
+
+    @Get('/categories/all')
+    @UseGuards(new AdminGuard())
+    getHiddenCategories() {
+        return this.menuService.categories.getWithHidden()
     }
 
     @Put('/categories/create')
@@ -59,6 +65,12 @@ export class MenuController {
     @Get('/dishes')
     getDishes() {
         return this.menuService.dishes.get()
+    }
+
+    @Get('/dishes/all')
+    @UseGuards(new AdminGuard())
+    getHiddenDishes() {
+        return this.menuService.dishes.getWithHidden()
     }
 
     @Get('/dishes/by-category')
