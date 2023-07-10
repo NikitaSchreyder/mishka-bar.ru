@@ -14,4 +14,7 @@ export class MenuCategoriesModel extends Model<MenuCategoriesModel, CreateMenuCa
 
   @Column({type: DataType.STRING, unique: true, allowNull: false})
   thumbUrl: string
+
+  @Column({type: DataType.BOOLEAN, allowNull: false})
+  isHidden: boolean
 }

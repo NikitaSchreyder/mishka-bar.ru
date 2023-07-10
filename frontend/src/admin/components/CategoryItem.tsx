@@ -4,10 +4,21 @@ import { axiosApi } from '../../core/api/AxiosApi'
 import { getCookie } from '../../core/helpers/cookies'
 
 const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal, updateCategories}) => {
-  const {id, name, searchLink, thumbUrl} = item
+  const {id, name, searchLink, thumbUrl, isHidden} = item
   const token = getCookie('token')
 
   const actions = {
+    toggleHidden() {
+      const formData = new FormData()
+      formData.append('id', id)
+      formData.append('isHidden', !isHidden ? '1' : '0')
+      axiosApi(token).put('/menu/categories/update', formData)  
+        .then(data => {
+          message.success(data.data.message)
+          updateCategories()
+        })  
+        .catch(err => message.error(err.response.data.message))
+    },
     remove() {
       axiosApi(token).delete(`/menu/categories/remove?id=${id}`)
         .then(data => {
@@ -20,6 +31,13 @@ const CategoryItem: React.FC<ICategoryItemProps> = ({item, showUpdateModal, upda
 
   const popoverContent = (
     <div>
+      <Popconfirm 
+        title={!isHidden ? 'Скрыть' : 'Сделать видимой'}
+        description="Вы уверены?"
+        onConfirm={actions.toggleHidden}
+      >
+        <Button danger>{!isHidden ? 'Скрыть' : 'Сделать видимой'}</Button>
+      </Popconfirm>
       <Button
         onClick={showUpdateModal}
       >Изменить</Button>

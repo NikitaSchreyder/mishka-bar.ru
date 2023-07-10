@@ -26,7 +26,7 @@ const CreateDishModalContent: React.FC<{closeModal: () => void, updateDishes: ()
   }, [categories])
 
   useEffect(() => {
-    axiosApi().get('/menu/categories')
+    axiosApi(token).get('/menu/categories/all')
       .then(data => setCategories(data.data))
   }, [])
 

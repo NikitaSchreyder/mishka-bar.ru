@@ -4,10 +4,21 @@ import { axiosApi } from '../../core/api/AxiosApi'
 import { getCookie } from '../../core/helpers/cookies'
 
 const DishesItem: React.FC<IDishesItemProps> = ({item, showUpdateModal, updateDishes}) => {
-  const {id, name, searchLink, thumbUrl} = item
+  const {id, name, searchLink, thumbUrl, isHidden} = item
   const token = getCookie('token')
 
   const actions = {
+    toggleHidden() {
+      const formData = new FormData()
+      formData.append('id', id)
+      formData.append('isHidden', !isHidden ? '1' : '0')
+      axiosApi(token).put('/menu/dishes/update', formData)  
+        .then(data => {
+          message.success(data.data.message)
+          updateDishes()
+        })  
+        .catch(err => message.error(err.response.data.message))
+    },
     remove() {
       axiosApi(token).delete(`/menu/dishes/remove?id=${id}`)
       .then(data => {
@@ -20,6 +31,13 @@ const DishesItem: React.FC<IDishesItemProps> = ({item, showUpdateModal, updateDi
 
   const popoverContent = (
     <div>
+      <Popconfirm 
+        title={!isHidden ? 'Скрыть' : 'Сделать видимым'}
+        description="Вы уверены?"
+        onConfirm={actions.toggleHidden}
+      >
+        <Button danger>{!isHidden ? 'Скрыть' : 'Сделать видимым'}</Button>
+      </Popconfirm>
       <Button
         onClick={showUpdateModal}
       >

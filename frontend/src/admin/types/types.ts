@@ -8,6 +8,7 @@ export interface ICategoryItemProps {
     name: string
     searchLink: string
     thumbUrl: string
+    isHidden: boolean
   }
   showUpdateModal: () => void
   updateCategories: () => void
@@ -19,6 +20,7 @@ export interface IDishesItemProps {
     name: string
     searchLink: string
     thumbUrl: string
+    isHidden: boolean
   }
   showUpdateModal: () => void
   updateDishes: () => void

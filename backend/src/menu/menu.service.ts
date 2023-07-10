@@ -18,7 +18,12 @@ export class MenuService {
     ) {}
 
     public categories = {
-        getAll: async () => {
+        get: async () => {
+            const categories = await this.menuCategoriesRepository.findAll({where: { isHidden: false } })
+            if(!categories) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
+            return categories
+        },
+        getWithHidden: async () => {
             const categories = await this.menuCategoriesRepository.findAll()
             if(!categories) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
             return categories
@@ -29,7 +34,13 @@ export class MenuService {
             
             const searchLink = transliterate(dto.name).toLowerCase()
             const thumbUrl = await this.filesService.savePhoto(file)
-            const newCategoryData: CreateMenuCategoryDto = { ...dto, searchLink, thumbUrl }
+            const newCategoryData: CreateMenuCategoryDto = { 
+                ...dto, 
+                searchLink, 
+                thumbUrl,
+                isHidden: true
+            }
+            
             const newCategory = await this.menuCategoriesRepository.create(newCategoryData)
 
             if(!newCategory) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
@@ -37,13 +48,15 @@ export class MenuService {
         },
         update: async (dto: UpdateMenuCategoryDto, file: Express.Multer.File) => {
             const menuCategory = await this.throwIfCategoryByIdNotFound(dto.id)
-            
+                        
             if(!file) {
-                const searchLink = transliterate(dto.name).toLowerCase()
+                const searchLink = dto.name ? transliterate(dto.name).toLowerCase() : menuCategory.searchLink
                 const updateData: UpdateMenuCategoryDto = {
                     ...dto,
+                    isHidden: dto.isHidden != null ? dto.isHidden : menuCategory.isHidden,
                     searchLink
                 } 
+
                 const updateStatus = await menuCategory.update(updateData)
 
                 if(!updateStatus) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
@@ -54,9 +67,10 @@ export class MenuService {
                 await this.filesService.removeFile(menuCategory.thumbUrl)
 
                 const thumbUrl = await this.filesService.savePhoto(file)
-                const searchLink = transliterate(dto.name).toLowerCase()
+                const searchLink = dto.name ? transliterate(dto.name).toLowerCase() : menuCategory.searchLink
                 const updateData: UpdateMenuCategoryDto = {
                     ...dto,
+                    isHidden: dto.isHidden != null ? dto.isHidden : menuCategory.isHidden,
                     searchLink,
                     thumbUrl
                 } 
@@ -78,13 +92,21 @@ export class MenuService {
 
     public dishes = {
         get: async () => {
+            const dishes = await this.menuDishesRepository.findAll({where: { isHidden: false } })
+            if(!dishes) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
+            return dishes
+        },
+        getWithHidden: async () => {
             const dishes = await this.menuDishesRepository.findAll()
             if(!dishes) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
             return dishes
         },
         getByCategory: async (categorySearchLink: string) => {
             const dishesByCategory = await this.menuDishesRepository.findAll({
-                where: {categorySearchLink}
+                where: {
+                    categorySearchLink,
+                    isHidden: false
+                }
             })
             if(!dishesByCategory) throw new HttpException('Не найдены блюда в категории', HttpStatus.NOT_FOUND)
             const categoryName = (await this.menuCategoriesRepository.findOne({where: {searchLink: categorySearchLink}})).name
@@ -104,7 +126,13 @@ export class MenuService {
             const category = await this.throwIfCategoryBySearchLinkNotFound(dto.categorySearchLink)
             const searchLink = transliterate(dto.name).toLowerCase()
             const thumbUrl = await this.filesService.savePhoto(file)
-            const newDishData: CreateMenuDishDto = {...dto, searchLink, thumbUrl, categorySearchLink: category.searchLink}
+            const newDishData: CreateMenuDishDto = {
+                ...dto, 
+                searchLink, 
+                thumbUrl, 
+                categorySearchLink: category.searchLink,
+                isHidden: true
+            }
             const newDish = await this.menuDishesRepository.create(newDishData)
             
             if(!newDish) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
@@ -114,14 +142,15 @@ export class MenuService {
         },
         update: async (dto: UpdateMenuDishDto, file: Express.Multer.File) => {
             const dish = await this.throwIfDishByIdNotFound(dto.id)
-            
-            if(dto.categorySearchLink !== dish.categorySearchLink) 
+
+            if(dto.categorySearchLink && dto.categorySearchLink !== dish.categorySearchLink) 
                 await this.throwIfCategoryBySearchLinkNotFound(dto.categorySearchLink)
 
             if(!file) {
-                const searchLink = transliterate(dto.name).toLowerCase()
+                const searchLink = dto.name ? transliterate(dto.name).toLowerCase() : dish.searchLink
                 const updateData: UpdateMenuDishDto = {
                     ...dto,
+                    isHidden: dto.isHidden != null ? dto.isHidden : dish.isHidden,
                     searchLink
                 } 
 
@@ -134,11 +163,13 @@ export class MenuService {
             if(file) {
                 await this.filesService.removeFile(dish.thumbUrl)
 
-                const searchLink = transliterate(dto.name).toLowerCase() 
+                const searchLink = dto.name ? transliterate(dto.name).toLowerCase() : dish.searchLink
                 const thumbUrl = await this.filesService.savePhoto(file)
+                
                 const updateData: UpdateMenuDishDto = {
                     ...dto,
                     searchLink,
+                    isHidden: dto.isHidden != null ? dto.isHidden : dish.isHidden,
                     thumbUrl
                 } 
 
