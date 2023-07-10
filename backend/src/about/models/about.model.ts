@@ -6,9 +6,9 @@ export class AboutModel extends Model<AboutModel, UpdateAboutDto> {
   @Column({type: DataType.INTEGER, autoIncrement: true, allowNull: false, primaryKey: true, unique: true})
   id: number;
 
-  @Column({type: DataType.STRING, allowNull: false})
+  @Column({type: DataType.STRING})
   thumbUrl: string
 
-  @Column({type: DataType.STRING, allowNull: false})
+  @Column({type: DataType.TEXT})
   description: string
 }
