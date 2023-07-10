@@ -6,10 +6,12 @@ import DishesItem from '../../components/DishesItem';
 import { useModalControl } from '../../../core/hooks/useModalControl';
 import { IDishesItemProps } from '../../types/types';
 import { CreateDishModal, UpdateDishModal } from '../../modals/AdminModals';
+import { getCookie } from '../../../core/helpers/cookies';
 
 const AdminMenuDishesPanel: React.FC = () => {
   const [dishes, setDishes] = useState<any[]>()
   const [updatedItem, setUpdatedItem] = useState<IDishesItemProps>()
+  const token = getCookie('token')
 
   const createModalControl = useModalControl()
 
@@ -20,7 +22,7 @@ const AdminMenuDishesPanel: React.FC = () => {
   }
 
   const updateDishes = () => {
-    axiosApi().get('menu/dishes')
+    axiosApi(token).get('menu/dishes/all')
       .then(res => {
         const { data } = res
         setDishes(data)

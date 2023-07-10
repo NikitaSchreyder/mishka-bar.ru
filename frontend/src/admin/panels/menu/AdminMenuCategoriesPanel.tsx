@@ -6,10 +6,12 @@ import { axiosApi } from '../../../core/api/AxiosApi'
 import { useModalControl } from '../../../core/hooks/useModalControl'
 import { CreateCategoryModal, UpdateCategoryModal, UpdateDishModal } from '../../modals/AdminModals'
 import { ICategoriesItemProps } from '../../types/types'
+import { getCookie } from '../../../core/helpers/cookies'
 
 const AdminMenuCategoriesPanel: React.FC = () => {
   const [categories, setCategories] = useState<any[]>()
   const [updatedItem, setUpdatedItem] = useState<ICategoriesItemProps>()
+  const token = getCookie('token')
   
   const createModalControl = useModalControl()
 
@@ -20,7 +22,7 @@ const AdminMenuCategoriesPanel: React.FC = () => {
   }
 
   const updateCategories = () => {
-    axiosApi().get('menu/categories')
+    axiosApi(token).get('menu/categories/all')
       .then(res => {
         const { data } = res
         setCategories(data)
