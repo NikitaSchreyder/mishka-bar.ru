@@ -109,6 +109,21 @@
     color: rgb(158, 158, 158);
 }
 
+.footer_developer {
+    width: 100%;
+}
+
+.footer_developer-content {
+    text-align: left; 
+    color: rgb(158, 158, 158); 
+    padding: 20px 0;
+}
+
+.footer_developer-content--link {
+    color: rgb(158, 158, 158); 
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer_content {
         width: 500px;
