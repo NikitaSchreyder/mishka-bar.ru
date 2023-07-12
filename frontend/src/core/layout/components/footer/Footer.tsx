@@ -125,9 +125,13 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className='footer_developer'>
+<<<<<<< HEAD
           <p className='footer_developer-content'>
             <a href='mailto:nikitaschreyder@gmail.com' className='footer_developer-content--link'>Разработка сайта: nikitaschreyder@gmail.com</a>
           </p>
+=======
+          <p className='footer_developer-content' >Разработка сайта: <a className='footer_developer-content--link' href="mailto: nikitaschreyder@gmail.com">nikitaschreyder@gmail.com</a></p>
+>>>>>>> 55f21e4 (add developer info)
         </div>
       </div>
     </footer>
