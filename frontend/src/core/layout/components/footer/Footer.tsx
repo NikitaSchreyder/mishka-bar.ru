@@ -124,9 +124,9 @@ const Footer: React.FC = () => {
             {renderInfoItems()}
           </div>
         </div>
-        <div className='footer_developer'>
+        {/* <div className='footer_developer'>
           <p className='footer_developer-content' >Разработка сайта: <a className='footer_developer-content--link' href="mailto:nikitaschreyder@gmail.com">nikitaschreyder@gmail.com</a></p>
-        </div>
+        </div> */}
       </div>
     </footer>
   )
