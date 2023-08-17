@@ -66,9 +66,6 @@ const BarIndexPage: React.FC = () => {
         }
     ]
 
-    console.log(barImages);
-    
-
     return (
         <>
             <Head>
@@ -80,7 +77,7 @@ const BarIndexPage: React.FC = () => {
             </div>
             <div className="layout_container menu-categories_container">
                 <div className='bar-grid'>
-                    {barImages.map((item, index) => <div className='bar-grid-item' onClick={() => handleClick(index)}><img className='bar-grid-item--image' src={item.src} /></div>)}
+                    {barImages.map((item, index) => <div key={index} className='bar-grid-item' onClick={() => handleClick(index)}><img className='bar-grid-item--image' src={item.src} /></div>)}
                 </div>
                 {/* <Gallery
                     rowHeight={300}
