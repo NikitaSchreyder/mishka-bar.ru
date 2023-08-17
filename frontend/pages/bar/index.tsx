@@ -2,10 +2,7 @@ import { NextPage } from "next"
 
 import BarIndexPage from "@/src/bar/BarIndexPage"
 
-const BarPage: NextPage = () => {
-    return <BarIndexPage />
-}
-
+const BarPage: NextPage = () => <BarIndexPage />
 export default BarPage
 
 // import { axiosApi } from "@/src/core/api/AxiosApi"

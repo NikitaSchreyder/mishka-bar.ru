@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Breadcrumb } from 'antd'
 import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 import { useState } from 'react'
-import { Gallery } from "react-grid-gallery"
+// import { Gallery } from "react-grid-gallery"
 import Lightbox from "react-image-lightbox"
 import Header from '../core/layout/components/header/Header'
 import Footer from '../core/layout/components/footer/Footer'
@@ -59,24 +59,15 @@ const BarIndexPage: React.FC = () => {
     const handleMoveNext = () => setIndex(nextIndex)
     const handleClick = (index: number) => setIndex(index)
 
-    const renderGallery = () => {
-        return (
-            <Gallery
-                rowHeight={300}
-                images={barImages}
-                onClick={handleClick}
-                enableImageSelection={false}
-                margin={5}
-            />
-        )
-    }
-
     const breadcrumbItems: ItemType[] = [
         {
             title: 'Барная карта',
             href: '/bar',
         }
     ]
+
+    console.log(barImages);
+    
 
     return (
         <>
@@ -87,8 +78,17 @@ const BarIndexPage: React.FC = () => {
             <div className="layout_container">
                 <Breadcrumb items={breadcrumbItems} separator='/' />
             </div>
-            <div className="layout_container">
-                {renderGallery()}
+            <div className="layout_container menu-categories_container">
+                <div className='bar-grid'>
+                    {barImages.map((item, index) => <div className='bar-grid-item' onClick={() => handleClick(index)}><img className='bar-grid-item--image' src={item.src} /></div>)}
+                </div>
+                {/* <Gallery
+                    rowHeight={300}
+                    images={barImages}
+                    onClick={handleClick}
+                    enableImageSelection={false}
+                    margin={5}
+                /> */}
                 {!!currentImage && (
                     <Lightbox
                         enableZoom={true}
