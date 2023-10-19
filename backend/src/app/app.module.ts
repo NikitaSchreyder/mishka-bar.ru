@@ -15,6 +15,9 @@ import { StocksModule } from '../stocks/stocks.module'
 import { StocksModel } from '../stocks/models/stocks.model'
 import { AboutModule } from '../about/about.module'
 import { AboutModel } from '../about/models/about.model'
+import { AppModel } from './models/app.model'
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
@@ -37,11 +40,15 @@ import { AboutModel } from '../about/models/about.model'
         MenuCategoriesModel,
         AdminModel,
         StocksModel,
-        AboutModel
+        AboutModel,
+        
       ],
       autoLoadModels: true,
       // sync: { force: true }
     }),
+    SequelizeModule.forFeature([
+      AppModel
+    ]),
     MenuModule,
     InteriorModule,
     FilesModule,
@@ -49,7 +56,7 @@ import { AboutModel } from '../about/models/about.model'
     StocksModule,
     AboutModule
   ],
-  controllers: [],
-  providers: [],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
