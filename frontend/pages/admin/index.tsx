@@ -5,17 +5,18 @@ import { IAdminIndexPageProps } from '../../src/admin/types/types';
 import { axiosApi } from '../../src/core/api/AxiosApi';
 import AdminLoginPage from '../../src/admin/AdminLoginPage';
 
-const AdminPage: NextPage<IAdminIndexPageProps> = ({isAdmin}) => {
+const AdminPage: NextPage<IAdminIndexPageProps> = ({isAdmin, isDev}) => {
   if(!isAdmin) {
     return <AdminLoginPage />
   }
-  return <AdminIndexPage />
+  return <AdminIndexPage isDev={isDev} />
 }
 
 export default AdminPage
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { token } = ctx.req.cookies;
+  const isDev = await(await axiosApi().get(`/app/is-dev`)).data
 
   if(!token) {
     return {
@@ -30,7 +31,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if(checkToken) {
     return {
       props: {
-        isAdmin: true
+        isAdmin: true,
+        isDev
       }
     }  
   }
