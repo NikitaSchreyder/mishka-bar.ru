@@ -1,5 +1,6 @@
 export interface IAdminIndexPageProps {
   isAdmin: boolean
+  isDev: boolean
 }
 
 export interface ICategoryItemProps {
