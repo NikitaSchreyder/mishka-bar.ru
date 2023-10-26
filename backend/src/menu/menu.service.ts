@@ -8,6 +8,7 @@ import { CreateMenuCategoryDto, CreateMenuDishDto, RemoveMenuCategoryDto, Remove
 import { transliterate } from '../core/text-utils/translit';
 import { MenuDishesModel } from './models/menu-dishes.model';
 import { async } from 'rxjs';
+import { Op } from 'sequelize';
 
 @Injectable()
 export class MenuService {
@@ -117,7 +118,7 @@ export class MenuService {
             return data
         },
         create: async (dto: CreateMenuDishDto, file: Express.Multer.File) => {
-            await this.checkDishDuplicate(dto.name)
+            await this.checkDishDuplicate(dto.name, dto.categorySearchLink)
 
             if(!file) throw new HttpException('Фото блюда обязательно', HttpStatus.BAD_REQUEST)
             if(!dto.price) throw new HttpException('Цена блюда обязательна', HttpStatus.BAD_REQUEST)
@@ -188,8 +189,15 @@ export class MenuService {
         }
     }
 
-    private async checkDishDuplicate(name: string) {
-        const isDuplicate = await this.menuDishesRepository.findOne({ where: {name}})
+    private async checkDishDuplicate(name: string, categorySearchLink: string) {
+        console.log(categorySearchLink);
+        
+        const isDuplicate = await this.menuDishesRepository.findOne({ 
+            where: {
+                name,
+                categorySearchLink
+            }
+        })
         if(isDuplicate) throw new HttpException('Блюдо уже существует', HttpStatus.BAD_REQUEST)
     }
 

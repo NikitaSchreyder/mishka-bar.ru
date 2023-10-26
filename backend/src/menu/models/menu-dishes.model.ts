@@ -6,7 +6,7 @@ export class MenuDishesModel extends Model<MenuDishesModel, CreateMenuDishDto> {
   @Column({type: DataType.INTEGER, autoIncrement: true, allowNull: false, primaryKey: true, unique: true})
   id: number;
 
-  @Column({type: DataType.STRING, unique: true, allowNull: false})
+  @Column({type: DataType.STRING, allowNull: false})
   name: string
 
   @Column({type: DataType.STRING, allowNull: false})

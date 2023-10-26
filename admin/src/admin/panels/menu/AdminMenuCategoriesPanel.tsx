@@ -42,8 +42,8 @@ const AdminMenuCategoriesPanel: React.FC = () => {
     <>
       <CreateCategoryModal updateCategories={updateCategories} closeModal={createModalControl.closeModal} open={createModalControl.toShow} />
       <UpdateCategoryModal updateCategories={updateCategories} updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
-      <div style={{padding: 20}}>
-        <Button onClick={createModalControl.openModal} style={{marginBottom: 20}}>Новая категория</Button>
+      <Button onClick={createModalControl.openModal} style={{marginBottom: 20}}>Новая категория</Button>
+      <div style={{padding: 20, display: 'flex', flexWrap: 'wrap'}}>
         <div style={{display: 'flex', gap: 20, flexWrap: 'wrap'}}>
           {renderCategories}
         </div>

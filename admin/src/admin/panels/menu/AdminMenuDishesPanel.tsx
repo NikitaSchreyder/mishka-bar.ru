@@ -42,8 +42,8 @@ const AdminMenuDishesPanel: React.FC = () => {
     <>
       <CreateDishModal updateDishes={updateDishes} closeModal={createModalControl.closeModal} open={createModalControl.toShow} />
       <UpdateDishModal updateDishes={updateDishes} updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
-      <div style={{padding: 20}}>
-        <Button onClick={createModalControl.openModal} style={{marginBottom: 20}}>Новое блюдо</Button>
+      <Button onClick={createModalControl.openModal} style={{marginBottom: 20}}>Новое блюдо</Button>
+      <div style={{padding: 20, display: 'flex', flexWrap: 'wrap', gap: 20}}>
         {renderDishes}
       </div>
     </>
