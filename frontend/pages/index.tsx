@@ -1,8 +1,9 @@
 import { GetServerSideProps, NextPage } from 'next'
 import IndexPage from '../src/home/IndexPage'
 import { axiosApi } from '../src/core/api/AxiosApi'
-// Найти заглушку
-const Home: NextPage<{isDev: boolean}> = ({isDev}) => isDev ? <p>ХУйня заглушка</p> : <IndexPage />
+import Development from '@/src/home/Development'
+
+const Home: NextPage<{isDev: boolean}> = ({isDev}) => isDev ? <Development /> : <IndexPage />
 
 export default Home
 

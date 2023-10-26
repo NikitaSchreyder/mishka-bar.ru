@@ -1,0 +1,13 @@
+.development {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 50px;
+}
+
+.development_text {
+    color: white;
+    font-size: 32px;
+}
