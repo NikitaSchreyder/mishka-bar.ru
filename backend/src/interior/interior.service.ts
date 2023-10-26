@@ -10,8 +10,8 @@ export class InteriorService {
     const images = imagesNames.map(item => {
       if (extname(item) == ".jpg") {
         return {
-          src: '/public/img/hall/min/' + item,
-          original: '/public/img/hall/' + item,
+          src: 'http://public.mishkabar.localhost/img/hall/min/' + item,
+          original: 'http://public.mishkabar.localhost/img/hall/' + item,
           width: 320,
           height: 213,
           caption: '',
