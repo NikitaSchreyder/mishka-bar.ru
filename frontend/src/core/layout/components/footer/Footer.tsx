@@ -5,15 +5,18 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       title: 'vk',
-      link: 'https://vk.com/club211107184'
+      link: 'https://vk.com/club211107184',
+      bg: `${process.env.publicUrl}img/icons/vk.svg`
     },
     {
       title: 'telegram',
-      link: 'https://t.me/mishka_bar_surgut'
+      link: 'https://t.me/mishka_bar_surgut',
+      bg: `${process.env.publicUrl}img/icons/tg.svg`
     },
     {
       title: 'yandex-food',
-      link: 'https://eda.yandex.ru/surgut/r/miska_1635151764'
+      link: 'https://eda.yandex.ru/surgut/r/miska_1635151764',
+      bg: `${process.env.publicUrl}img/icons/yandex-food.png`
     }
   ]
 
@@ -21,7 +24,7 @@ const Footer: React.FC = () => {
     return socialLinks.map((item, index) => {
       return (
         <li className="footer_social-item" key={index}>
-          <Link target='_blank' className={`footer_social-item--${item.title}`} href={item.link}></Link>
+          <Link target='_blank' style={{background: `url("${item.bg}")`}} className={`footer_social-item--${item.title}`} href={item.link}></Link>
         </li>
       )
     })
@@ -110,7 +113,7 @@ const Footer: React.FC = () => {
       <div className='layout_container'>
         <div className="footer_promo">
           <div className='footer_logo-container'>
-            <Image alt='logo' className="footer_logo" preview={false} src="/img/logo.webp" />
+            <Image alt='logo' className="footer_logo" preview={false} src={`${process.env.publicUrl}img/logo.webp`} />
           </div>
           <ul className="footer_social">
             {renderSocialLinks()}

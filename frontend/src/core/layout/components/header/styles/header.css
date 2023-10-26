@@ -14,10 +14,9 @@
   background: transparent;
   color: rgb(255, 255, 255);
   animation-duration: 0s !important;
-  background: url('/img/icons/menu.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
 }
 
 .header_menu-btn:hover {

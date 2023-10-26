@@ -55,7 +55,7 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
           <Button aria-label='закрыть меню' onClick={onClose} className='header_menu-close-btn' icon={<CloseOutlined  />} />
         </div>
         <div className='header_menu-logo-container'>
-          <Image alt='logo' className="footer_logo" preview={false} src="/img/logo.webp" />
+          <Image alt='logo' className="footer_logo" preview={false} src={`${process.env.publicUrl}img/logo.webp`} />
         </div>
         <nav>
           <ul className='header_menu-items'>
@@ -65,13 +65,13 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
         <div className='header_menu-info'>
           <ul className='header_menu-info_social'>
             <li className='header_menu-info_social-item'>
-              <Link target='_blank' className='header_menu-info_social-item_link--vk' href={'https://vk.com/club211107184'}></Link>
+              <Link target='_blank' style={{background: `url('${process.env.publicUrl}img/icons/vk.svg')`}} className='header_menu-info_social-item_link--vk' href={'https://vk.com/club211107184'}></Link>
             </li>
             <li className='header_menu-info_social-item'>
-              <Link target='_blank' className='header_menu-info_social-item_link--tg' href={'https://t.me/mishka_bar_surgut'}></Link>
+              <Link target='_blank' style={{background: `url('${process.env.publicUrl}img/icons/tg.svg')`}} className='header_menu-info_social-item_link--tg' href={'https://t.me/mishka_bar_surgut'}></Link>
             </li>
             <li className='header_menu-info_social-item'>
-              <Link target='_blank' className='header_menu-info_social-item_link--yandex-food' href={'https://eda.yandex.ru/surgut/r/miska_1635151764'}></Link>
+              <Link target='_blank' style={{background: `url('${process.env.publicUrl}img/icons/yandex-food.png')`}} className='header_menu-info_social-item_link--yandex-food' href={'https://eda.yandex.ru/surgut/r/miska_1635151764'}></Link>
             </li>
           </ul>
           <p><span className='header_menu-info--title'>Номер телефона:</span> <a href="tel:79825194242">+7(982)519 42 42</a></p>

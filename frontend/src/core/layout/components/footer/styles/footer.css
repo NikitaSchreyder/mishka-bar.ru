@@ -36,30 +36,27 @@
     display: block;
     height: 30px;
     width: 30px;
-    background: url('/img/icons/tg.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 
 .footer_social-item--vk {
     display: block;
     height: 30px;
     width: 30px;
-    background: url('/img/icons/vk.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 
 .footer_social-item--yandex-food {
     display: block;
     height: 30px;
     width: 30px;
-    background: url('/img/icons/yandex-food.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 
 .footer_content {
