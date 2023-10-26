@@ -17,12 +17,14 @@ export default function App({ Component, pageProps }: AppProps) {
     'стейки сургут',
     'европейская кухня сургут',
   ]
+
+  const description = 'Mishka Bar, место где тебя встретят не только крепкими медвежьими объятиями, но и вкусной итальянской, японской и русской кухней, освежающими напитками и приятной атмосферой.'
   
   return (
     <>
       <Head>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
-        <meta name='description' content='Mishka Bar, место где вас встретят не только крепкими медвежьими объятиями, но и вкусной итальянской, японской и русской кухней, освежающими напитками и приятной атмосферой.' />
+        <meta name='description' content={description} />
         <meta name='keywords' content={keywords.join(',')} />
       </Head>
       <div className='app'>
