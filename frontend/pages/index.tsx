@@ -4,7 +4,6 @@ import { axiosApi } from '../src/core/api/AxiosApi'
 import Development from '@/src/home/Development'
 
 const Home: NextPage<{isDev: boolean}> = ({isDev}) => isDev ? <Development /> : <IndexPage />
-
 export default Home
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
@@ -16,4 +15,3 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
     }
   }
 }
-
