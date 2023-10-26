@@ -6,11 +6,10 @@
 .home {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 1)), url('/public/img/hall/mishkabar-10.jpg');  
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100vh;  
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
   padding-bottom: 50px;
 }
 

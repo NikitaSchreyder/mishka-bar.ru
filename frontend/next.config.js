@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: false,
   env: {
+    apiUrl: 'http://api.mishkabar.localhost/',
+    publicUrl: 'http://public.mishkabar.localhost/',
     links: {
       vk: 'https://vk.com/club211107184',
       tg: 'https://t.me/mishka_bar_surgut',

@@ -15,12 +15,13 @@ const Header: React.FC = () => {
     <header className='header'>
       <HeaderMenu onClose={closeMenu} visible={menuVisible} />
       <Button 
+        style={{background: `url(${process.env.publicUrl}img/icons/menu.png)`}}
         aria-label='меню'
         onClick={openMenu}
         className="header_menu-btn"
       />
       <Link href={'/'} className='header_logo-container'>
-        <Image preview={false} className='header_logo' src='/img/logo.webp' alt='logo' />
+        <Image preview={false} className='header_logo' src={`${process.env.publicUrl}img/logo.webp`} alt='logo' />
       </Link>
       <div className='header_info'>
         <a target='_blank' href='https://yandex.ru/maps/-/CCU0MRcY8C' className='header_info--address'>{address}</a>
