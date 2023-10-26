@@ -14,7 +14,7 @@ export class FilesService {
     }
     
     fs.writeFileSync(path.join(filePath, fileName), file.buffer)
-    return `/public/${fileName}`
+    return `http://public.mishkabar.localhost/${fileName}`
   }
 
   public async removeFile(filename: string) {
