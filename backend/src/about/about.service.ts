@@ -55,12 +55,12 @@ export class AboutService {
       }
   
       if(file) {
-        await this.filesService.removeFile(aboutData.thumbUrl)
-  
+        if(aboutData.thumbUrl) await this.filesService.removeFile(aboutData.thumbUrl)
+        
         const thumbUrl = await this.filesService.savePhoto(file)
         const updateData: UpdateAboutDto = {
-            ...dto,
-            thumbUrl
+          ...dto,
+          thumbUrl
         } 
   
         const updateStatus = await aboutData.update(updateData)
