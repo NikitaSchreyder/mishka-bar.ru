@@ -2,6 +2,10 @@
 /dist
 /node_modules
 /public/*.png
+/public/*.jpeg
+/public/*.jpg
+/public/*.jiff
+/public/*.gif
 
 # Logs
 logs
