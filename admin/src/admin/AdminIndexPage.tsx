@@ -91,7 +91,7 @@ const AdminIndexPage: React.FC<{isDev: boolean}> = ({isDev}) => {
   return (
     <div>
       <Menu theme='dark' onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
-      <p style={{color: 'white'}}>Статус сайта: {isDev ? 'Разработка' : 'Прод'} <Button onClick={isDev ? disableDevStatus : enableDevStatus}>{isDev ? 'Вкл прод' : 'Выкл прод'}</Button></p>
+      <p style={{color: 'white'}}>Статус сайта: {isDev ? <span style={{color: 'red'}}>Разработка</span> : <span style={{color: 'green'}}>Прод</span>} <Button onClick={isDev ? disableDevStatus : enableDevStatus}>{isDev ? 'Вкл прод' : 'Выкл прод'}</Button></p>
       <RenderPanel />
     </div>
   )
