@@ -60,7 +60,7 @@ const AdminAboutPanel: React.FC = () => {
         <div className="about-content">
           <Image style={{cursor: 'pointer'}} onClick={() => fileInputRef.current?.click()} alt='Фото зала' className='about-img' preview={false} src={thumbUrl} />
           <input onChange={e => updatePhoto(e.currentTarget.files?.item(0))} ref={fileInputRef} type="file" style={{display: 'none'}} />
-          <p ref={descriptionInputRef} onInput={onDescriptionChange} contentEditable className="about-description">{description}</p>
+          <p style={{color: 'white', border: '1px solid white'}} ref={descriptionInputRef} onInput={onDescriptionChange} contentEditable className="about-description">{description}</p>
           <Button style={{display: saveBtnVisible ? 'block' : 'none'}} onClick={updateDescription}>Сохранить описание</Button>
         </div>
       </div>
