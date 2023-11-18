@@ -4,7 +4,7 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('App', [{
-      isDev: true,
+      isDev: true
     }]);
   },
 
