@@ -18,6 +18,8 @@ export class FilesService {
   }
 
   public async removeFile(filename: string) {
+    console.log('filename', filename);
+    
     const clearFilename = filename.split('/')
     const filePath = path.resolve(__dirname, '..', '..', 'public', clearFilename[clearFilename.length - 1])
     fs.unlink(filePath, () => {})
