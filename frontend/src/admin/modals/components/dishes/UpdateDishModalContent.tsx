@@ -20,8 +20,8 @@ const UpdateDishModalContent: React.FC<{updatedItem: any, closeModal: () => void
   }
 
   const renderCategories = useMemo(() => {
-    return categories && categories.map(item => (
-      <option value={item.searchLink}>{item.name}</option>
+    return categories && categories.map((item, index) => (
+      <option key={`categoris-update-${index}`} value={item.searchLink}>{item.name}</option>
     ))
   }, [categories])
 

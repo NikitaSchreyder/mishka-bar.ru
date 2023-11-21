@@ -13,8 +13,9 @@ import MenuCategoryItem from '../core/components/Menu/MenuCategoryItem'
 
 const BarCategoryIndexPage: React.FC<IMenuCategoryIndexPageProps> = ({categoryItems, categoryName}) => {
     const [openedItem, setOpenedItem] = useState<TMenuItem>({
+        id: '',
         categorySearchLink: '',
-        composition: [],
+        composition: '',
         name: '',
         price: 0,
         thumbUrl: ''
