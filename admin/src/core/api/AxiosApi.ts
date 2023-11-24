@@ -5,10 +5,11 @@ class AxiosApi {
 
   constructor(authToken?: string) {
     this.axiosInstance = axios.create({
-      baseURL: 'http://api.mishkabar.localhost/',
+      baseURL: 'http://127.0.0.1:3007/api',
       headers: {
         Authorization: authToken || '123'
-      }
+      },
+      withCredentials: true
     })
   }
 }

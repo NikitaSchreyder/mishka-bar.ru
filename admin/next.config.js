@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: false,
   env: {
-    apiUrl: 'http://api.mishkabar.localhost/',
-    publicUrl: 'http://public.mishkabar.localhost/'
+    apiUrl: 'http://api.trade-good.ru/',
+    publicUrl: 'http://trade-good.ru/public/'
   }
 }
 

@@ -84,7 +84,7 @@ const AdminIndexPage: React.FC<{isDev: boolean}> = ({isDev}) => {
       case 'about':
         return <AdminAboutPanel />
       default:
-        return null
+        return <></>
     }
   }, [current])
 

@@ -1,11 +1,11 @@
-import { Button, Input, message } from 'antd'
+import { Button, Input, Slider, message } from 'antd'
 import { FormEvent } from 'react'
 import { axiosApi } from '../core/api/AxiosApi'
 import { useRouter } from 'next/router'
 
 const AdminLoginPage: React.FC = () => {
   const router = useRouter()
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
 
@@ -17,7 +17,7 @@ const AdminLoginPage: React.FC = () => {
       password
     }
 
-    axiosApi().post('/admin/signin', signInData)
+    await axiosApi().post('/admin/signin', signInData)
       .then(data => {
         document.cookie = "token=" + data.data
         router.reload()
