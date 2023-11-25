@@ -6,7 +6,10 @@ import { AppModule } from './app/app.module'
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule)
-  app.enableCors()
+  app.enableCors({
+    origin: true,
+    credentials: true
+  })
   app.setGlobalPrefix('api')
   app.useStaticAssets(join(__dirname, '..', 'public'));
   await app.listen(3007)

@@ -8,7 +8,7 @@ export class AdminGuard implements CanActivate {
   ): boolean | Promise<boolean> | Observable<boolean> {
     const {authorization} = context.switchToHttp().getRequest().headers;
     
-    if(authorization === 'fggdfgserg654365ytvfgdsad23re423erwqr')
+    if(authorization === 'nfbfdsjgbskdfjg35igtu3w45h9t3htfgjgh')
       return true
     
     return false;

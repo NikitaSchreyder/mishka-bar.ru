@@ -26,14 +26,16 @@ export class AdminService {
   public async signIn(login: string, password: string) {
     const admin = await this.adminRepository.findOne({where: {login}})
     if(!admin) throw new HttpException('Неверный логин или пароль', HttpStatus.NOT_FOUND)
-    
-    if(bcrypt.compare(password, admin.password)) {
-      return "fggdfgserg654365ytvfgdsad23re423erwqr"
-    }
+    return await this.comparePassword(password, admin.password)    
+  }
+
+  private async comparePassword(password: string, adminPassword: string) {
+    const compareResult = await bcrypt.compare(password, adminPassword)
+    if(compareResult) return 'nfbfdsjgbskdfjg35igtu3w45h9t3htfgjgh'
   }
 
   public async adminCheckToken(token: string) {
-    if(token === "fggdfgserg654365ytvfgdsad23re423erwqr") return true
+    if(token === "nfbfdsjgbskdfjg35igtu3w45h9t3htfgjgh") return true
     return false
   }
 }

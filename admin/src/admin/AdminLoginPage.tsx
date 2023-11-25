@@ -1,7 +1,8 @@
 import { Button, Input, Slider, message } from 'antd'
-import { FormEvent } from 'react'
+import { FormEvent, useEffect } from 'react'
 import { axiosApi } from '../core/api/AxiosApi'
 import { useRouter } from 'next/router'
+import axios from 'axios'
 
 const AdminLoginPage: React.FC = () => {
   const router = useRouter()
