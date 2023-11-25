@@ -24,4 +24,9 @@ export class AboutController {
   ) {
     return this.aboutService.updateAbout(dto, file)
   }
+
+  @Put('/remove-photo')
+  removePhoto() {
+    return this.aboutService.removePhoto()
+  }
 }

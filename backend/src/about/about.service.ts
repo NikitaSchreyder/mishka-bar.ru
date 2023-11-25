@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { AboutModel } from './models/about.model';
 import { InjectModel } from '@nestjs/sequelize';
 import { FilesService } from '../files/files.service';
@@ -70,4 +70,15 @@ export class AboutService {
       } 
     }
   }
-}
+
+  public async removePhoto() {
+    const aboutData = await this.aboutRepository.findOne()
+    await this.filesService.removeFile(aboutData.thumbUrl)
+
+    const remove = await aboutData.update({
+      thumbUrl: ''
+    })
+    if(!remove) throw new InternalServerErrorException('Ошибка при удалении фото')
+    throw new HttpException('Фото удалено', HttpStatus.OK)
+  }
+} 

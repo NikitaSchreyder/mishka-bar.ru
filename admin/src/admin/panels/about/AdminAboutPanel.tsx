@@ -1,11 +1,13 @@
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps'
-import { Button, Image } from 'antd'
+import { Button, Image, message } from 'antd'
 import { createRef, useEffect, useState } from 'react'
 import { IAboutIndexPageProps } from '../../../about/types/types'
 import { axiosApi } from '../../../core/api/AxiosApi'
 import { getCookie } from '../../../core/helpers/cookies'
+import { useRouter } from 'next/router'
 
 const AdminAboutPanel: React.FC = () => {
+  const router = useRouter()
   const token = getCookie('token')
   const [aboutData, setAboutData] = useState<IAboutIndexPageProps>({
     description: '',
@@ -39,8 +41,24 @@ const AdminAboutPanel: React.FC = () => {
     axiosApi(token).put('/about', formdata)
       .then(() => {
         axiosApi().get('/about')
-          .then(data => setAboutData(data.data))
+          .then(data => {
+            setAboutData(data.data)
+            setTimeout(() => {
+              router.reload()
+            }, 1000);
+          })
       })
+  }
+
+  const removePhoto = async () => {
+    axiosApi(token).put('/about/remove-photo')
+      .then(data => {
+        message.success(data.data.message)
+        setTimeout(() => {
+          router.reload()
+        }, 1000);
+      })
+        .catch(err => console.log(err))
   }
 
   const updateDescription = () => {
@@ -60,6 +78,7 @@ const AdminAboutPanel: React.FC = () => {
         <div className="about-content">
           <Image style={{cursor: 'pointer'}} onClick={() => fileInputRef.current?.click()} alt='Фото зала' className='about-img' preview={false} src={thumbUrl} />
           <input onChange={e => updatePhoto(e.currentTarget.files?.item(0))} ref={fileInputRef} type="file" style={{display: 'none'}} />
+          <Button onClick={removePhoto}>Удалить фото</Button>
           <p style={{color: 'white', border: '1px solid white'}} ref={descriptionInputRef} onInput={onDescriptionChange} contentEditable className="about-description">{description}</p>
           <Button style={{display: saveBtnVisible ? 'block' : 'none'}} onClick={updateDescription}>Сохранить описание</Button>
         </div>

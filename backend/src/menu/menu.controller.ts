@@ -34,6 +34,8 @@ export class MenuController {
         @Body() dto: CreateMenuCategoryDto,
         @UploadedFile() file: Express.Multer.File
     ) {
+        console.log(dto);
+        
         return this.menuService.categories.create(dto, file)
     }
 
