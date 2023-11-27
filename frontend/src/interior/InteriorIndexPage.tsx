@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { Breadcrumb } from 'antd'
-import { Gallery } from "react-grid-gallery"
 import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 
 import "react-image-lightbox/style.css"
 import Lightbox from "react-image-lightbox"
 import Footer from "../core/layout/components/footer/Footer"
 import Header from "../core/layout/components/header/Header"
+import Gallery from '../core/components/Gallery/Gallery'
 
 
 const InteriorIndexPage: React.FC<{interiorImages: any}> = ({interiorImages}) => {
@@ -24,16 +24,11 @@ const InteriorIndexPage: React.FC<{interiorImages: any}> = ({interiorImages}) =>
     const handleMoveNext = () => setIndex(nextIndex)
     const handleClick = (index: number) => setIndex(index)
 
-    const renderGallery = () => {
+    const renderGallery = useCallback(() => {
         return (
-            <Gallery
-                images={interiorImages}
-                onClick={handleClick}
-                enableImageSelection={false}
-                margin={5}
-            />
+            <Gallery images={interiorImages} onClick={handleClick} />
         )
-    }
+    }, [interiorImages])
 
     const breadcrumbItems: ItemType[] = [
         {
