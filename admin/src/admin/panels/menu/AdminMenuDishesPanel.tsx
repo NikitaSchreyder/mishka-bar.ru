@@ -1,5 +1,5 @@
 import { Button, Collapse } from 'antd';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import CategoryItem from '../../components/CategoryItem';
 import { axiosApi } from '../../../core/api/AxiosApi';
 import DishesItem from '../../components/DishesItem';
@@ -10,7 +10,8 @@ import { getCookie } from '../../../core/helpers/cookies';
 import CollapsePanel from 'antd/es/collapse/CollapsePanel';
 
 const AdminMenuDishesPanel: React.FC = () => {
-  const [dishes, setDishes] = useState<any[]>()
+  const [dishes, setDishes] = useState<any[]>([])
+  const [categories, setCategories] = useState<any[]>([])
   const [updatedItem, setUpdatedItem] = useState<IDishesItemProps>()
   const token = getCookie('token')
 
@@ -30,46 +31,41 @@ const AdminMenuDishesPanel: React.FC = () => {
       })
   }
 
+  const getCategories = () => {
+    axiosApi(token).get('menu/categories/all')
+      .then(res => {
+        const { data } = res
+        setCategories(data)
+      })
+  }
+
   useEffect(() => {
     updateDishes()
+    getCategories()
   }, [])
 
-  const renderDishes = useMemo(() => {
-    const categories = dishes?.map(item => item.categorySearchLink)
-    const uniqueCategories = categories?.filter((item, index) => categories.indexOf(item) === index)
-    if(dishes?.length) {
+  const renderDishes = useCallback(() => {
+    if(dishes?.length && categories?.length) {
       return (
         <Collapse 
           style={{width: '100%'}}
           items={
-            uniqueCategories?.map((item, index) => ({
-              label: (<p style={{color: 'white'}}>{item}</p>), 
+            categories?.map((item, index) => ({
+              label: <p style={{color: 'white'}}>{item.name}</p>, 
               key: index,
-              children: (
+              children: 
+              (
                 <div style={{backgroundColor: 'black', display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'space-between'}}>
-                  {dishes.filter(dish => dish.categorySearchLink === item).map(item => <DishesItem key={item.id} updateDishes={updateDishes} showUpdateModal={() => showUpdateModal(item)} item={item} />)}
+                  {dishes.filter(dish => dish.categorySearchLink === item.searchLink).map(item => <DishesItem key={item.id} updateDishes={updateDishes} showUpdateModal={() => showUpdateModal(item)} item={item} />)}
                 </div> 
-                )
+              )
             }))
           }
         />
       )
-      // categories?.map((item, index) => {
-      //   return (
-      //     <Collapse items={[
-      //       {label: item.categorySearchLink, key: index, children: (
-      //           <div style={{padding: 20, display: 'flex', flexWrap: 'wrap', gap: 20}}>
-      //             {dishes.filter(dish => dish.categorySearchLink === item).map(dishItem => <DishesItem key={item.id} updateDishes={updateDishes} showUpdateModal={() => showUpdateModal(item)} item={item} />)}
-      //           </div>
-      //         )}
-      //       ]} 
-      //     />
-      //   )
-      // })
     }
-    // if(dishes?.length) return dishes.map(item => <DishesItem key={item.id} updateDishes={updateDishes} showUpdateModal={() => showUpdateModal(item)} item={item} />)
     return <div style={{color: 'white'}}>Нет блюд </div>
-  }, [dishes]) 
+  }, [dishes, categories]) 
 
   return (
     <>
@@ -77,7 +73,7 @@ const AdminMenuDishesPanel: React.FC = () => {
       <UpdateDishModal updateDishes={updateDishes} updatedItem={updatedItem} closeModal={updateModalControl.closeModal} open={updateModalControl.toShow} />
       <Button onClick={createModalControl.openModal} style={{marginBottom: 20}}>Новое блюдо</Button>
       <div style={{padding: 20, display: 'flex', flexWrap: 'wrap', gap: 20}}>
-        {renderDishes}
+        {renderDishes()}
       </div>
     </>
   )

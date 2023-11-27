@@ -27,6 +27,8 @@ export class MenuService {
         getWithHidden: async () => {
             const categories = await this.menuCategoriesRepository.findAll()
             if(!categories) throw new HttpException('Произошла ошибка сервера', HttpStatus.INTERNAL_SERVER_ERROR)
+            console.log(categories);
+            
             return categories
         },
         create: async (dto: CreateMenuCategoryDto, file: Express.Multer.File) => {
