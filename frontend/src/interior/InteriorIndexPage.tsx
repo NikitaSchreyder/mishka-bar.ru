@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import { useState } from "react"
+import { Breadcrumb } from 'antd'
 import { Gallery } from "react-grid-gallery"
+import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 
+import "react-image-lightbox/style.css"
 import Lightbox from "react-image-lightbox"
 import Footer from "../core/layout/components/footer/Footer"
 import Header from "../core/layout/components/header/Header"
 
-import "react-image-lightbox/style.css"
-import { Breadcrumb } from 'antd'
-import { ItemType } from 'antd/es/breadcrumb/Breadcrumb'
 
 const InteriorIndexPage: React.FC<{interiorImages: any}> = ({interiorImages}) => {
     const [index, setIndex] = useState(-1)
