@@ -75,7 +75,7 @@ const HeaderMenu: React.FC<IHeaderMenuProps> = ({onClose, visible}) => {
             </li>
           </ul>
           <p><span className='header_menu-info--title'>Номер телефона:</span> <a href="tel:79825194242">+7(982)519 42 42</a></p>
-          <p><span className='header_menu-info--title'>Время работы:</span> 12:00 - 00:00</p>
+          <p><span className='header_menu-info--title'>Время работы:</span> 12:00 - 23:00</p>
           <p><span className='header_menu-info--title'>Адрес:</span> <a target='_blank' href="https://yandex.ru/maps/-/CCU0MRcY8C">г.Сургут, ул.проспект Мира, 26</a></p>
         </div>
       </div>

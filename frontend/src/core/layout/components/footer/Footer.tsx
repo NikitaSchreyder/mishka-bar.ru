@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
     {
       type: 'text',
       title: 'Время работы',
-      value: '12:00 - 00:00'
+      value: '12:00 - 23:00'
     }
   ]
 
